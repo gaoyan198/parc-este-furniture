@@ -1,0 +1,1208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Parc Esta Furniture — Type BP5 Shortlist</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --cream:    #F7F3EE;
+      --paper:    #FDFAF6;
+      --walnut:   #6B4C2A;
+      --walnut-lt:#9A7250;
+      --walnut-bg:#EDE0CF;
+      --clay:     #B8896A;
+      --ash:      #D4C4B0;
+      --border:   #E2D5C3;
+      --ink:      #1E1610;
+      --ink-lt:   #5C4A38;
+      --ink-xs:   #9A8878;
+      --white:    #FFFFFF;
+      --green:    #5A7A5A;
+      --green-bg: #EBF2EB;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: var(--cream);
+      color: var(--ink);
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(247,243,238,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 clamp(1rem, 5vw, 3rem);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 52px;
+    }
+    .nav-brand {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1rem;
+      font-weight: 500;
+      color: var(--walnut);
+      letter-spacing: 0.04em;
+      text-decoration: none;
+    }
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+    }
+    .nav-links a {
+      font-size: 0.78rem;
+      font-weight: 500;
+      color: var(--ink-lt);
+      text-decoration: none;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--walnut); }
+
+    /* ── HERO ── */
+    .hero {
+      padding: clamp(3rem, 8vw, 6rem) clamp(1rem, 5vw, 3rem) clamp(2rem, 5vw, 3.5rem);
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .hero-eyebrow {
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--clay);
+      margin-bottom: 1rem;
+    }
+    .hero h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.4rem, 6vw, 4rem);
+      font-weight: 300;
+      line-height: 1.15;
+      color: var(--ink);
+      margin-bottom: 1.25rem;
+    }
+    .hero h1 em {
+      font-style: italic;
+      color: var(--walnut);
+    }
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem 1.5rem;
+      font-size: 0.82rem;
+      color: var(--ink-xs);
+      margin-bottom: 2.5rem;
+    }
+    .hero-meta span { display: flex; align-items: center; gap: 0.4rem; }
+    .hero-meta span::before {
+      content: '';
+      display: inline-block;
+      width: 5px; height: 5px;
+      border-radius: 50%;
+      background: var(--ash);
+    }
+
+    /* ── BUDGET BAR ── */
+    .budget-bar {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 1.75rem 2rem;
+      max-width: 900px;
+      margin: 0 auto 3.5rem;
+    }
+    .budget-bar-label {
+      font-size: 0.72rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--ink-xs);
+      margin-bottom: 1.25rem;
+    }
+    .budget-items {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 1rem;
+    }
+    .budget-item { text-align: left; }
+    .budget-item-label {
+      font-size: 0.72rem;
+      color: var(--ink-xs);
+      margin-bottom: 0.2rem;
+    }
+    .budget-item-name {
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: var(--ink-lt);
+      margin-bottom: 0.2rem;
+      line-height: 1.3;
+    }
+    .budget-item-price {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.35rem;
+      font-weight: 500;
+      color: var(--walnut);
+    }
+    .budget-total {
+      border-top: 1px solid var(--border);
+      margin-top: 1.25rem;
+      padding-top: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .budget-total-label {
+      font-size: 0.78rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--ink-lt);
+    }
+    .budget-total-price {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2rem;
+      font-weight: 500;
+      color: var(--walnut);
+    }
+
+    /* ── SECTION ── */
+    .section {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 clamp(1rem, 5vw, 3rem) 4rem;
+    }
+    .section-header {
+      display: flex;
+      align-items: baseline;
+      gap: 1rem;
+      margin-bottom: 2rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .section-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 3.5rem;
+      font-weight: 300;
+      color: var(--ash);
+      line-height: 1;
+    }
+    .section-title-group {}
+    .section-eyebrow {
+      font-size: 0.68rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--clay);
+    }
+    .section-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+      font-weight: 400;
+      color: var(--ink);
+      line-height: 1.2;
+    }
+
+    /* ── CARD ── */
+    .card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+      margin-bottom: 1.25rem;
+    }
+    .card-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 1.5rem 1.75rem 1.25rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .card-badge-row {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      margin-bottom: 0.5rem;
+    }
+    .badge {
+      display: inline-block;
+      font-size: 0.62rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      padding: 0.25em 0.7em;
+      border-radius: 100px;
+    }
+    .badge-top { background: var(--walnut); color: var(--white); }
+    .badge-runner { background: var(--walnut-bg); color: var(--walnut); }
+    .badge-alt { background: var(--green-bg); color: var(--green); }
+    .card-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.4rem;
+      font-weight: 500;
+      color: var(--ink);
+      line-height: 1.2;
+    }
+    .card-sub {
+      font-size: 0.78rem;
+      color: var(--ink-xs);
+      margin-top: 0.15rem;
+    }
+    .card-price {
+      text-align: right;
+      flex-shrink: 0;
+    }
+    .card-price-label {
+      font-size: 0.62rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--ink-xs);
+      margin-bottom: 0.1rem;
+    }
+    .card-price-value {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.9rem;
+      font-weight: 500;
+      color: var(--walnut);
+      line-height: 1;
+    }
+    .card-body { padding: 1.5rem 1.75rem; }
+
+    /* ── SPEC TABLE ── */
+    .spec-grid {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 0;
+      margin-bottom: 1.5rem;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      overflow: hidden;
+      font-size: 0.82rem;
+    }
+    .spec-row {
+      display: contents;
+    }
+    .spec-row:not(:last-child) .spec-key,
+    .spec-row:not(:last-child) .spec-val {
+      border-bottom: 1px solid var(--border);
+    }
+    .spec-key {
+      background: var(--cream);
+      padding: 0.6rem 1rem;
+      font-weight: 600;
+      color: var(--ink-lt);
+      white-space: nowrap;
+    }
+    .spec-val {
+      background: var(--white);
+      padding: 0.6rem 1rem;
+      color: var(--ink);
+    }
+    .spec-val a {
+      color: var(--walnut);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .spec-val a:hover { text-decoration: underline; }
+
+    /* ── WHY / CALLOUT ── */
+    .why-block {
+      background: var(--cream);
+      border-left: 3px solid var(--walnut);
+      border-radius: 0 8px 8px 0;
+      padding: 1rem 1.25rem;
+      margin-bottom: 1.25rem;
+      font-size: 0.85rem;
+      color: var(--ink-lt);
+      line-height: 1.65;
+    }
+    .why-block strong { color: var(--ink); }
+    .why-label {
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--walnut);
+      margin-bottom: 0.4rem;
+    }
+
+    .tip-block {
+      background: var(--green-bg);
+      border-left: 3px solid var(--green);
+      border-radius: 0 8px 8px 0;
+      padding: 1rem 1.25rem;
+      margin-bottom: 1.25rem;
+      font-size: 0.83rem;
+      color: #3A5A3A;
+      line-height: 1.65;
+    }
+    .tip-label {
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--green);
+      margin-bottom: 0.4rem;
+    }
+
+    /* ── COMPANION LIST ── */
+    .companion {
+      font-size: 0.82rem;
+      color: var(--ink-lt);
+      padding-left: 1.1rem;
+    }
+    .companion li { margin-bottom: 0.3rem; }
+    .companion-label {
+      font-size: 0.72rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--ink-xs);
+      margin-bottom: 0.5rem;
+      margin-top: 1rem;
+    }
+
+    /* ── RUNNER-UP ROW ── */
+    .runner-row {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 1.25rem;
+    }
+    .runner-card {
+      flex: 1;
+      background: var(--paper);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.25rem 1.5rem;
+    }
+    .runner-card-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: var(--ink);
+      margin-bottom: 0.25rem;
+    }
+    .runner-card-price {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--walnut-lt);
+      margin-bottom: 0.5rem;
+    }
+    .runner-card-desc {
+      font-size: 0.8rem;
+      color: var(--ink-lt);
+      line-height: 1.5;
+    }
+
+    /* ── STYLE COHESION ── */
+    .cohesion-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+    .cohesion-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.25rem;
+    }
+    .cohesion-icon {
+      font-size: 1.3rem;
+      margin-bottom: 0.5rem;
+    }
+    .cohesion-title {
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--walnut);
+      margin-bottom: 0.4rem;
+    }
+    .cohesion-desc {
+      font-size: 0.78rem;
+      color: var(--ink-lt);
+      line-height: 1.5;
+    }
+
+    /* ── ACTION PLAN ── */
+    .action-list {
+      list-style: none;
+      counter-reset: actions;
+    }
+    .action-item {
+      counter-increment: actions;
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      padding: 1rem 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.84rem;
+    }
+    .action-item:last-child { border-bottom: none; }
+    .action-num {
+      flex-shrink: 0;
+      width: 28px; height: 28px;
+      border-radius: 50%;
+      background: var(--walnut);
+      color: var(--white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.72rem;
+      font-weight: 700;
+      margin-top: 0.1rem;
+    }
+    .action-text { flex: 1; color: var(--ink-lt); }
+    .action-text strong { color: var(--ink); }
+    .action-where {
+      font-size: 0.72rem;
+      color: var(--ink-xs);
+      margin-top: 0.15rem;
+    }
+
+    /* ── BUDGET SCENARIOS ── */
+    .scenarios-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+    .scenario-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      overflow: hidden;
+    }
+    .scenario-header {
+      padding: 1rem 1.25rem 0.75rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .scenario-letter {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2rem;
+      font-weight: 300;
+      color: var(--ash);
+      line-height: 1;
+    }
+    .scenario-name {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--ink-lt);
+      margin-top: 0.1rem;
+    }
+    .scenario-body { padding: 1rem 1.25rem; }
+    .scenario-line {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      font-size: 0.78rem;
+      padding: 0.2rem 0;
+      color: var(--ink-lt);
+      border-bottom: 1px dotted var(--border);
+    }
+    .scenario-line:last-of-type { border-bottom: none; }
+    .scenario-line-name { flex: 1; padding-right: 0.5rem; line-height: 1.3; }
+    .scenario-line-price { font-weight: 600; color: var(--ink); white-space: nowrap; }
+    .scenario-total {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.75rem 1.25rem;
+      background: var(--cream);
+      border-top: 1px solid var(--border);
+    }
+    .scenario-total-label {
+      font-size: 0.68rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--ink-xs);
+    }
+    .scenario-total-price {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.6rem;
+      font-weight: 500;
+      color: var(--walnut);
+    }
+
+    /* ── COMMUNITY INSIGHTS ── */
+    .insights-list {
+      list-style: none;
+      margin-bottom: 1.5rem;
+    }
+    .insights-list li {
+      padding: 0.65rem 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.83rem;
+      color: var(--ink-lt);
+      display: flex;
+      gap: 0.75rem;
+      align-items: flex-start;
+    }
+    .insights-list li::before {
+      content: '小';
+      flex-shrink: 0;
+      width: 22px; height: 22px;
+      background: var(--walnut-bg);
+      color: var(--walnut);
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.65rem;
+      font-weight: 700;
+      margin-top: 0.15rem;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      text-align: center;
+      padding: 3rem 1rem;
+      border-top: 1px solid var(--border);
+      font-size: 0.75rem;
+      color: var(--ink-xs);
+    }
+    footer a { color: var(--walnut-lt); text-decoration: none; }
+
+    /* ── DIVIDER ── */
+    .divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 2.5rem 0;
+    }
+
+    /* ── PALETTE DOTS ── */
+    .palette {
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
+      margin: 1.5rem 0;
+      flex-wrap: wrap;
+    }
+    .palette-swatch {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.72rem;
+      color: var(--ink-lt);
+    }
+    .swatch-dot {
+      width: 28px; height: 28px;
+      border-radius: 50%;
+      border: 1px solid rgba(0,0,0,0.08);
+      flex-shrink: 0;
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 600px) {
+      .nav-links { display: none; }
+      .runner-row { flex-direction: column; }
+      .card-header { flex-direction: column; }
+      .card-price { text-align: left; }
+      .budget-bar { padding: 1.25rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-brand" href="#">Parc Esta · Type BP5</a>
+  <ul class="nav-links">
+    <li><a href="#bed">Bed</a></li>
+    <li><a href="#sofa">Sofa</a></li>
+    <li><a href="#dining">Dining</a></li>
+    <li><a href="#style">Style</a></li>
+    <li><a href="#plan">Action Plan</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <p class="hero-eyebrow">Furniture Research Report</p>
+  <h1>A <em>Japandi</em> Home<br>at Parc Esta</h1>
+  <div class="hero-meta">
+    <span>Type BP5 · 69 sqm / 743 sq ft</span>
+    <span>Sims Avenue, Eunos</span>
+    <span>MCL Land</span>
+    <span>Style: Japandi / Wabi-sabi</span>
+    <span>Ash · Walnut · Cotton Neutral</span>
+  </div>
+
+  <!-- Palette -->
+  <div class="palette">
+    <div class="palette-swatch">
+      <div class="swatch-dot" style="background:#6B4C2A;"></div>
+      <span>Walnut</span>
+    </div>
+    <div class="palette-swatch">
+      <div class="swatch-dot" style="background:#C4A882;"></div>
+      <span>Ash</span>
+    </div>
+    <div class="palette-swatch">
+      <div class="swatch-dot" style="background:#EAD9C0;"></div>
+      <span>Oat</span>
+    </div>
+    <div class="palette-swatch">
+      <div class="swatch-dot" style="background:#C9A88E;"></div>
+      <span>Clay</span>
+    </div>
+    <div class="palette-swatch">
+      <div class="swatch-dot" style="background:#F7F3EE;"></div>
+      <span>Cream</span>
+    </div>
+  </div>
+</header>
+
+<!-- BUDGET BAR -->
+<div class="section" style="padding-bottom: 0;">
+  <div class="budget-bar">
+    <p class="budget-bar-label">Scenario A · Recommended Total</p>
+    <div class="budget-items">
+      <div class="budget-item">
+        <div class="budget-item-label">Bed + Frame</div>
+        <div class="budget-item-name">Castlery Joseph Walnut</div>
+        <div class="budget-item-price">$1,199</div>
+      </div>
+      <div class="budget-item">
+        <div class="budget-item-label">Sofa</div>
+        <div class="budget-item-name">Castlery Hamilton 2-Seater</div>
+        <div class="budget-item-price">$1,199</div>
+      </div>
+      <div class="budget-item">
+        <div class="budget-item-label">Sofa Accents</div>
+        <div class="budget-item-name">Rattan chair + Jute rug</div>
+        <div class="budget-item-price">~$350</div>
+      </div>
+      <div class="budget-item">
+        <div class="budget-item-label">Dining</div>
+        <div class="budget-item-name">IKEA LISABO set (4 chairs)</div>
+        <div class="budget-item-price">$439</div>
+      </div>
+    </div>
+    <div class="budget-total">
+      <div class="budget-total-label">Estimated Total</div>
+      <div class="budget-total-price">~$3,187</div>
+    </div>
+  </div>
+</div>
+
+<!-- ────────────── BED ────────────── -->
+<section class="section" id="bed">
+  <div class="section-header">
+    <div class="section-num">01</div>
+    <div class="section-title-group">
+      <div class="section-eyebrow">Splurge · Master Bedroom</div>
+      <div class="section-title">Bed + Bedframe</div>
+    </div>
+  </div>
+
+  <!-- Community Insights -->
+  <p style="font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--ink-xs);margin-bottom:0.75rem;">
+    小红书 · Community Insights
+  </p>
+  <ul class="insights-list">
+    <li>Floating / recessed-base platform beds are overwhelmingly recommended on XHS &amp; Lemon8 SG renovation posts — creates visual lightness, makes a 69sqm room feel larger.</li>
+    <li>Walnut veneer and solid oak are the two dominant material choices. Walnut is praised for warm grain that photographs beautifully on home reveal posts.</li>
+    <li>Tatami-style storage beds are a recurring XHS favourite for compact SG condos — eliminates need for bulky storage furniture.</li>
+    <li>Tall tufted headboards are consistently described as "old-fashioned" on XHS and clash with the Japandi wabi-sabi brief. Avoid.</li>
+  </ul>
+
+  <!-- Top Pick -->
+  <div class="card">
+    <div class="card-header">
+      <div>
+        <div class="card-badge-row">
+          <span class="badge badge-top">Top Pick</span>
+          <span class="badge badge-runner" style="background:var(--walnut-bg);color:var(--walnut);">Splurge</span>
+        </div>
+        <div class="card-name">Castlery Joseph Bed, Walnut</div>
+        <div class="card-sub">Castlery Singapore · Queen Size</div>
+      </div>
+      <div class="card-price">
+        <div class="card-price-label">Queen</div>
+        <div class="card-price-value">$1,199</div>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="spec-grid">
+        <div class="spec-row">
+          <div class="spec-key">Dimensions</div>
+          <div class="spec-val">W159.2 × D210.6 × H100cm</div>
+        </div>
+        <div class="spec-row">
+          <div class="spec-key">Mattress space</div>
+          <div class="spec-val">W154 × D193cm</div>
+        </div>
+        <div class="spec-row">
+          <div class="spec-key">Material</div>
+          <div class="spec-val">Engineered wood with American walnut veneer; solid poplar slats</div>
+        </div>
+        <div class="spec-row">
+          <div class="spec-key">Leg height</div>
+          <div class="spec-val">12cm — creates floating base effect</div>
+        </div>
+        <div class="spec-row">
+          <div class="spec-key">Headboard</div>
+          <div class="spec-val">Solid walnut veneer slab — clean, architectural</div>
+        </div>
+        <div class="spec-row">
+          <div class="spec-key">Weight capacity</div>
+          <div class="spec-val">360kg</div>
+        </div>
+        <div class="spec-row">
+          <div class="spec-key">Warranty</div>
+          <div class="spec-val">10-year limited frame warranty</div>
+        </div>
+        <div class="spec-row">
+          <div class="spec-key">Buy</div>
+          <div class="spec-val">
+            <a href="https://www.castlery.com/sg/products/joseph-bed-walnut" target="_blank">castlery.com/sg → Joseph Bed Walnut ↗</a>
+          </div>
+        </div>
+      </div>
+      <div class="why-block">
+        <div class="why-label">Why this for Parc Esta</div>
+        The floating recessed base is <strong>the</strong> defining Japandi bed form — low, grounded, visually light. Walnut veneer hits the palette exactly. At W159.2cm in a ~3.2m-wide master bedroom, there's ~80cm clearance each side for bedside tables. One of Castlery SG's bestsellers; resale value holds well on Carousell. The 10-year warranty makes it a confident splurge. Also available with bouclé or fabric headboard if you prefer a softer look.
+      </div>
+      <div class="companion-label">Style with</div>
+      <ul class="companion">
+        <li>Castlery Joseph Bedside Tables in walnut (~$279–349 each) — keep the collection cohesive</li>
+        <li>Linen pillowcases in oat or clay (MUJI or Zara Home)</li>
+        <li>Waffle-weave throw blanket in warm cream</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Runner-ups -->
+  <div class="runner-row">
+    <div class="runner-card">
+      <div class="card-badge-row" style="margin-bottom:0.5rem;">
+        <span class="badge badge-runner">Runner-Up</span>
+      </div>
+      <div class="runner-card-name">BedAndBasics Nara American Oak</div>
+      <div class="runner-card-price">From $647 · Queen</div>
+      <div class="runner-card-desc">
+        Solid American oak (not veneer) — real grain, real ageing, true Wabi-sabi. W156–186cm × D217cm × H92cm. ~$550 cheaper than the Joseph, freeing budget for a premium mattress. Visit their showroom — praised on Lemon8 SG.
+        <br><br><a href="https://www.bedandbasics.sg" target="_blank" style="color:var(--walnut);font-weight:600;font-size:0.78rem;">bedandbasics.sg ↗</a>
+      </div>
+    </div>
+    <div class="runner-card">
+      <div class="card-badge-row" style="margin-bottom:0.5rem;">
+        <span class="badge badge-alt">Storage Pick</span>
+      </div>
+      <div class="runner-card-name">BedAndBasics Take Oak Tatami Storage</div>
+      <div class="runner-card-price">From $1,169 · Queen</div>
+      <div class="runner-card-desc">
+        Tatami platform with under-bed storage drawers — essential in a 69sqm unit. W156.6–186.6cm × D213.5cm × H93cm. The most authentically Japanese option. Platform style + built-in drawers = Japandi + practical.
+        <br><br><a href="https://www.bedandbasics.sg" target="_blank" style="color:var(--walnut);font-weight:600;font-size:0.78rem;">bedandbasics.sg ↗</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="tip-block">
+    <div class="tip-label">Mattress note</div>
+    Budget separately for a queen mattress — Emma Original and Sealy Posturepedic are frequently recommended on Singapore Lemon8 for Castlery bed owners. Recommended thickness: 20–30cm for the Joseph frame.
+  </div>
+</section>
+
+
+<!-- ────────────── SOFA ────────────── -->
+<section class="section" id="sofa">
+  <div class="section-header">
+    <div class="section-num">02</div>
+    <div class="section-title-group">
+      <div class="section-eyebrow">Splurge · Living Room</div>
+      <div class="section-title">Sofa</div>
+    </div>
+  </div>
+
+  <ul class="insights-list">
+    <li>Castlery Hamilton is the most-recommended sofa on Singapore Lemon8 for Japandi/Scandi homes — praised for deep seats, pocket spring comfort, removable washable covers.</li>
+    <li>Linen-weave or bouclé in oat, cream, or warm grey is the XHS consensus for tropical climates — breathable, ages beautifully.</li>
+    <li>For small SG living rooms: 2-seater + rattan accent chair reads as "curated" rather than cramped. Adds texture that a 3-seater alone cannot.</li>
+    <li>L-shaped sectionals in sub-800sqft units are consistently regretted on XHS — they dominate the room and block balcony flow.</li>
+  </ul>
+
+  <div class="tip-block" style="margin-bottom:1.5rem;">
+    <div class="tip-label">Room dimension note</div>
+    The floor plan labels "2.6m" and "2.0m" in the living area — these are likely partial references, not full room dimensions. <strong>Measure your actual space before purchasing.</strong> The room may be wider. All recommendations below are sized conservatively.
+  </div>
+
+  <!-- Top Pick -->
+  <div class="card">
+    <div class="card-header">
+      <div>
+        <div class="card-badge-row">
+          <span class="badge badge-top">Top Pick</span>
+          <span class="badge badge-runner" style="background:var(--walnut-bg);color:var(--walnut);">Splurge</span>
+        </div>
+        <div class="card-name">Castlery Hamilton 2-Seater</div>
+        <div class="card-sub">Performance Linen Weave · Oat</div>
+      </div>
+      <div class="card-price">
+        <div class="card-price-label">2-Seater</div>
+        <div class="card-price-value">$1,199</div>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="spec-grid">
+        <div class="spec-row">
+          <div class="spec-key">Dimensions</div>
+          <div class="spec-val">W180 × D100 × H82cm</div>
+        </div>
+        <div class="spec-row">
+          <div class="spec-key">Seating depth</div>
+          <div class="spec-val">60cm — deep and loungy</div>
+        </div>
+        <div class="spec-row">
+          <div class="spec-key">Recommended fabric</div>
+          <div class="spec-val">Performance Linen Weave — Oat (breathable, Japandi-perfect)</div>
+        </div>
+        <div class="spec-row">
+          <div class="spec-key">Other fabrics</div>
+          <div class="spec-val">Boucle Cream · Washed Chenille Sand · Twill Pearl Beige</div>
+        </div>
+        <div class="spec-row">
+          <div class="spec-key">Suspension</div>
+          <div class="spec-val">Pocket springs + sinuous spring base</div>
+        </div>
+        <div class="spec-row">
+          <div class="spec-key">Cover</div>
+          <div class="spec-val">Fully removable, machine washable</div>
+        </div>
+        <div class="spec-row">
+          <div class="spec-key">Legs</div>
+          <div class="spec-val">Stainless steel (offset with warm wood accessories)</div>
+        </div>
+        <div class="spec-row">
+          <div class="spec-key">Buy</div>
+          <div class="spec-val">
+            <a href="https://www.castlery.com/sg/products/hamilton-2-seater-sofa" target="_blank">castlery.com/sg → Hamilton 2-Seater ↗</a>
+          </div>
+        </div>
+      </div>
+      <div class="why-block">
+        <div class="why-label">Why this for Parc Esta</div>
+        The Hamilton is the most-recommended sofa on Singapore Lemon8 for Japandi interiors. At 180cm wide it fits the living room without cramping flow. "Oat" linen weave is warm, breathable, and classic Japandi — it won't look dated in 5 years. The 60cm seating depth is luxuriously deep. Pocket springs (not just foam) mean the sofa won't sag prematurely.
+      </div>
+      <div class="tip-block">
+        <div class="tip-label">Key action before buying</div>
+        Order a fabric swatch from Castlery — <strong>free by mail.</strong> Hold the "Oat Linen Weave" swatch against your unit wall in natural light at different times of day before committing.
+      </div>
+      <div class="companion-label">Complete the living room</div>
+      <ul class="companion">
+        <li>Rattan accent chair — ~$200–350 from local rattan shops (Haji Lane) or IKEA</li>
+        <li>IKEA SINDAL jute rug 200×300cm — ~$99</li>
+        <li>Low rattan or solid oak coffee table</li>
+        <li>Total living room setup: <strong>~$1,550–1,700</strong></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="runner-row">
+    <div class="runner-card">
+      <div class="card-badge-row" style="margin-bottom:0.5rem;">
+        <span class="badge badge-runner">Runner-Up</span>
+      </div>
+      <div class="runner-card-name">Castlery Hamilton 3-Seater</div>
+      <div class="runner-card-price">$1,599 · W203.5 × D100 × H82cm</div>
+      <div class="runner-card-desc">
+        Same quality and fabric options. Upgrade for $400 more if you confirm the living room is ≥3.0m wide. Better for hosting guests or lying down to watch TV. Pocket springs, removable covers — same construction.
+        <br><br><a href="https://www.castlery.com/sg/products/hamilton-3-seater-sofa" target="_blank" style="color:var(--walnut);font-weight:600;font-size:0.78rem;">castlery.com/sg → Hamilton 3-Seater ↗</a>
+      </div>
+    </div>
+    <div class="runner-card">
+      <div class="card-badge-row" style="margin-bottom:0.5rem;">
+        <span class="badge badge-alt">Best Aesthetic</span>
+      </div>
+      <div class="runner-card-name">Hamilton 2-Seater + Rattan Chair</div>
+      <div class="runner-card-price">~$1,500–1,700 total</div>
+      <div class="runner-card-desc">
+        The gold-standard Japandi composition on XHS: sofa + rattan accent chair + jute rug. Rattan introduces a textural third element (beyond wood + linen) that is distinctly Japanese in spirit. Takes less floor space than a 3-seater with more design complexity.
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ────────────── DINING ────────────── -->
+<section class="section" id="dining">
+  <div class="section-header">
+    <div class="section-num">03</div>
+    <div class="section-title-group">
+      <div class="section-eyebrow">Save · Dining Area</div>
+      <div class="section-title">Dining Table + Chairs</div>
+    </div>
+  </div>
+
+  <ul class="insights-list">
+    <li>IKEA LISABO is overwhelmingly the top pick on Singapore Lemon8 renovation accounts for 2BR condo dining on a budget — ash veneer + solid birch, Red Dot Award, legitimately beautiful at the price.</li>
+    <li>For Japandi dining chairs: solid wood chairs without arms (minimalist) or upholstered seats with rounded backs (cosy + practical). IKEA RÖNNINGE appears frequently in Japandi home reveals.</li>
+    <li>Avoid chairs with armrests at compact tables — they take too much width and make squeezing 4 people uncomfortable at a 140cm table.</li>
+  </ul>
+
+  <!-- Top Pick -->
+  <div class="card">
+    <div class="card-header">
+      <div>
+        <div class="card-badge-row">
+          <span class="badge badge-top">Top Pick</span>
+          <span class="badge" style="background:#EBF2EB;color:#3A6A3A;font-size:0.62rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;padding:0.25em 0.7em;border-radius:100px;">Save Tier</span>
+        </div>
+        <div class="card-name">IKEA LISABO Table + 4 Chairs</div>
+        <div class="card-sub">Ash Veneer + Solid Birch · Red Dot Award Winner</div>
+      </div>
+      <div class="card-price">
+        <div class="card-price-label">Set of 5</div>
+        <div class="card-price-value">$439</div>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="spec-grid">
+        <div class="spec-row">
+          <div class="spec-key">Table dimensions</div>
+          <div class="spec-val">140 × 78 × 74cm — 4-seater</div>
+        </div>
+        <div class="spec-row">
+          <div class="spec-key">Table material</div>
+          <div class="spec-val">Ash veneer surface + solid birch legs, tinted acrylic lacquer</div>
+        </div>
+        <div class="spec-row">
+          <div class="spec-key">Chair material</div>
+          <div class="spec-val">Layer-glued ash veneer + solid birch legs</div>
+        </div>
+        <div class="spec-row">
+          <div class="spec-key">Rating</div>
+          <div class="spec-val">4.9 / 5.0 stars (IKEA Singapore)</div>
+        </div>
+        <div class="spec-row">
+          <div class="spec-key">Award</div>
+          <div class="spec-val">Red Dot Award for design</div>
+        </div>
+        <div class="spec-row">
+          <div class="spec-key">Buy</div>
+          <div class="spec-val">
+            <a href="https://www.ikea.com/sg/en/p/lisabo-lisabo-table-and-4-chairs-ash-veneer-ash-s29385530/" target="_blank">IKEA Singapore · LISABO set ↗</a>
+          </div>
+        </div>
+      </div>
+      <div class="why-block">
+        <div class="why-label">Why this is a no-brainer</div>
+        Ash veneer is the most Japandi material at any price point. The construction is solid birch. It wins design awards. At $439 for table + 4 chairs, the value is exceptional. The money saved here funds better pieces elsewhere. There is no dining table at this price that competes aesthetically for Japandi style. The LISABO chair's minimalist back with gentle curves doesn't "read IKEA" in a finished home.
+      </div>
+      <div class="companion-label">Style the table</div>
+      <ul class="companion">
+        <li>4 linen placemats in oat or clay (Zara Home or MUJI) — ~$40–60</li>
+        <li>Rattan tray as centrepiece — ~$20–40</li>
+        <li>Small ceramic bud vase — ~$20–40</li>
+        <li><strong>Total accessories: under $100</strong></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="runner-row">
+    <div class="runner-card">
+      <div class="card-badge-row" style="margin-bottom:0.5rem;">
+        <span class="badge badge-runner">Runner-Up</span>
+      </div>
+      <div class="runner-card-name">IKEA MÖRBYLÅNGA + RÖNNINGE × 4</div>
+      <div class="runner-card-price">~$940–1,015 total</div>
+      <div class="runner-card-desc">
+        MÖRBYLÅNGA: $699 · 140×85cm · Oak veneer, brown stained — richer, deeper tone that coordinates closely with the walnut bed. Pair with RÖNNINGE chairs (solid birch round back, ~$59–79 each × 4). Certified for restaurant use — extremely durable.
+        <br><br><a href="https://www.ikea.com/sg/en/p/moerbylanga-table-oak-veneer-brown-stained-80365802/" target="_blank" style="color:var(--walnut);font-weight:600;font-size:0.78rem;">IKEA Singapore · MÖRBYLÅNGA ↗</a>
+      </div>
+    </div>
+    <div class="runner-card">
+      <div class="card-badge-row" style="margin-bottom:0.5rem;">
+        <span class="badge badge-alt">Mid-Range</span>
+      </div>
+      <div class="runner-card-name">Nook &amp; Cranny Oqui Oval Extendable</div>
+      <div class="runner-card-price">~$1,051 (table) + chairs</div>
+      <div class="runner-card-desc">
+        Natural oak veneer, Japandi/Scandi oval form. Extendable to 6 seats for hosting — practical for a 2BR condo. More sculptural than IKEA. Consider when ready to upgrade the dining area in future.
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ────────────── STYLE ────────────── -->
+<section class="section" id="style">
+  <div class="section-header">
+    <div class="section-num" style="color:var(--ash);">—</div>
+    <div class="section-title-group">
+      <div class="section-eyebrow">Japandi Cohesion</div>
+      <div class="section-title">Making it all work together</div>
+    </div>
+  </div>
+
+  <div class="cohesion-grid">
+    <div class="cohesion-card">
+      <div class="cohesion-icon">🪵</div>
+      <div class="cohesion-title">Wood Tone Anchor</div>
+      <div class="cohesion-desc">Walnut bed (warm, medium) + ash dining table (lighter) + rattan accent (organic). Intentional variation within one warm-neutral family — not a mismatch.</div>
+    </div>
+    <div class="cohesion-card">
+      <div class="cohesion-icon">🧵</div>
+      <div class="cohesion-title">Fabric Palette</div>
+      <div class="cohesion-desc">Sofa in oat linen → dining chairs in ash veneer → bed in walnut → accessories in clay/cream. One warm neutral family throughout.</div>
+    </div>
+    <div class="cohesion-card">
+      <div class="cohesion-icon">✋</div>
+      <div class="cohesion-title">Texture Layering</div>
+      <div class="cohesion-desc">Slatted wood (bed) → woven linen (sofa) → smooth veneer (dining) → natural fibre jute (rug). Each piece contributes a different texture within the same palette.</div>
+    </div>
+    <div class="cohesion-card">
+      <div class="cohesion-icon">⚠️</div>
+      <div class="cohesion-title">Chrome / Silver</div>
+      <div class="cohesion-desc">The Hamilton's stainless legs are the one exception. Offset with warm accessories — rattan coffee table, ceramic vessels, wood trays — to keep the room feeling Japandi.</div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ────────────── ACTION PLAN ────────────── -->
+<section class="section" id="plan">
+  <div class="section-header">
+    <div class="section-num" style="color:var(--ash);">—</div>
+    <div class="section-title-group">
+      <div class="section-eyebrow">Next Steps</div>
+      <div class="section-title">Shopping Action Plan</div>
+    </div>
+  </div>
+
+  <div class="card" style="margin-bottom:2rem;">
+    <div class="card-body" style="padding:0.5rem 1.75rem;">
+      <ol class="action-list">
+        <li class="action-item">
+          <div class="action-num">1</div>
+          <div class="action-text">
+            <strong>Order Castlery fabric swatches</strong> — Performance Linen Weave Oat for the Hamilton sofa. Free by mail. Hold against your wall in natural light before committing.
+            <div class="action-where">→ castlery.com/sg · Request swatches from product page</div>
+          </div>
+        </li>
+        <li class="action-item">
+          <div class="action-num">2</div>
+          <div class="action-text">
+            <strong>Visit Castlery showroom</strong> — test the Joseph Bed and Hamilton sofa in person. Feel the seat depth, check the walnut finish in real light.
+            <div class="action-where">→ Jewel Changi Airport or Funan Mall</div>
+          </div>
+        </li>
+        <li class="action-item">
+          <div class="action-num">3</div>
+          <div class="action-text">
+            <strong>Visit BedAndBasics showroom</strong> — if you want to compare solid-wood (Nara) vs walnut veneer (Joseph). In-store experience praised on Lemon8.
+            <div class="action-where">→ BedAndBasics Singapore</div>
+          </div>
+        </li>
+        <li class="action-item">
+          <div class="action-num">4</div>
+          <div class="action-text">
+            <strong>Order IKEA LISABO set</strong> — available online (free delivery over $100) or in-store. Confirm ash veneer finish before ordering.
+            <div class="action-where">→ IKEA Alexandra or IKEA Tampines</div>
+          </div>
+        </li>
+        <li class="action-item">
+          <div class="action-num">5</div>
+          <div class="action-text">
+            <strong>Source rattan accent chair</strong> — browse Haji Lane rattan shops or IKEA. Look for natural rattan with a simple round or bucket shape.
+            <div class="action-where">→ Haji Lane, Arab Street area · or IKEA</div>
+          </div>
+        </li>
+        <li class="action-item">
+          <div class="action-num">6</div>
+          <div class="action-text">
+            <strong>Sign up for Castlery newsletter</strong> — they run 10–20% off sales regularly. Waiting for a sale on the bed + sofa combo could save $200–400.
+            <div class="action-where">→ castlery.com/sg</div>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </div>
+
+  <!-- Budget Scenarios -->
+  <p style="font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--ink-xs);margin-bottom:1rem;">
+    Budget Scenarios
+  </p>
+  <div class="scenarios-grid">
+    <div class="scenario-card">
+      <div class="scenario-header">
+        <div class="scenario-letter">A</div>
+        <div class="scenario-name">All Top Picks</div>
+      </div>
+      <div class="scenario-body">
+        <div class="scenario-line"><span class="scenario-line-name">Castlery Joseph Bed Walnut (Queen)</span><span class="scenario-line-price">$1,199</span></div>
+        <div class="scenario-line"><span class="scenario-line-name">Castlery Hamilton 2-Seater (Oat)</span><span class="scenario-line-price">$1,199</span></div>
+        <div class="scenario-line"><span class="scenario-line-name">Rattan chair + jute rug</span><span class="scenario-line-price">~$350</span></div>
+        <div class="scenario-line"><span class="scenario-line-name">IKEA LISABO set (table + 4 chairs)</span><span class="scenario-line-price">$439</span></div>
+      </div>
+      <div class="scenario-total">
+        <div class="scenario-total-label">Total</div>
+        <div class="scenario-total-price">$3,187</div>
+      </div>
+    </div>
+    <div class="scenario-card">
+      <div class="scenario-header">
+        <div class="scenario-letter">B</div>
+        <div class="scenario-name">3-Seater + Premium Dining</div>
+      </div>
+      <div class="scenario-body">
+        <div class="scenario-line"><span class="scenario-line-name">Castlery Joseph Bed Walnut (Queen)</span><span class="scenario-line-price">$1,199</span></div>
+        <div class="scenario-line"><span class="scenario-line-name">Castlery Hamilton 3-Seater (Oat)</span><span class="scenario-line-price">$1,599</span></div>
+        <div class="scenario-line"><span class="scenario-line-name">Rattan chair + jute rug</span><span class="scenario-line-price">~$350</span></div>
+        <div class="scenario-line"><span class="scenario-line-name">MÖRBYLÅNGA table + RÖNNINGE × 4</span><span class="scenario-line-price">~$950</span></div>
+      </div>
+      <div class="scenario-total">
+        <div class="scenario-total-label">Total</div>
+        <div class="scenario-total-price">~$4,098</div>
+      </div>
+    </div>
+    <div class="scenario-card">
+      <div class="scenario-header">
+        <div class="scenario-letter">C</div>
+        <div class="scenario-name">Maximum Japandi</div>
+      </div>
+      <div class="scenario-body">
+        <div class="scenario-line"><span class="scenario-line-name">BedAndBasics Tatami Storage Bed</span><span class="scenario-line-price">$1,169</span></div>
+        <div class="scenario-line"><span class="scenario-line-name">Castlery Hamilton 3-Seater (Oat)</span><span class="scenario-line-price">$1,599</span></div>
+        <div class="scenario-line"><span class="scenario-line-name">Rattan chair + jute rug</span><span class="scenario-line-price">~$350</span></div>
+        <div class="scenario-line"><span class="scenario-line-name">Nook + Cranny Oqui Extendable + chairs</span><span class="scenario-line-price">~$1,450</span></div>
+      </div>
+      <div class="scenario-total">
+        <div class="scenario-total-label">Total</div>
+        <div class="scenario-total-price">~$4,568</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p style="font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:400;color:var(--ink-lt);margin-bottom:0.5rem;">
+    Parc Esta · Type BP5 · Furniture Research
+  </p>
+  <p>Prices current as of May 2026. Verify before purchasing. Research sources: XHS 小红书, Lemon8 SG, Castlery, BedAndBasics, IKEA Singapore.</p>
+  <p style="margin-top:0.5rem;">
+    <a href="https://github.com/gaoyan198/parc-este-furniture" target="_blank">View on GitHub ↗</a>
+  </p>
+</footer>
+
+</body>
+</html>
