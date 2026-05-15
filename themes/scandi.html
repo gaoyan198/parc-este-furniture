@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Scandi · Parc Esta Furniture</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--cream:#F7F3EE;--ink:#1E1610;--ink-lt:#5C4A38;--ink-xs:#9A8878;--border:#E2D5C3;--walnut:#6B4C2A;--white:#fff}
+body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--cream);color:var(--ink);font-size:15px;line-height:1.7}
+a{color:var(--walnut);text-decoration:none}
+a:hover{text-decoration:underline}
+.theme-nav{position:sticky;top:0;z-index:200;background:#1E1610;color:#fff;padding:0 clamp(1rem,5vw,3rem);display:flex;align-items:center;justify-content:space-between;height:42px;font-size:.74rem}
+.theme-nav-home{color:rgba(255,255,255,.65);font-weight:600;letter-spacing:.04em;text-decoration:none;font-family:'Cormorant Garamond',serif;font-size:.95rem}
+.theme-nav-home:hover{color:#fff}
+.theme-nav-links{display:flex;gap:1.4rem;list-style:none;align-items:center}
+.theme-nav-links a{color:rgba(255,255,255,.55);font-weight:600;letter-spacing:.08em;text-transform:uppercase;font-size:.66rem;text-decoration:none;padding:.4rem 0;border-bottom:2px solid transparent;transition:color .15s,border-color .15s}
+.theme-nav-links a.active{color:#fff;border-bottom-color:#D4C4B0}
+.theme-nav-links a:hover{color:#fff}
+@media(max-width:700px){.theme-nav-links{gap:.85rem}.theme-nav-links a{font-size:.6rem}.theme-nav-home{display:none}}
+
+.coming{min-height:calc(100vh - 42px);display:flex;align-items:center;justify-content:center;padding:3rem 1.5rem;text-align:center}
+.coming-inner{max-width:560px}
+.coming-eyebrow{font-size:.72rem;font-weight:600;text-transform:uppercase;letter-spacing:.2em;color:var(--walnut);margin-bottom:1.5rem}
+.coming-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2.4rem,6vw,4rem);font-weight:400;line-height:1.05;margin-bottom:1.5rem}
+.coming-title em{font-style:italic;color:var(--walnut)}
+.coming-body{color:var(--ink-lt);font-size:1.02rem;line-height:1.7;margin-bottom:1.5rem}
+.coming-palette{display:flex;justify-content:center;gap:.5rem;margin-bottom:2.5rem}
+.coming-palette .sw{width:32px;height:32px;border-radius:50%;border:1px solid rgba(0,0,0,.08)}
+.coming-summary{background:var(--white);border:1px solid var(--border);border-radius:14px;padding:1.5rem 1.6rem;text-align:left;font-size:.88rem;color:var(--ink-lt);margin-bottom:2rem}
+.coming-summary h3{font-size:.7rem;text-transform:uppercase;letter-spacing:.14em;color:var(--walnut);font-weight:700;margin-bottom:.7rem}
+.coming-summary ul{list-style:none;display:grid;gap:.4rem}
+.coming-summary li{padding-left:1.2rem;position:relative;font-size:.85rem}
+.coming-summary li::before{content:"·";position:absolute;left:.3rem;color:var(--walnut);font-weight:700}
+.coming-back{display:inline-block;padding:.7rem 1.4rem;background:var(--ink);color:#fff;border-radius:100px;font-size:.72rem;font-weight:600;text-transform:uppercase;letter-spacing:.12em}
+.coming-back:hover{background:var(--walnut);text-decoration:none;color:#fff}
+.peek{display:inline-block;margin-left:.6rem;padding:.7rem 1.4rem;border:1px solid var(--border);border-radius:100px;font-size:.72rem;font-weight:600;text-transform:uppercase;letter-spacing:.12em;color:var(--ink-lt)}
+.peek:hover{border-color:var(--walnut);color:var(--walnut);text-decoration:none}
+</style>
+</head>
+<body>
+
+<div class="theme-nav">
+  <a href="../index.html" class="theme-nav-home">Parc Esta · Furniture Research</a>
+  <ul class="theme-nav-links">
+    <li><a href="japandi.html">Japandi</a></li>
+    <li><a href="wabi-sabi.html">Wabi-Sabi</a></li>
+    <li><a href="scandi.html" class="active">Scandi</a></li>
+    <li><a href="modern-tropical.html">Tropical</a></li>
+    <li><a href="mid-century.html">Mid-Century</a></li>
+  </ul>
+</div>
+
+<section class="coming">
+  <div class="coming-inner">
+    <p class="coming-eyebrow">Research in progress</p>
+    <h1 class="coming-title">A <em>Scandi</em> Home<br>at Parc Esta</h1>
+    <p class="coming-body">Bright Nordic light. White walls, blonde birch and ash, sheepskin throws, hygge layering. The brightest, airiest version of this 743 sq ft unit. Detailed research and product picks are being compiled.</p>
+    <div class="coming-palette">
+      <span class="sw" style="background:#FFFFFF" title="White"></span>
+      <span class="sw" style="background:#F2EBDD" title="Cream"></span>
+      <span class="sw" style="background:#D5C9AF" title="Blonde wood"></span>
+      <span class="sw" style="background:#9A8060" title="Honey"></span>
+    </div>
+    <div class="coming-summary">
+      <h3>Planned coverage</h3>
+      <ul>
+        <li>Bed: IKEA MALM birch / GJÖRA / HEMNES + Scanteak picks, storage focus</li>
+        <li>Sofa: Castlery Lin / IKEA SÖDERHAMN / Burrow loveseat, light fabric</li>
+        <li>Dining: IKEA EKEDALEN birch + RÖNNINGE chairs / SKOGSTA white-wash</li>
+        <li>Toilet: TOTO CW162 + chrome / brushed nickel accessories</li>
+      </ul>
+    </div>
+    <a href="japandi.html" class="coming-back">Browse the completed Japandi page →</a>
+    <a href="../index.html" class="peek">← Back to all styles</a>
+  </div>
+</section>
+
+</body>
+</html>

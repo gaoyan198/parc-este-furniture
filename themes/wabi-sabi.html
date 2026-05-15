@@ -1,0 +1,1064 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Wabi-Sabi · Parc Esta Furniture</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  /* Wabi-Sabi palette: deeper, more earthy, more weathered */
+  --cream:#EFE7DA;--paper:#F6EFE2;--walnut:#5C3F22;--walnut-lt:#7A5A3A;
+  --walnut-bg:#E1D2BB;--clay:#B89A7A;--ash:#C7B499;--border:#D9C9AE;
+  --ink:#2A1F15;--ink-lt:#5C4A38;--ink-xs:#9A8878;--white:#FBF5EA;
+  --green:#5A6A4A;--green-bg:#E5E8DC;--blue:#574330;--blue-bg:#EFE5D2;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--cream);color:var(--ink);font-size:15px;line-height:1.7}
+a{color:var(--walnut);text-decoration:none}
+a:hover{text-decoration:underline}
+
+/* NAV */
+.theme-nav{position:sticky;top:0;z-index:200;background:#1E1610;color:#fff;padding:0 clamp(1rem,5vw,3rem);display:flex;align-items:center;justify-content:space-between;height:42px;font-size:.74rem}
+.theme-nav-home{color:rgba(255,255,255,.65);font-weight:600;letter-spacing:.04em;text-decoration:none;font-family:'Cormorant Garamond',serif;font-size:.95rem}
+.theme-nav-home:hover{color:#fff}
+.theme-nav-links{display:flex;gap:1.4rem;list-style:none;align-items:center}
+.theme-nav-links a{color:rgba(255,255,255,.55);font-weight:600;letter-spacing:.08em;text-transform:uppercase;font-size:.66rem;text-decoration:none;padding:.4rem 0;border-bottom:2px solid transparent;transition:color .15s,border-color .15s}
+.theme-nav-links a.active{color:#fff;border-bottom-color:#D4C4B0}
+.theme-nav-links a:hover{color:#fff}
+@media(max-width:700px){.theme-nav-links{gap:.85rem}.theme-nav-links a{font-size:.6rem}.theme-nav-home{display:none}}
+nav{position:sticky;top:42px;z-index:100;background:rgba(247,243,238,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 clamp(1rem,5vw,3rem);display:flex;align-items:center;justify-content:space-between;height:52px}
+.nav-brand{font-family:'Cormorant Garamond',serif;font-size:1rem;font-weight:500;color:var(--walnut);letter-spacing:.04em}
+.nav-links{display:flex;gap:1.25rem;list-style:none}
+.nav-links a{font-size:.72rem;font-weight:600;color:var(--ink-lt);letter-spacing:.08em;text-transform:uppercase}
+.nav-links a:hover{color:var(--walnut);text-decoration:none}
+
+/* HERO */
+.hero{padding:clamp(3rem,8vw,5rem) clamp(1rem,5vw,3rem) 2rem;max-width:920px;margin:0 auto}
+.eyebrow{font-size:.7rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--clay);margin-bottom:.75rem}
+h1{font-family:'Cormorant Garamond',serif;font-size:clamp(2.4rem,6vw,3.8rem);font-weight:300;line-height:1.15;margin-bottom:1rem}
+h1 em{font-style:italic;color:var(--walnut)}
+.hero-meta{display:flex;flex-wrap:wrap;gap:.4rem 1.25rem;font-size:.8rem;color:var(--ink-xs);margin-bottom:2rem}
+.hero-meta span::before{content:'·';margin-right:.5rem}
+.palette{display:flex;flex-wrap:wrap;gap:.75rem;margin-bottom:2rem}
+.swatch{display:flex;align-items:center;gap:.4rem;font-size:.72rem;color:var(--ink-lt)}
+.swatch-dot{width:26px;height:26px;border-radius:50%;border:1px solid rgba(0,0,0,.08);flex-shrink:0}
+
+/* BUDGET BAR */
+.wrap{max-width:920px;margin:0 auto;padding:0 clamp(1rem,5vw,3rem)}
+.budget-bar{background:var(--white);border:1px solid var(--border);border-radius:16px;padding:1.5rem 2rem;margin-bottom:3rem}
+.budget-bar-label{font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--ink-xs);margin-bottom:1rem}
+.budget-items{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:1rem;margin-bottom:1.25rem}
+.bi-label{font-size:.68rem;color:var(--ink-xs)}
+.bi-name{font-size:.78rem;font-weight:500;color:var(--ink-lt);line-height:1.3;margin:.1rem 0}
+.bi-price{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:500;color:var(--walnut)}
+.budget-total{border-top:1px solid var(--border);padding-top:1rem;display:flex;justify-content:space-between;align-items:center}
+.budget-total-label{font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--ink-lt)}
+.budget-total-price{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:500;color:var(--walnut)}
+
+/* SECTION */
+section{max-width:920px;margin:0 auto;padding:0 clamp(1rem,5vw,3rem) 3.5rem}
+.sec-head{display:flex;align-items:baseline;gap:1rem;margin-bottom:1.75rem;padding-bottom:1rem;border-bottom:1px solid var(--border)}
+.sec-num{font-family:'Cormorant Garamond',serif;font-size:3.2rem;font-weight:300;color:var(--ash);line-height:1}
+.sec-eyebrow{font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--clay)}
+.sec-title{font-family:'Cormorant Garamond',serif;font-size:clamp(1.5rem,3.5vw,2.1rem);font-weight:400;line-height:1.2}
+
+/* COMMUNITY BOX */
+.community{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:1.25rem 1.5rem;margin-bottom:1.5rem}
+.community-label{font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--walnut);margin-bottom:.75rem;display:flex;align-items:center;gap:.5rem}
+.community-label::after{content:'';flex:1;height:1px;background:var(--border)}
+.community ul{list-style:none}
+.community li{padding:.45rem 0;border-bottom:1px solid var(--border);font-size:.82rem;color:var(--ink-lt);display:flex;gap:.6rem}
+.community li:last-child{border-bottom:none;padding-bottom:0}
+.community li::before{content:'小';flex-shrink:0;width:20px;height:20px;background:var(--walnut-bg);color:var(--walnut);border-radius:5px;display:flex;align-items:center;justify-content:center;font-size:.6rem;font-weight:700;margin-top:.2rem}
+.src-links{font-size:.72rem;color:var(--ink-xs);margin-top:.75rem;display:flex;flex-wrap:wrap;gap:.4rem .75rem}
+.src-links a{color:var(--walnut-lt)}
+
+/* CARDS */
+.card{background:var(--white);border:1px solid var(--border);border-radius:14px;overflow:hidden;margin-bottom:1rem}
+.card.top{border-left:3px solid var(--walnut)}
+.card.runner{border-left:3px solid var(--ash)}
+.card.alt{border-left:3px solid var(--green)}
+.card-head{display:flex;align-items:flex-start;justify-content:space-between;gap:1rem;padding:1.25rem 1.5rem 1rem;border-bottom:1px solid var(--border)}
+.badge-row{display:flex;gap:.4rem;margin-bottom:.4rem;flex-wrap:wrap}
+.badge{display:inline-block;font-size:.6rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;padding:.2em .65em;border-radius:100px}
+.b-top{background:var(--walnut);color:#fff}
+.b-runner{background:var(--walnut-bg);color:var(--walnut)}
+.b-alt{background:var(--green-bg);color:var(--green)}
+.b-save{background:#EBF0F8;color:#3A5A8A}
+.card-name{font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-weight:500;color:var(--ink);line-height:1.2}
+.card-sub{font-size:.75rem;color:var(--ink-xs);margin-top:.1rem}
+.card-price-wrap{text-align:right;flex-shrink:0}
+.card-price-label{font-size:.6rem;text-transform:uppercase;letter-spacing:.1em;color:var(--ink-xs)}
+.card-price{font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:500;color:var(--walnut);line-height:1}
+.card-body{padding:1.25rem 1.5rem}
+
+/* PRODUCT IMAGE */
+.card-image{position:relative;width:100%;aspect-ratio:4/3;background:var(--cream);overflow:hidden;border-bottom:1px solid var(--border)}
+.card-image img{width:100%;height:100%;object-fit:cover;object-position:center;display:block;transition:transform .6s ease}
+.card-image:hover img{transform:scale(1.03)}
+.card-image .img-caption{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(180deg,rgba(0,0,0,0) 0%,rgba(0,0,0,.55) 100%);color:#fff;font-size:.65rem;letter-spacing:.06em;padding:1.6rem .9rem .55rem;text-transform:uppercase;font-weight:600;opacity:.92}
+
+/* SPEC TABLE */
+.specs{display:grid;grid-template-columns:auto 1fr;border:1px solid var(--border);border-radius:10px;overflow:hidden;margin-bottom:1.25rem;font-size:.8rem}
+.sk{background:var(--cream);padding:.5rem .9rem;font-weight:600;color:var(--ink-lt);border-bottom:1px solid var(--border)}
+.sv{background:var(--white);padding:.5rem .9rem;color:var(--ink);border-bottom:1px solid var(--border)}
+.sk:last-of-type,.sv:last-of-type{border-bottom:none}
+
+/* CALLOUT BLOCKS */
+.why{background:var(--cream);border-left:3px solid var(--walnut);border-radius:0 8px 8px 0;padding:.9rem 1.1rem;margin-bottom:1rem;font-size:.82rem;color:var(--ink-lt)}
+.why strong{color:var(--ink)}
+.why-label,.tip-label{font-size:.62rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;margin-bottom:.3rem}
+.why-label{color:var(--walnut)}
+.tip{background:var(--green-bg);border-left:3px solid var(--green);border-radius:0 8px 8px 0;padding:.9rem 1.1rem;margin-bottom:1rem;font-size:.82rem;color:#3A5A3A}
+.tip-label{color:var(--green)}
+.note{background:var(--blue-bg);border-left:3px solid var(--blue);border-radius:0 8px 8px 0;padding:.9rem 1.1rem;margin-bottom:1rem;font-size:.82rem;color:#2A3A5A}
+
+/* COMPANIONS */
+.companion-label{font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--ink-xs);margin:.9rem 0 .4rem}
+.companion{padding-left:1rem;font-size:.8rem;color:var(--ink-lt)}
+.companion li{margin-bottom:.25rem}
+
+/* ACTION PLAN */
+.action-list{list-style:none}
+.action-item{display:flex;gap:.9rem;padding:.9rem 0;border-bottom:1px solid var(--border);font-size:.82rem}
+.action-item:last-child{border-bottom:none}
+.action-num{flex-shrink:0;width:26px;height:26px;border-radius:50%;background:var(--walnut);color:#fff;display:flex;align-items:center;justify-content:center;font-size:.68rem;font-weight:700;margin-top:.15rem}
+.action-text{color:var(--ink-lt)}
+.action-text strong{color:var(--ink)}
+.action-where{font-size:.7rem;color:var(--ink-xs);margin-top:.1rem}
+
+/* SCENARIOS */
+.scenarios{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1rem;margin-bottom:2rem}
+.sc{background:var(--white);border:1px solid var(--border);border-radius:12px;overflow:hidden}
+.sc-head{padding:.9rem 1.1rem .7rem;border-bottom:1px solid var(--border)}
+.sc-letter{font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:300;color:var(--ash);line-height:1}
+.sc-name{font-size:.75rem;font-weight:600;color:var(--ink-lt)}
+.sc-body{padding:.9rem 1.1rem}
+.sc-line{display:flex;justify-content:space-between;font-size:.76rem;padding:.18rem 0;border-bottom:1px dotted var(--border);color:var(--ink-lt)}
+.sc-line:last-of-type{border-bottom:none}
+.sc-line-name{flex:1;padding-right:.4rem;line-height:1.3}
+.sc-line-price{font-weight:600;color:var(--ink);white-space:nowrap}
+.sc-total{display:flex;justify-content:space-between;align-items:center;padding:.75rem 1.1rem;background:var(--cream);border-top:1px solid var(--border)}
+.sc-total-label{font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--ink-xs)}
+.sc-total-price{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:500;color:var(--walnut)}
+
+/* COHESION */
+.cohesion-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:.9rem;margin-bottom:2rem}
+.coh{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:1.1rem}
+.coh-icon{font-size:1.2rem;margin-bottom:.4rem}
+.coh-title{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--walnut);margin-bottom:.35rem}
+.coh-desc{font-size:.78rem;color:var(--ink-lt);line-height:1.5}
+
+/* SOURCES */
+.sources-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem;margin-bottom:2rem}
+.src-card{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:1.1rem 1.25rem}
+.src-card-title{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--ink-lt);margin-bottom:.75rem;padding-bottom:.5rem;border-bottom:1px solid var(--border)}
+.src-card ul{list-style:none}
+.src-card li{padding:.3rem 0;border-bottom:1px solid var(--border);font-size:.78rem}
+.src-card li:last-child{border-bottom:none;padding-bottom:0}
+.src-card a{color:var(--walnut-lt)}
+.src-card a:hover{color:var(--walnut)}
+.src-tag{display:inline-block;font-size:.58rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;padding:.1em .5em;border-radius:4px;margin-right:.3rem;vertical-align:middle}
+.tag-xhs{background:var(--walnut-bg);color:var(--walnut)}
+.tag-lemon{background:#FFF0F0;color:#C0404A}
+.tag-article{background:var(--blue-bg);color:var(--blue)}
+.tag-shop{background:var(--green-bg);color:var(--green)}
+
+/* DIVIDER */
+hr{border:none;border-top:1px solid var(--border);margin:2rem 0}
+
+/* FOOTER */
+footer{text-align:center;padding:3rem 1rem;border-top:1px solid var(--border);font-size:.75rem;color:var(--ink-xs)}
+footer p+p{margin-top:.4rem}
+
+/* RESPONSIVE */
+@media(max-width:600px){
+  .nav-links{display:none}
+  .card-head{flex-direction:column}
+  .card-price-wrap{text-align:left}
+}
+</style>
+</head>
+<body>
+
+<div class="theme-nav">
+  <a href="../index.html" class="theme-nav-home">Parc Esta · Furniture Research</a>
+  <ul class="theme-nav-links">
+    <li><a href="japandi.html">Japandi</a></li>
+    <li><a href="wabi-sabi.html" class="active">Wabi-Sabi</a></li>
+    <li><a href="scandi.html">Scandi</a></li>
+    <li><a href="modern-tropical.html">Tropical</a></li>
+    <li><a href="mid-century.html">Mid-Century</a></li>
+  </ul>
+</div>
+
+<nav>
+  <span class="nav-brand">Parc Esta · Type BP5</span>
+  <ul class="nav-links">
+    <li><a href="#bed">Bed</a></li>
+    <li><a href="#sofa">Sofa</a></li>
+    <li><a href="#dining">Dining</a></li>
+    <li><a href="#toilet">Toilet</a></li>
+    <li><a href="#style">Style</a></li>
+    <li><a href="#plan">Action Plan</a></li>
+    <li><a href="#sources">Sources</a></li>
+  </ul>
+</nav>
+
+<header class="hero">
+  <p class="eyebrow">Furniture &amp; Fittings Research Report</p>
+  <h1>A <em>Wabi-Sabi</em> Home<br>at Parc Esta</h1>
+  <div class="hero-meta">
+    <span>Type BP5 · 69 sqm / 743 sq ft</span>
+    <span>Sims Avenue, Eunos</span>
+    <span>MCL Land</span>
+    <span>Wabi-Sabi · 侘寂</span>
+  </div>
+  <div class="palette">
+    <div class="swatch"><div class="swatch-dot" style="background:#3A2A1E"></div><span>Charred</span></div>
+    <div class="swatch"><div class="swatch-dot" style="background:#7A5C3A"></div><span>Burnt umber</span></div>
+    <div class="swatch"><div class="swatch-dot" style="background:#B89A7A"></div><span>Clay</span></div>
+    <div class="swatch"><div class="swatch-dot" style="background:#D5C2A4"></div><span>Stone</span></div>
+    <div class="swatch"><div class="swatch-dot" style="background:#E8DFD2"></div><span>Bone</span></div>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="budget-bar">
+    <div class="budget-bar-label">Scenario A · Recommended Total (all top picks)</div>
+    <div class="budget-items">
+      <div><div class="bi-label">Bed + Frame</div><div class="bi-name">Originals Isla Teak with Rope</div><div class="bi-price">$2,980</div></div>
+      <div><div class="bi-label">Sofa</div><div class="bi-name">Originals Sloopy Flax 2.5-Seater</div><div class="bi-price">$5,680</div></div>
+      <div><div class="bi-label">Sofa Accents</div><div class="bi-name">Vintage stool + linen throw</div><div class="bi-price">~$280</div></div>
+      <div><div class="bi-label">Dining</div><div class="bi-name">IKEA SKOGSTA Acacia Set</div><div class="bi-price">~$799</div></div>
+      <div><div class="bi-label">Toilet Bowl</div><div class="bi-name">TOTO CW162 Wall-Hung</div><div class="bi-price">$1,101</div></div>
+      <div><div class="bi-label">Bathroom Acc.</div><div class="bi-name">Aged bronze set</div><div class="bi-price">~$220</div></div>
+    </div>
+    <div class="budget-total">
+      <div class="budget-total-label">Estimated Total</div>
+      <div class="budget-total-price">~$11,060</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════ BED ═══════════════ -->
+<section id="bed">
+  <div class="sec-head">
+    <div class="sec-num">01</div>
+    <div>
+      <div class="sec-eyebrow">Splurge · Up to $4,000 (frame + mattress) · Master Bedroom</div>
+      <div class="sec-title">Bed + Bedframe</div>
+    </div>
+  </div>
+
+  <div class="community">
+    <div class="community-label">小红书 · Lemon8 SG · Community Insights</div>
+    <ul>
+      <li><strong>Wabi-Sabi (侘寂) prizes solid teak with visible grain and natural marks</strong> — XHS home reveals consistently feature Grade A Indonesian teak, rope detailing, and rattan accents. No veneer. The wood must be allowed to age and weather.</li>
+      <li><strong>Singapore-specific wabi-sabi retailers</strong> — Originals Furniture (Tarita / Tolv collections), Journey East (dBodhi reclaimed teak), LOFT HOME (premium tables), and Picket&Rail (custom solid wood) are the four retailers dominating SG wabi-sabi feeds.</li>
+      <li><strong>Storage trade-off</strong> — pure wabi-sabi favours headboard-defined statement pieces over storage. If under-bed storage is non-negotiable, the Picket&Rail custom tatami platform is the closest compromise — solid hardwood with concealed storage.</li>
+      <li><strong>Rope-detailed headboards are having a moment</strong> — XHS hashtag #手编绳床头 (handwoven rope headboard) shows the Tarita Isla form as the defining shape: Danish cord weaving as a textile element where Japandi would have wood slats.</li>
+      <li><strong>"Imperfect is the point"</strong> — community advice is to embrace cracks, knots, and natural irregularity. Reject any retailer pitching "flawless" finish on teak — that defeats the philosophy.</li>
+    </ul>
+    <div class="src-links">
+      XHS searches:
+      <a href="https://www.xiaohongshu.com/search_result?keyword=%E4%BE%98%E5%AF%82%E9%A3%8E+%E5%BA%8A+%E6%8E%A8%E8%8D%90" target="_blank">侘寂风 床 推荐 ↗</a>
+      <a href="https://www.xiaohongshu.com/search_result?keyword=%E5%8E%9F%E6%9C%A8+%E5%BA%8A+%E6%96%B0%E5%8A%A0%E5%9D%A1" target="_blank">原木 床 新加坡 ↗</a>
+      <a href="https://www.xiaohongshu.com/search_result?keyword=%E6%9F%9A%E6%9C%A8+%E5%BA%8A%E6%9E%B6+%E6%96%B0%E5%8A%A0%E5%9D%A1" target="_blank">柚木 床架 新加坡 ↗</a>
+      · Lemon8:
+      <a href="https://www.lemon8-app.com/@renologist.sg/7437076542754243088?region=sg" target="_blank">Japandi / wabi-sabi design SG ↗</a>
+      · Article: <a href="https://megafurniture.sg/blogs/articles/wabi-sabi-hdb-interior-design" target="_blank">Ultimate Wabi-Sabi HDB Guide ↗</a>
+    </div>
+  </div>
+
+  <!-- Option 1 -->
+  <div class="card top">
+    <div class="card-image"><img src="../images/wabi-bed-isla.jpg" alt="Originals Isla Bed Frame Teak with Rope" loading="lazy"><div class="img-caption">Originals · Isla Bed Frame Teak with Rope (Tarita)</div></div>
+    <div class="card-head">
+      <div>
+        <div class="badge-row"><span class="badge b-top">Top Pick</span><span class="badge b-runner">Solid Grade A Teak</span><span class="badge b-runner">Handwoven Rope Headboard</span></div>
+        <div class="card-name">Originals Isla Bed Frame — Teak with Rope</div>
+        <div class="card-sub">Originals Furniture Singapore (Tarita) · Solid Grade A teak · Handwoven Danish cord headboard</div>
+      </div>
+      <div class="card-price-wrap">
+        <div class="card-price-label">Queen, from</div>
+        <div class="card-price">$2,980</div>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="specs">
+        <div class="sk">Dimensions</div><div class="sv">W162 × L207 × H100cm (Queen)</div>
+        <div class="sk">Material</div><div class="sv">Solid Grade A teak (no veneer) · Handwoven Danish cord headboard · Natural finish</div>
+        <div class="sk">Base / clearance</div><div class="sv">42cm base height · 22cm clearance underneath</div>
+        <div class="sk">Storage</div><div class="sv">None built-in — pure aesthetic statement piece. Pair with under-bed storage boxes (~22cm tall) to use the clearance.</div>
+        <div class="sk">Warranty</div><div class="sv">5-year structural warranty</div>
+        <div class="sk">Delivery</div><div class="sv">Flat-packed with on-site assembly included</div>
+        <div class="sk">Buy</div><div class="sv"><a href="https://www.originals.com.sg/products/isla-bed-frame-teak-with-rope" target="_blank">originals.com.sg → Isla Teak with Rope ↗</a></div>
+      </div>
+      <div class="why">
+        <div class="why-label">Why this is the wabi-sabi defining piece</div>
+        The rope-wrapped headboard is <strong>the</strong> form that defines this style on XHS — handwoven Danish cord on a teak frame. It introduces a textile element where most beds offer wood or upholstery, and the natural fibre will age and weather over years. Grade A solid teak is the highest available quality (not veneer), and teak's natural oils make it remarkably suited to Singapore humidity. At $2,980 plus a quality mattress, you stay well within the $4,000 bed budget while landing the most architecturally interesting piece in this entire research.
+      </div>
+      <div class="companion-label">Style with (budget remaining ~$1,000 from $4,000 bed budget)</div>
+      <ul class="companion">
+        <li>Premium mattress (Emma Original Queen): ~$800–1,200</li>
+        <li>Under-bed canvas storage boxes (22cm tall) — MUJI or Daiso clear types: ~$30 each</li>
+        <li>Raw linen bedding in stone, clay, or unbleached — Society Limonta / In Bed / MUJI</li>
+        <li>Single ceramic table lamp (hand-thrown if possible) on a teak stool nightstand</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Option 2 -->
+  <div class="card runner">
+    <div class="card-image"><img src="../images/wabi-bed-luna.jpg" alt="Originals Luna Bed Frame Teak Natural" loading="lazy"><div class="img-caption">Originals · Luna Bed Frame Teak Natural (Tarita)</div></div>
+    <div class="card-head">
+      <div>
+        <div class="badge-row"><span class="badge b-runner">Option 2</span><span class="badge b-runner">Sculptural Teak</span><span class="badge b-runner">Soft Curves</span></div>
+        <div class="card-name">Originals Luna Bed Frame — Teak Natural</div>
+        <div class="card-sub">Originals Furniture Singapore (Tarita) · Ethically sourced Indonesian teak · Soft curved form</div>
+      </div>
+      <div class="card-price-wrap">
+        <div class="card-price-label">Queen, from</div>
+        <div class="card-price">$3,380</div>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="specs">
+        <div class="sk">Dimensions</div><div class="sv">W168 × L200 × H110cm (Queen)</div>
+        <div class="sk">Material</div><div class="sv">Premium sustainably sourced Grade A Indonesian teak · Natural finish</div>
+        <div class="sk">Base / clearance</div><div class="sv">35cm base height · 16cm clearance underneath</div>
+        <div class="sk">Mattress space</div><div class="sv">Fits 153 × 190cm mattress</div>
+        <div class="sk">Design</div><div class="sv">Tropical sculptural curves — softer, more organic silhouette than rectangular tatami forms</div>
+        <div class="sk">Warranty</div><div class="sv">5-year structural warranty</div>
+        <div class="sk">Buy</div><div class="sv"><a href="https://www.originals.com.sg/products/luna-bed-frame-teak-natural" target="_blank">originals.com.sg → Luna Teak Natural ↗</a></div>
+      </div>
+      <div class="why">
+        <div class="why-label">When to choose the Luna over the Isla</div>
+        If you want a softer, more sculptural form rather than the rope-wrapped statement. The Luna's curves reference Indonesian tropical furniture traditions — slightly more "resort" feeling, still entirely wabi-sabi. $400 more than the Isla, taller headboard (110cm vs 100cm), and the natural teak grain takes centre stage without competing textile elements. Best if your bedroom has high ceilings and you want a strong vertical anchor.
+      </div>
+      <div class="tip">
+        <div class="tip-label">Trade-off vs Isla</div>
+        Less distinctive on first glance (no rope feature). Lower clearance (16cm vs 22cm) means smaller under-bed storage boxes only. More expensive.
+      </div>
+    </div>
+  </div>
+
+  <!-- Option 3 -->
+  <div class="card alt">
+    <div class="card-image"><img src="../images/wabi-bed-tatami.jpg" alt="Picket&amp;Rail Custom Tatami Platform Storage Bed" loading="lazy"><div class="img-caption">Picket&amp;Rail · Custom Tatami Platform Storage Bed</div></div>
+    <div class="card-head">
+      <div>
+        <div class="badge-row"><span class="badge b-alt">Option 3</span><span class="badge b-alt">If Storage is Non-Negotiable</span><span class="badge b-alt">Fully Customisable</span></div>
+        <div class="card-name">Picket&amp;Rail Custom Tatami Platform Storage Bed</div>
+        <div class="card-sub">Picket&amp;Rail Singapore · Custom solid wood platform · Box / drawer / cabinet storage configurable</div>
+      </div>
+      <div class="card-price-wrap">
+        <div class="card-price-label">Queen, est.</div>
+        <div class="card-price">~$1,800+</div>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="specs">
+        <div class="sk">Dimensions</div><div class="sv">Fully customisable — Super Single, Single, Queen, King</div>
+        <div class="sk">Material</div><div class="sv">Solid hardwood (specify Indonesian teak or solid oak at order) · Formaldehyde-free construction</div>
+        <div class="sk">Storage type</div><div class="sv">Customisable — Box storage, Drawer storage, Swing door cabinet storage, or any mix</div>
+        <div class="sk">Load capacity</div><div class="sv">Engineered up to 650kg/m² — among the strongest platforms on the SG market</div>
+        <div class="sk">Showroom</div><div class="sv">35 Senang Crescent · WhatsApp for custom quote</div>
+        <div class="sk">Buy</div><div class="sv"><a href="https://picketandrail.com/pages/tatami-storage-beds" target="_blank">picketandrail.com → Tatami Storage Beds ↗</a></div>
+      </div>
+      <div class="why">
+        <div class="why-label">When to choose this over the Originals statement beds</div>
+        If under-bed storage is essential and you want the wabi-sabi solid hardwood aesthetic. Visit the Senang Crescent showroom with your dimensions and select your wood type, storage configuration, and platform height. The downside vs Isla/Luna is the loss of the statement headboard form — Picket&Rail platforms are quieter, more architectural. Pair with a wall-mounted teak slat panel or a vintage Indonesian textile hung as a headboard to keep the wabi-sabi character.
+      </div>
+      <div class="tip">
+        <div class="tip-label">Worth a showroom visit anyway</div>
+        Even if you go with Isla or Luna, Picket&Rail's Senang Crescent showroom is the best place in SG to see solid Indonesian teak in person. Useful for calibrating expectations on grain, weight, and finish before committing $3,000+ to an Originals piece.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ SOFA ═══════════════ -->
+<section id="sofa">
+  <div class="sec-head">
+    <div class="sec-num">02</div>
+    <div>
+      <div class="sec-eyebrow">Splurge · Living Room</div>
+      <div class="sec-title">Sofa</div>
+    </div>
+  </div>
+
+  <div class="community">
+    <div class="community-label">小红书 · Lemon8 SG · Community Insights</div>
+    <ul>
+      <li><strong>Skirted, deep-seat fabric sofas are the wabi-sabi defining form</strong> — generously padded, feather-wrapped seat cushions, slip-covered in raw or washed linen (flax, oat, stone). The Tolv "Sloopy" sofa appears in nearly every Singapore wabi-sabi home reveal.</li>
+      <li><strong>Linen ages into wabi-sabi</strong> — the philosophy values fabric that softens, slubs, and creases with use. Crisp performance fabrics actively work against the aesthetic. Accept the wrinkles.</li>
+      <li><strong>Aniline leather is acceptable</strong> — wabi-sabi honours patina. Full-grain aniline leather (Tolv "Pensive") develops a character map of where you sit, where light hits, where hands rest. Pigmented or "easy-care" leather doesn't age and is rejected by the style.</li>
+      <li><strong>Composition over modularity</strong> — XHS wabi-sabi living rooms favour a single substantial fabric sofa + one vintage wooden stool or low rattan chair, not a modular sectional. The empty space around the sofa <em>is</em> the design.</li>
+      <li><strong>Castlery Hamilton is borderline-acceptable</strong> as a budget alternative — the stainless steel legs read too clean for pure wabi-sabi. If chosen, swap to walnut tapered legs (Castlery offers this option on some collections, or use third-party leg replacements).</li>
+    </ul>
+    <div class="src-links">
+      XHS:
+      <a href="https://www.xiaohongshu.com/search_result?keyword=%E4%BE%98%E5%AF%82%E9%A3%8E+%E6%B2%99%E5%8F%91+%E6%8E%A8%E8%8D%90" target="_blank">侘寂风 沙发 推荐 ↗</a>
+      <a href="https://www.xiaohongshu.com/search_result?keyword=%E4%BA%9A%E9%BA%BB+%E6%B2%99%E5%8F%91+%E6%96%B0%E5%8A%A0%E5%9D%A1" target="_blank">亚麻 沙发 新加坡 ↗</a>
+      <a href="https://www.xiaohongshu.com/search_result?keyword=%E5%8E%9F%E6%9C%A8%E9%A3%8E+%E5%AE%A2%E5%8E%85" target="_blank">原木风 客厅 ↗</a>
+      · Lemon8:
+      <a href="https://www.lemon8-app.com/@renologist.sg/7437076542754243088?region=sg" target="_blank">Japandi / wabi-sabi design trend SG ↗</a>
+      · Article: <a href="https://www.originals.com.sg/collections/wabi-sabi" target="_blank">Originals Wabi-Sabi Collection guide ↗</a>
+    </div>
+  </div>
+
+  <div class="note">
+    <strong>Room dimension note:</strong> The floor plan labels "2.6m" and "2.0m" in the living area — likely partial references, not full room dimensions. <strong>Measure your actual space before purchasing.</strong> All options below are sized conservatively.
+  </div>
+
+  <!-- Option 1 -->
+  <div class="card top">
+    <div class="card-image"><img src="../images/wabi-sofa-sloopy.jpg" alt="Originals Sloopy Fabric Sofa 2.5-Seater Flax" loading="lazy"><div class="img-caption">Originals · Sloopy Fabric Sofa 2.5-Seater (Flax linen, by Tolv)</div></div>
+    <div class="card-head">
+      <div>
+        <div class="badge-row"><span class="badge b-top">Top Pick</span><span class="badge b-runner">Feather-Wrapped</span><span class="badge b-runner">Pure Flax Linen</span></div>
+        <div class="card-name">Originals Sloopy Fabric Sofa 2.5-Seater — Flax</div>
+        <div class="card-sub">Originals Furniture Singapore (Tolv) · Linen "Flax" cover · Feather-wrapped cushions · Skirted base</div>
+      </div>
+      <div class="card-price-wrap">
+        <div class="card-price-label">2.5-Seater</div>
+        <div class="card-price">$5,680</div>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="specs">
+        <div class="sk">Dimensions</div><div class="sv">W203 × D97 × H93cm (2.5-seater)</div>
+        <div class="sk">Seat depth / height</div><div class="sv">Seat depth 90cm · Seat height 44cm — exceptionally deep, lounge-style</div>
+        <div class="sk">Fabric</div><div class="sv">Linen, "Flax" colour — natural, breathable, develops character with age</div>
+        <div class="sk">Cushions</div><div class="sv">Feather-wrapped seat + back · 6 scatter cushions included</div>
+        <div class="sk">Frame</div><div class="sv">Kiln-dried engineered + solid wood frame · Casual skirted design</div>
+        <div class="sk">Covers</div><div class="sv">Fully removable, machine washable</div>
+        <div class="sk">Origin</div><div class="sv">Designed by Sketch · Made in Vietnam by Tolv</div>
+        <div class="sk">Lead time</div><div class="sv">In stock for 3-seater · 12–16 weeks for 2.5-seater</div>
+        <div class="sk">Buy</div><div class="sv"><a href="https://www.originals.com.sg/products/sloopy-fabric-sofa-3-seater-flax-230cm" target="_blank">originals.com.sg → Sloopy Flax ↗</a></div>
+      </div>
+      <div class="why">
+        <div class="why-label">Why this is THE wabi-sabi sofa for Parc Esta</div>
+        The Sloopy at 203cm fits beautifully into Parc Esta's compact living room with ~30cm clearance each side. Pure flax linen (not performance/treated) is essential to wabi-sabi — it slubs, creases, and softens into a unique surface over years. Feather-wrapped cushions sink and need fluffing — that imperfection is the philosophy in physical form. The skirted base hides the legs entirely, creating a grounded, settled silhouette. This is the most-photographed wabi-sabi sofa form on Singapore XHS.
+      </div>
+      <div class="tip">
+        <div class="tip-label">Linen care reality check</div>
+        Linen wrinkles. Linen shows where you sit. That's the point. If you'd rather your sofa look pristine every day, this style is wrong for you — choose Castlery Hamilton (Japandi page) instead.
+      </div>
+      <div class="companion-label">Complete the living room (~$6,200 total)</div>
+      <ul class="companion">
+        <li>Vintage wooden stool or low rattan side chair — ~$180–280 (Haji Lane vintage shops / Carousell)</li>
+        <li>Hand-thrown ceramic floor vase with a single dried branch — ~$80–150</li>
+        <li>Coarse jute or undyed wool rug 200×300cm — IKEA SINDAL ~$99 or Originals undyed wool ~$880</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Option 2 -->
+  <div class="card runner">
+    <div class="card-image"><img src="../images/wabi-sofa-pensive.jpg" alt="Originals Pensive Leather Sofa 2.5-Seater Arena" loading="lazy"><div class="img-caption">Originals · Pensive Leather Sofa 2.5-Seater (Arena aniline leather, by Tolv)</div></div>
+    <div class="card-head">
+      <div>
+        <div class="badge-row"><span class="badge b-runner">Option 2</span><span class="badge b-runner">Full-Grain Aniline Leather</span><span class="badge b-runner">Solid Oak Frame</span></div>
+        <div class="card-name">Originals Pensive Leather Sofa 2.5-Seater — Arena</div>
+        <div class="card-sub">Originals Furniture Singapore (Tolv) · Full-grain aniline leather · Solid American oak frame</div>
+      </div>
+      <div class="card-price-wrap">
+        <div class="card-price-label">2.5-Seater</div>
+        <div class="card-price">$5,080</div>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="specs">
+        <div class="sk">Dimensions</div><div class="sv">W200 × D84 × H80cm (2.5-seater)</div>
+        <div class="sk">Frame</div><div class="sv">Handcrafted from solid American oak — visible structural wood, no upholstery hides it</div>
+        <div class="sk">Leather</div><div class="sv">Full-grain, full-aniline leather · Sourced South America · Finished in Italian tanneries</div>
+        <div class="sk">Colour</div><div class="sv">"Arena" — warm sand-brown that darkens and develops patina with sunlight + use</div>
+        <div class="sk">3.5-seater</div><div class="sv">W240 × D84 × H80cm — $5,880 if room allows</div>
+        <div class="sk">Buy</div><div class="sv"><a href="https://www.originals.com.sg/products/pensive-leather-sofa-arena" target="_blank">originals.com.sg → Pensive Arena ↗</a></div>
+      </div>
+      <div class="why">
+        <div class="why-label">When to choose leather over linen</div>
+        Aniline leather is the only leather grade that develops <em>true</em> patina — it absorbs oils, lightens at high-touch points, darkens elsewhere. Over 5–10 years, the sofa acquires a topographical map of your life. That is wabi-sabi made literal. The Pensive's exposed solid oak frame is the other half of the story — wood and leather aging at different rates, both honoured. At $5,080 it's $600 less than the Sloopy and at 200cm fits Parc Esta's room slightly better.
+      </div>
+      <div class="tip">
+        <div class="tip-label">Leather + Singapore humidity</div>
+        Aniline leather needs occasional conditioning (Lexol or Leather Honey) — 2× per year is enough. It is not "easy care" leather. If you'd prefer a sofa that requires zero ritual, go with the Sloopy linen instead.
+      </div>
+    </div>
+  </div>
+
+  <!-- Option 3 -->
+  <div class="card alt">
+    <div class="card-image"><img src="../images/wabi-sofa-komo.jpg" alt="Originals Komo Modular 3-Seater Sofa" loading="lazy"><div class="img-caption">Originals · Komo Modular 3-Seater (NS)</div></div>
+    <div class="card-head">
+      <div>
+        <div class="badge-row"><span class="badge b-alt">Option 3</span><span class="badge b-alt">Value Wabi-Sabi</span><span class="badge b-alt">Modular</span></div>
+        <div class="card-name">Originals Komo Modular Sofa 3-Seater — Alabaster</div>
+        <div class="card-sub">Originals Furniture Singapore (NS) · Performance fabric Alabaster · Solid oak base</div>
+      </div>
+      <div class="card-price-wrap">
+        <div class="card-price-label">3-Seater</div>
+        <div class="card-price">$3,400</div>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="specs">
+        <div class="sk">Dimensions</div><div class="sv">W242 × D100 × H77cm (3-seater)</div>
+        <div class="sk">Frame</div><div class="sv">Handcrafted solid oak timber base</div>
+        <div class="sk">Cushions</div><div class="sv">Multilayered high-density memory foam · Feather foam lumbar inserts</div>
+        <div class="sk">Fabric</div><div class="sv">"Alabaster" performance fabric (also available in "Asgard")</div>
+        <div class="sk">Style</div><div class="sv">Modular contemporary — adaptable, more linear than Sloopy</div>
+        <div class="sk">Pre-order</div><div class="sv">Made to order · 16–20 weeks delivery</div>
+        <div class="sk">Buy</div><div class="sv"><a href="https://www.originals.com.sg/products/komo-modular-sofa-3-seater-bespoke" target="_blank">originals.com.sg → Komo Modular ↗</a></div>
+      </div>
+      <div class="why">
+        <div class="why-label">When to choose this</div>
+        If $5,000+ is over budget for a sofa but you still want the Originals quality and solid oak base. The Komo is $1,680–$2,280 cheaper than the leather/linen splurges while keeping the wood frame visible. <strong>Note on size:</strong> at 242cm the 3-seater is borderline-too-large for a 2.6m living room — only 9cm clearance each side. Confirm room width is ≥2.8m before ordering, otherwise step down to a 2-seater equivalent or choose the Sloopy 2.5.
+      </div>
+      <div class="tip">
+        <div class="tip-label">Wabi-Sabi purity caveat</div>
+        Performance fabric is the trade-off for the price. It won't soften and slub the way pure linen does — but it will outlast the Sloopy in heavy daily use. A compromise position rather than a doctrinaire pick.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ DINING ═══════════════ -->
+<section id="dining">
+  <div class="sec-head">
+    <div class="sec-num">03</div>
+    <div>
+      <div class="sec-eyebrow">Save · Dining Area</div>
+      <div class="sec-title">Dining Table + Chairs</div>
+    </div>
+  </div>
+
+  <div class="community">
+    <div class="community-label">小红书 · Lemon8 SG · Community Insights</div>
+    <ul>
+      <li><strong>Solid teak with visible character is the wabi-sabi dining table standard</strong> — knotted, marked, naturally edge-finished. Veneer is rejected by purists, but tolerated at low budgets if the grain is honest (acacia, rough-cut oak).</li>
+      <li><strong>IKEA SKOGSTA</strong> in acacia + black legs is the surprise budget hero on XHS — knotted character grain, solid wood throughout (not veneer), reads as a deliberate wabi-sabi statement rather than "IKEA on a budget."</li>
+      <li><strong>Originals Athena Teak</strong> is the splurge dining table for SG wabi-sabi — Grade A solid teak, no veneer, gentle curved edges. Most-photographed wabi-sabi dining piece in Singapore home reveals.</li>
+      <li><strong>Mismatched chairs are encouraged</strong> in wabi-sabi — pair a teak bench on one side with two vintage chairs on the other for asymmetry. Pure-set 4-chair arrangements are Scandi/Japandi territory.</li>
+      <li><strong>Round vs rectangular</strong> — wabi-sabi favours round tables when space allows (encourages slow eating, no head-of-table hierarchy). At Parc Esta's compact L-shaped dining, rectangular 140cm is the practical compromise.</li>
+    </ul>
+    <div class="src-links">
+      XHS:
+      <a href="https://www.xiaohongshu.com/search_result?keyword=%E4%BE%98%E5%AF%82%E9%A3%8E+%E9%A4%90%E6%A1%8C+%E6%8E%A8%E8%8D%90" target="_blank">侘寂风 餐桌 推荐 ↗</a>
+      <a href="https://www.xiaohongshu.com/search_result?keyword=%E5%8E%9F%E6%9C%A8+%E9%A4%90%E6%A1%8C+%E5%AE%9E%E6%9C%A8" target="_blank">原木 餐桌 实木 ↗</a>
+      <a href="https://www.xiaohongshu.com/search_result?keyword=%E6%9F%9A%E6%9C%A8+%E9%A4%90%E6%A1%8C+%E6%96%B0%E5%8A%A0%E5%9D%A1" target="_blank">柚木 餐桌 新加坡 ↗</a>
+      · Article:
+      <a href="https://www.originals.com.sg/collections/wabi-sabi" target="_blank">Originals Wabi-Sabi Collection ↗</a>
+      <a href="https://megafurniture.sg/blogs/articles/wabi-sabi-hdb-interior-design" target="_blank">Megafurniture Wabi-Sabi HDB guide ↗</a>
+    </div>
+  </div>
+
+  <!-- Option 1 -->
+  <div class="card top">
+    <div class="card-image"><img src="../images/wabi-dining-skogsta.jpg" alt="IKEA SKOGSTA Acacia Dining Table" loading="lazy"><div class="img-caption">IKEA · SKOGSTA Dining Table (Solid Acacia / Black)</div></div>
+    <div class="card-head">
+      <div>
+        <div class="badge-row"><span class="badge b-top">Top Pick</span><span class="badge b-save">Save Tier</span><span class="badge b-runner">Solid Acacia</span></div>
+        <div class="card-name">IKEA SKOGSTA Dining Table — Acacia / Black</div>
+        <div class="card-sub">IKEA Singapore · Solid acacia wood (not veneer) · Black powder-coated steel legs · Knotted character grain</div>
+      </div>
+      <div class="card-price-wrap">
+        <div class="card-price-label">Table only</div>
+        <div class="card-price">$329</div>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="specs">
+        <div class="sk">Dimensions</div><div class="sv">120cm version: 120 × 78 × 74cm (compact) · 235 × 100cm available for larger spaces</div>
+        <div class="sk">Material</div><div class="sv">Solid acacia top (not veneer) · Knotted, naturally varied grain · Powder-coated steel legs</div>
+        <div class="sk">Wabi-Sabi fit</div><div class="sv">Each table top is unique due to acacia's natural variation — knots, mineral streaks, colour variation are features not flaws</div>
+        <div class="sk">Durability</div><div class="sv">Acacia is highly durable, scratch + water resistant — ideal for daily use in tropical climate</div>
+        <div class="sk">Chairs</div><div class="sv">Pair with IKEA EKEDALEN solid wood chairs (~$89–99 each × 4 = ~$400) or vintage rattan chairs from Carousell</div>
+        <div class="sk">Buy</div><div class="sv"><a href="https://www.ikea.com/sg/en/p/skogsta-dining-table-acacia-black-50593805/" target="_blank">IKEA Singapore → SKOGSTA Acacia ↗</a></div>
+      </div>
+      <div class="why">
+        <div class="why-label">Why this is the wabi-sabi save-tier hero</div>
+        Acacia is one of the most honest budget woods — knotted, varied, naturally imperfect grain pattern. At $329 you're getting solid wood (not veneer) with proper character. The black powder-coated legs read as deliberate industrial-wabi, not "IKEA budget chic." For dining at $329 + ~$400 in chairs = ~$730 total, you free thousands for the splurge bed and sofa. The 120cm version fits Parc Esta's L-shaped dining; the 235cm is the host-friendly larger option for a future upgrade.
+      </div>
+      <div class="companion-label">Style the table (under $80)</div>
+      <ul class="companion">
+        <li>4 raw or washed linen placemats — Society Limonta / In Bed / MUJI: ~$15 each</li>
+        <li>Vintage wooden bowl as centrepiece (Carousell, ~$30) — Indonesian or Filipino antique</li>
+        <li>Hand-thrown ceramic salt dish + olive oil cruet — Supermama or Tongue in Cheek</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Option 2 -->
+  <div class="card runner">
+    <div class="card-image"><img src="../images/wabi-dining-athena.jpg" alt="Originals Athena Dining Table Teak" loading="lazy"><div class="img-caption">Originals · Athena Dining Table Teak (Tarita) — Grade A solid teak</div></div>
+    <div class="card-head">
+      <div>
+        <div class="badge-row"><span class="badge b-runner">Option 2</span><span class="badge b-runner">Splurge Dining</span><span class="badge b-runner">Solid Grade A Teak</span></div>
+        <div class="card-name">Originals Athena Dining Table — Teak 140cm</div>
+        <div class="card-sub">Originals Furniture Singapore (Tarita) · Premium Grade A teak · No veneer · 5-year warranty</div>
+      </div>
+      <div class="card-price-wrap">
+        <div class="card-price-label">140cm, from</div>
+        <div class="card-price">$1,680</div>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="specs">
+        <div class="sk">Dimensions (4 sizes)</div><div class="sv">140 × 80 × 75cm ($1,680) · 180 × 95cm · 200 × 95cm · 220 × 95cm ($2,880)</div>
+        <div class="sk">Material</div><div class="sv">Premium sustainably sourced Grade A teak (solid wood throughout, no veneer)</div>
+        <div class="sk">Edge profile</div><div class="sv">Softly curved top edges with sturdy rectangular legs · Clear satin lacquered finish (preserves natural grain)</div>
+        <div class="sk">Stock</div><div class="sv">In stock — 140 / 180 / 200 / 220cm sizes ready for delivery</div>
+        <div class="sk">Warranty</div><div class="sv">5-year structural warranty · Flat-packed with on-site assembly</div>
+        <div class="sk">Buy</div><div class="sv"><a href="https://www.originals.com.sg/products/athena-dining-table-teak" target="_blank">originals.com.sg → Athena Teak ↗</a></div>
+      </div>
+      <div class="why">
+        <div class="why-label">When the Athena over the SKOGSTA</div>
+        If you've reduced the bed/sofa splurge and have $1,680+ for dining. The Athena is the most-photographed wabi-sabi dining table on Singapore XHS — Grade A solid teak develops a patina you cannot fake with veneer. The 140cm fits Parc Esta's L-shaped dining; the 180cm is the move if room allows. Pairs perfectly with the Originals Isla bed in matching teak — instant wood-tone cohesion. The 5-year warranty on solid teak is meaningful — this is a 20+ year piece.
+      </div>
+      <div class="tip">
+        <div class="tip-label">Chair pairing</div>
+        Don't buy matching Athena teak chairs — too uniform, too "set." Pair with vintage Indonesian dining chairs from Carousell (~$80–150 each), a bench on one side + 2 chairs on the other, or solid wood RÖNNINGE chairs in natural birch (IKEA, $79 each) for material contrast.
+      </div>
+    </div>
+  </div>
+
+  <!-- Option 3 -->
+  <div class="card alt">
+    <div class="card-image"><img src="../images/wabi-bed-tatami.jpg" alt="Picket&amp;Rail Custom Solid Wood Dining" loading="lazy"><div class="img-caption">Picket&amp;Rail · Custom Solid Wood Dining (representative image)</div></div>
+    <div class="card-head">
+      <div>
+        <div class="badge-row"><span class="badge b-alt">Option 3</span><span class="badge b-alt">Bespoke</span><span class="badge b-alt">Made to Order</span></div>
+        <div class="card-name">Picket&amp;Rail Custom Solid Wood Dining Table</div>
+        <div class="card-sub">Picket&amp;Rail Singapore · Custom dimensions · Solid Indonesian teak or solid oak · Made-to-order</div>
+      </div>
+      <div class="card-price-wrap">
+        <div class="card-price-label">Custom, est.</div>
+        <div class="card-price">~$1,400+</div>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="specs">
+        <div class="sk">Dimensions</div><div class="sv">Fully customisable — specify width, length, height at order</div>
+        <div class="sk">Material</div><div class="sv">Select solid Indonesian teak or solid American oak at order · No veneer options</div>
+        <div class="sk">Edge profile</div><div class="sv">Choose live edge (most wabi-sabi), softly chamfered, or straight</div>
+        <div class="sk">Lead time</div><div class="sv">~6–8 weeks from order</div>
+        <div class="sk">Showroom</div><div class="sv">35 Senang Crescent · WhatsApp consultation recommended</div>
+        <div class="sk">Buy</div><div class="sv"><a href="https://picketandrail.com" target="_blank">picketandrail.com → Custom inquiry ↗</a></div>
+      </div>
+      <div class="why">
+        <div class="why-label">When to go custom</div>
+        If Parc Esta's L-shaped dining is awkwardly proportioned (e.g. you need 130 × 75cm or a specific corner-friendly shape), going custom solves the problem the off-the-shelf tables can't. Picket&Rail's solid Indonesian teak with a live-edge option is the most wabi-sabi configuration available in SG — the natural undulating edge is literally the imperfection-as-beauty philosophy in furniture form. Visit the showroom with your floor plan dimensions.
+      </div>
+      <div class="tip">
+        <div class="tip-label">Live edge tip</div>
+        Live edge dining tables look stunning but eat ~5cm of usable surface on each long side. Account for this when sizing — order ~150cm if you'd otherwise want 140cm usable.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ TOILET ═══════════════ -->
+<section id="toilet">
+  <div class="sec-head">
+    <div class="sec-num">04</div>
+    <div>
+      <div class="sec-eyebrow">Bathroom Upgrade</div>
+      <div class="sec-title">Toilet Bowl + Bathroom Accessories</div>
+    </div>
+  </div>
+
+  <div class="community">
+    <div class="community-label">小红书 · Lemon8 SG · Community Insights</div>
+    <ul>
+      <li><strong>Toilet bowls are theme-agnostic functional choices</strong> — TOTO CW162 / CW522 / Kohler Modern Life work just as well in a Wabi-Sabi bathroom as a Japandi one. The variable is the <strong>accessories palette</strong> and the surrounding materials (tile, wall finish).</li>
+      <li><strong>Aged bronze and antique brass are the wabi-sabi finishes</strong> — not matte black (too modern), not brushed gold (too clean). Real or living-finish bronze that develops a patina is ideal.</li>
+      <li><strong>Microcement or limewash walls</strong> are the XHS-favourite wabi-sabi bathroom backdrop, not white tile. If renovation budget allows, microcement finish on at least one wall is the most transformative single decision.</li>
+      <li><strong>Honed travertine, stone, or unsealed terracotta tile floors</strong> are the wabi-sabi flooring preferences — they age, water-stain, and develop character. Polished porcelain "stays perfect" and reads as anti-wabi-sabi.</li>
+      <li><strong>Visible wood</strong> — a single piece of teak (stool, shelf, framed mirror) in the bathroom dramatically shifts the room into wabi-sabi territory. Most-recommended single-item upgrade.</li>
+    </ul>
+    <div class="src-links">
+      XHS:
+      <a href="https://www.xiaohongshu.com/search_result?keyword=%E6%96%B0%E5%8A%A0%E5%9D%A1+%E9%A9%AC%E6%A1%B6+%E6%8E%A8%E8%8D%90" target="_blank">新加坡 马桶 推荐 ↗</a>
+      <a href="https://www.xiaohongshu.com/search_result?keyword=%E6%97%A5%E5%BC%8F%E6%B5%B4%E5%AE%A4+%E6%96%B0%E5%8A%A0%E5%9D%A1" target="_blank">日式浴室 新加坡 ↗</a>
+      <a href="https://www.xiaohongshu.com/search_result?keyword=TOTO+%E9%A9%AC%E6%A1%B6+%E6%96%B0%E5%8A%A0%E5%9D%A1" target="_blank">TOTO 马桶 新加坡 ↗</a>
+      · Lemon8:
+      <a href="https://www.lemon8-app.com/@home.swee.home/7355844812190581265?region=sg" target="_blank">Ultimate toilet bowl guide SG ↗</a>
+      <a href="https://www.lemon8-app.com/@home.swee.home/7359514859660198417?region=sg" target="_blank">Best toilet bowl brands SG ↗</a>
+      · Article:
+      <a href="https://www.homeanddecor.com.sg/renovation/bathroom/toto-toilet-bowl-price" target="_blank">TOTO price review Home&Decor ↗</a>
+      <a href="https://www.bestreviews.sg/best-toilet-bowl-singapore/" target="_blank">Best toilet bowls SG 2025 ↗</a>
+    </div>
+  </div>
+
+  <p style="font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--ink-xs);margin-bottom:1rem;">PART A — Toilet Bowl</p>
+
+  <!-- Toilet Option 1 -->
+  <div class="card top">
+    <div class="card-image"><img src="../images/toilet-cw162.jpg" alt="TOTO CW162 Wall-Hung Toilet" loading="lazy"><div class="img-caption">TOTO · CW162 Wall-Hung Toilet (Tornado Flush · Rimless · CeFiONtect)</div></div>
+    <div class="card-head">
+      <div>
+        <div class="badge-row"><span class="badge b-top">Top Pick</span><span class="badge b-runner">Wall-Hung</span></div>
+        <div class="card-name">TOTO CW162 Wall-Hung Toilet</div>
+        <div class="card-sub">Tornado flush · Rimless · CeFiONtect · Separate washlet add-on available</div>
+      </div>
+      <div class="card-price-wrap">
+        <div class="card-price-label">On sale</div>
+        <div class="card-price">$1,101</div>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="specs">
+        <div class="sk">Dimensions</div><div class="sv">394W × 530D × 339H mm</div>
+        <div class="sk">Flush system</div><div class="sv">Tornado Flush — powerful, uses less water</div>
+        <div class="sk">Flush volume</div><div class="sv">3.5L full / 2.5L reduced dual flush</div>
+        <div class="sk">Bowl</div><div class="sv">Rimless — eliminates hidden bacteria buildup under rim</div>
+        <div class="sk">Glaze</div><div class="sv">CeFiONtect — nano-glaze prevents debris sticking, easy to clean</div>
+        <div class="sk">Seat</div><div class="sv">Soft-close seat and cover included</div>
+        <div class="sk">Regular price</div><div class="sv">$1,295 (currently on sale)</div>
+        <div class="sk">Buy</div><div class="sv"><a href="https://shop.bathroom.com.sg/product/toto-cw162-wall-hung-toilet-bowl/" target="_blank">bathroom.com.sg → TOTO CW162 ↗</a> · <a href="https://asia.toto.com/sg/products/toilets/wall-hung/" target="_blank">TOTO Asia official wall-hung range ↗</a></div>
+      </div>
+      <div class="why">
+        <div class="why-label">Why this as the base toilet pick</div>
+        Wall-hung design is the XHS standard for modern condos — creates the illusion of more floor space, and cleaning underneath is effortless. Tornado Flush is TOTO's signature system — dramatically quieter and more powerful than conventional flushing. CeFiONtect glaze means the bowl stays cleaner longer with minimal scrubbing. At ~$1,101, it's the most affordable wall-hung TOTO with the full feature set.
+      </div>
+      <div class="tip">
+        <div class="tip-label">Add a washlet separately</div>
+        TOTO washlet seats (bidet function, heated seat) can be added to the CW162. The TOTO TCF6531 washlet is a popular pairing at ~$800–1,200. Total bowl + washlet: ~$1,900–2,300. Check compatibility before purchasing.
+      </div>
+    </div>
+  </div>
+
+  <!-- Toilet Option 2 -->
+  <div class="card runner">
+    <div class="card-image"><img src="../images/toilet-cw522.jpg" alt="TOTO CW522 Wall-Hung Toilet + Washlet SX" loading="lazy"><div class="img-caption">TOTO · CW522 + Washlet SX (Contemporary II · Smart Toilet)</div></div>
+    <div class="card-head">
+      <div>
+        <div class="badge-row"><span class="badge b-runner">Option 2</span><span class="badge b-runner">Smart Toilet</span></div>
+        <div class="card-name">TOTO CW522 + WASHLET SX (Contemporary II)</div>
+        <div class="card-sub">Integrated wall-hung toilet + washlet combo · Heated seat · Auto deodorizer</div>
+      </div>
+      <div class="card-price-wrap">
+        <div class="card-price-label">Bundle (30% off)</div>
+        <div class="card-price">$3,574</div>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="specs">
+        <div class="sk">Bowl dimensions</div><div class="sv">380W × 580D × 335H mm</div>
+        <div class="sk">Flush</div><div class="sv">Tornado Flush · 4.5L / 3L dual flush · Rimless</div>
+        <div class="sk">Washlet features</div><div class="sv">Front + rear cleansing · Oscillating spray · Heated seat (adjustable temp)</div>
+        <div class="sk">Washlet features</div><div class="sv">Auto deodorizer · EWATER+ self-cleaning nozzle · Motion sensor activation</div>
+        <div class="sk">Regular price</div><div class="sv">$5,105 (currently 30% off at W. Atelier)</div>
+        <div class="sk">Note</div><div class="sv">Cistern tank, chair bracket, rubber bush purchased separately</div>
+        <div class="sk">Buy</div><div class="sv"><a href="https://www.watelier.com/product/bathroom-sanitary-wares-toilets-wall-hung/toto-wall-hung-toilet-contemporary-ii-cw522hme5u-washlet-sx-tcf796cz" target="_blank">W. Atelier → TOTO CW522 + Washlet ↗</a></div>
+      </div>
+      <div class="why">
+        <div class="why-label">When to choose this over the CW162</div>
+        If you want the full smart toilet experience — heated seat, integrated bidet functions, auto deodorizer, self-cleaning nozzle — this is the definitive TOTO package. At $3,574 (30% off from $5,105) it's a significant purchase but one of the most-praised bathroom upgrades on XHS SG. The Contemporary II design is architecturally clean and Japandi-compatible.
+      </div>
+    </div>
+  </div>
+
+  <!-- Toilet Option 3 -->
+  <div class="card alt">
+    <div class="card-image"><img src="../images/toilet-kohler.jpg" alt="Kohler Modern Life Wall-Hung Toilet" loading="lazy"><div class="img-caption">Kohler · Modern Life Wall-Hung (Red Dot Design Award)</div></div>
+    <div class="card-head">
+      <div>
+        <div class="badge-row"><span class="badge b-alt">Option 3</span><span class="badge b-alt">Budget Pick</span></div>
+        <div class="card-name">Kohler Wall-Hung Toilet</div>
+        <div class="card-sub">Modern Life range · Rimless · More affordable entry point</div>
+      </div>
+      <div class="card-price-wrap">
+        <div class="card-price-label">From</div>
+        <div class="card-price">$642</div>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="specs">
+        <div class="sk">Design</div><div class="sv">Wall-hung · Rimless bowl</div>
+        <div class="sk">Style</div><div class="sv">Clean modern lines — Japandi-compatible</div>
+        <div class="sk">From</div><div class="sv">$642 SGD (Modern Life range)</div>
+        <div class="sk">Buy</div><div class="sv"><a href="https://www.kohler.com.sg/browse/bathroom/Categories/toilets/" target="_blank">kohler.com.sg → Toilet range ↗</a></div>
+      </div>
+      <div class="why">
+        <div class="why-label">When to consider Kohler</div>
+        If the bathroom reno budget is tight, Kohler's Modern Life wall-hung at ~$642 delivers the wall-hung aesthetic at significantly lower cost than TOTO. Less brand prestige on XHS SG but solid functional quality. Saves ~$450 vs the CW162. Add a separate non-TOTO bidet seat (~$200–400) for similar function.
+      </div>
+    </div>
+  </div>
+
+  <hr/>
+  <p style="font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--ink-xs);margin:1.5rem 0 1rem;">PART B — Bathroom Accessories</p>
+
+  <div class="note">
+    <strong>Wabi-sabi finish rule:</strong> Pick ONE living-finish metal across all bathroom hardware — aged bronze, antique brass, or oil-rubbed bronze. Avoid chrome, polished anything, and matte black (too modern). Finishes that develop patina with use are essential — sealed/coated PVD finishes that "stay perfect" defeat the philosophy.
+  </div>
+
+  <!-- Accessories Option 1 -->
+  <div class="card top" style="margin-top:1rem">
+    <div class="card-head">
+      <div>
+        <div class="badge-row"><span class="badge b-top">Top Pick</span><span class="badge b-runner">Aged Bronze</span><span class="badge b-runner">Living Finish</span></div>
+        <div class="card-name">Aged / Oil-Rubbed Bronze Bathroom Set</div>
+        <div class="card-sub">Living-finish bronze that darkens and patinas with use · Towel bar, TP holder, hooks, ring · Bacera SG</div>
+      </div>
+      <div class="card-price-wrap">
+        <div class="card-price-label">5–10 pcs</div>
+        <div class="card-price">~$220–420</div>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="specs">
+        <div class="sk">Material</div><div class="sv">Solid brass or SUS304 with bronze-oxide living finish (intentionally not sealed)</div>
+        <div class="sk">Finish behaviour</div><div class="sv">Darkens with handling at touch points · Lightens in dry-air areas · Each piece becomes unique over 5–10 years</div>
+        <div class="sk">Typical set includes</div><div class="sv">24" towel bar · TP holder · Towel ring · 2–4 robe hooks · Soap dish</div>
+        <div class="sk">Where to buy</div><div class="sv"><a href="https://www.bacera.com.sg/bathroom/bathroom-accessories/" target="_blank">Bacera SG ↗</a> · W. Atelier · House of Knipschildt</div>
+        <div class="sk">Price range</div><div class="sv">$220–420 SGD depending on piece count — solid brass costs more than coated SUS304</div>
+      </div>
+      <div class="why">
+        <div class="why-label">Why aged bronze is the wabi-sabi finish</div>
+        Bronze is one of the few metals that genuinely patinas in daily use — your towel bar at the bottom (where wet hands rest) will look different from the top (where air dries it) within a year. That asymmetry is the wabi-sabi principle made physical. Pair with a single teak shelf or stool and a hand-thrown ceramic soap dish — three materials, all aging at different rates, all telling a story.
+      </div>
+      <div class="companion-label">Where to source in SG</div>
+      <ul class="companion">
+        <li><a href="https://www.bacera.com.sg/bathroom/bathroom-accessories/" target="_blank">Bacera Singapore ↗</a> — best showroom for living-finish bronze, see actual patina samples</li>
+        <li>House of Knipschildt — premium European bronze hardware</li>
+        <li>Carousell — vintage bronze bathroom fittings (rare but worth searching "antique bronze bathroom")</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Accessories Option 2 -->
+  <div class="card runner">
+    <div class="card-head">
+      <div>
+        <div class="badge-row"><span class="badge b-runner">Option 2</span><span class="badge b-runner">Antique Brass</span><span class="badge b-runner">Warmer Tone</span></div>
+        <div class="card-name">Antique Brass Bathroom Set</div>
+        <div class="card-sub">Slightly brighter and warmer than aged bronze · Lacquered for stable appearance · Bacera / W. Atelier</div>
+      </div>
+      <div class="card-price-wrap">
+        <div class="card-price-label">Est. set</div>
+        <div class="card-price">~$280–480</div>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="specs">
+        <div class="sk">Material</div><div class="sv">Solid brass with antique-brass lacquered finish (stable, doesn't continue to patina)</div>
+        <div class="sk">Finish</div><div class="sv">Warm gold-bronze, slightly brighter than oil-rubbed bronze</div>
+        <div class="sk">Style note</div><div class="sv">Pairs with the warm teak tones in Originals Isla/Athena beautifully · A step warmer than aged bronze</div>
+        <div class="sk">Where to buy</div><div class="sv"><a href="https://www.bacera.com.sg/bathroom/bathroom-accessories/" target="_blank">Bacera SG ↗</a> · <a href="https://www.watelier.com" target="_blank">W. Atelier ↗</a> · HERA Bathroom</div>
+      </div>
+      <div class="why">
+        <div class="why-label">When to choose antique brass over aged bronze</div>
+        If you want the wabi-sabi colour story without the maintenance ritual of true living-finish bronze. Lacquered antique brass stays as it looks the day you install it — less character-development over time, but no fingerprint-management or oxidation concerns. A pragmatic middle path between wabi-sabi purity and easy-care living.
+      </div>
+    </div>
+  </div>
+
+  <!-- Accessories Option 3 -->
+  <div class="card alt">
+    <div class="card-head">
+      <div>
+        <div class="badge-row"><span class="badge b-alt">Option 3</span><span class="badge b-alt">Ceramic + Wood</span><span class="badge b-alt">Hand-Made Accents</span></div>
+        <div class="card-name">Hand-thrown Ceramic + Teak Bathroom Accents</div>
+        <div class="card-sub">Local SG artisans · Supermama · Tongue in Cheek · Carousell vintage · One-of-a-kind pieces</div>
+      </div>
+      <div class="card-price-wrap">
+        <div class="card-price-label">Est. set</div>
+        <div class="card-price">~$150–350</div>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="specs">
+        <div class="sk">Includes</div><div class="sv">Hand-thrown soap dish · Ceramic toothbrush holder · Teak bath tray · Linen hand towel · Wooden stool</div>
+        <div class="sk">Where to buy</div><div class="sv">Supermama (hand-thrown SG ceramics) · Tongue in Cheek · Style:Nordic · MUJI (linen)</div>
+        <div class="sk">Style note</div><div class="sv">Add OVER the bronze/brass hardware set — these are accents, not replacements for towel bars</div>
+      </div>
+      <div class="why">
+        <div class="why-label">Why these accents matter</div>
+        The truly wabi-sabi bathroom isn't defined by the metal hardware — it's defined by the visible hand-made objects: a single hand-thrown soap dish, a Carousell vintage Indonesian teak stool by the shower, a coarse linen hand towel hung over a brass hook. Each piece bears its maker's mark or shows previous use. Budget $150–350 across 3–5 of these accent objects and you'll have a more authentically wabi-sabi bathroom than someone who spent $2,000 on hardware.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ STYLE ═══════════════ -->
+<section id="style">
+  <div class="sec-head">
+    <div class="sec-num" style="color:var(--ash)">—</div>
+    <div>
+      <div class="sec-eyebrow">Wabi-Sabi Cohesion Guide</div>
+      <div class="sec-title">Making it all work together</div>
+    </div>
+  </div>
+  <div class="cohesion-grid">
+    <div class="coh"><div class="coh-icon">🌳</div><div class="coh-title">Wood is the Hero</div><div class="coh-desc">Solid teak everywhere — bed, dining, side stool. No veneer. Allow visible grain variation, knots, mineral streaks. The wood must look like it grew from a tree, not a printer.</div></div>
+    <div class="coh"><div class="coh-icon">🌾</div><div class="coh-title">Raw Natural Fabrics</div><div class="coh-desc">Flax linen, raw cotton, undyed wool, jute. Skirted, deep cushions that crease. Avoid: performance fabrics, microfibre, polyester blends, anything advertising "stain resistant."</div></div>
+    <div class="coh"><div class="coh-icon">🪨</div><div class="coh-title">Patina + Imperfection</div><div class="coh-desc">Living-finish bronze hardware. Aniline leather. Hand-thrown ceramics. Pieces that change over years. Reject "stays perfect forever" claims — that's the wrong philosophy.</div></div>
+    <div class="coh"><div class="coh-icon">🪷</div><div class="coh-title">Negative Space</div><div class="coh-desc">Empty floor area, blank walls, single hero objects. Wabi-sabi rooms are quieter than Japandi. One ceramic vessel on a table beats five.</div></div>
+    <div class="coh"><div class="coh-icon">⚠️</div><div class="coh-title">What to Avoid</div><div class="coh-desc">Matte black hardware (too modern). Chrome anything. Glass-top tables. Polished granite. White-painted furniture. Bright colour accents. Anything that screams "new."</div></div>
+    <div class="coh"><div class="coh-icon">🪴</div><div class="coh-title">Living Elements</div><div class="coh-desc">A single bonsai or dried branch in a ceramic vessel. Indoor plant with visible imperfection (fiddle leaf with one wonky leaf is more wabi than perfect monstera). Real flowers from the wet market — never silk.</div></div>
+  </div>
+</section>
+
+<!-- ═══════════════ ACTION PLAN ═══════════════ -->
+<section id="plan">
+  <div class="sec-head">
+    <div class="sec-num" style="color:var(--ash)">—</div>
+    <div>
+      <div class="sec-eyebrow">Next Steps</div>
+      <div class="sec-title">Shopping Action Plan</div>
+    </div>
+  </div>
+
+  <div class="card" style="margin-bottom:2rem">
+    <div class="card-body" style="padding:.5rem 1.5rem">
+      <ol class="action-list">
+        <li class="action-item"><div class="action-num">1</div><div class="action-text"><strong>Visit Originals Furniture showroom</strong> — see the Isla bed (rope headboard), Sloopy linen sofa, and Athena teak dining table in person. Solid Grade A teak and pure linen need to be touched and seen. This is the single highest-stakes shopping trip in the plan.<div class="action-where">→ originals.com.sg — Tan Boon Liat Building or other current SG location</div></div></li>
+        <li class="action-item"><div class="action-num">2</div><div class="action-text"><strong>Visit Picket&amp;Rail at 35 Senang Crescent</strong> — see solid Indonesian teak in person to calibrate expectations on grain, weight, finish. Useful even if you commit to Originals — knowing what "real teak" looks like helps you assess online photos.<div class="action-where">→ 35 Senang Crescent · picketandrail.com</div></div></li>
+        <li class="action-item"><div class="action-num">3</div><div class="action-text"><strong>Source raw linen bedding</strong> — Society Limonta or In Bed Store for premium, MUJI for budget. Unwashed/stonewashed flax is essential. Allow 4–6 weeks for international shipping if needed.<div class="action-where">→ societylimonta.com · inbedstore.com · MUJI Singapore</div></div></li>
+        <li class="action-item"><div class="action-num">4</div><div class="action-text"><strong>Visit Bacera Singapore</strong> — see aged bronze and antique brass bathroom hardware in person. Living-finish bronze must be evaluated in real lighting — online photos don't show patina behaviour accurately.<div class="action-where">→ bacera.com.sg</div></div></li>
+        <li class="action-item"><div class="action-num">5</div><div class="action-text"><strong>Visit TOTO showroom at W. Atelier</strong> — see CW162 and CW522 + Washlet in person. The same toilet that grounds a Japandi bathroom works fine for wabi-sabi; the surrounding accessories carry the style.<div class="action-where">→ W. Atelier · watelier.com</div></div></li>
+        <li class="action-item"><div class="action-num">6</div><div class="action-text"><strong>Order IKEA SKOGSTA</strong> — confident online order, free delivery over $100. Inspect each table top in person before assembly — acacia grain varies; choose one with the character you like.<div class="action-where">→ IKEA Alexandra or IKEA Tampines · ikea.com/sg</div></div></li>
+        <li class="action-item"><div class="action-num">7</div><div class="action-text"><strong>Hunt vintage on Carousell</strong> — search "Indonesian teak", "vintage rattan chair", "antique wooden bowl". The most wabi-sabi accents are unique finds, not new purchases. Allocate 2–3 weekends to browse.<div class="action-where">→ carousell.sg</div></div></li>
+      </ol>
+    </div>
+  </div>
+
+  <p style="font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--ink-xs);margin-bottom:1rem">Budget Scenarios</p>
+  <div class="scenarios">
+    <div class="sc">
+      <div class="sc-head"><div class="sc-letter">A</div><div class="sc-name">Entry Wabi-Sabi</div></div>
+      <div class="sc-body">
+        <div class="sc-line"><span class="sc-line-name">Originals Isla Teak with Rope Q</span><span class="sc-line-price">$2,980</span></div>
+        <div class="sc-line"><span class="sc-line-name">Originals Sloopy 2.5-Seater Flax</span><span class="sc-line-price">$5,680</span></div>
+        <div class="sc-line"><span class="sc-line-name">Vintage stool + jute rug</span><span class="sc-line-price">~$280</span></div>
+        <div class="sc-line"><span class="sc-line-name">IKEA SKOGSTA + EKEDALEN ×4</span><span class="sc-line-price">~$729</span></div>
+        <div class="sc-line"><span class="sc-line-name">TOTO CW162 wall-hung</span><span class="sc-line-price">$1,101</span></div>
+        <div class="sc-line"><span class="sc-line-name">Aged bronze accessories set</span><span class="sc-line-price">~$280</span></div>
+      </div>
+      <div class="sc-total"><div class="sc-total-label">Total</div><div class="sc-total-price">~$11,050</div></div>
+    </div>
+    <div class="sc">
+      <div class="sc-head"><div class="sc-letter">B</div><div class="sc-name">Premium Teak + Leather</div></div>
+      <div class="sc-body">
+        <div class="sc-line"><span class="sc-line-name">Originals Luna Teak Natural Q</span><span class="sc-line-price">$3,380</span></div>
+        <div class="sc-line"><span class="sc-line-name">Premium mattress (Emma Hybrid)</span><span class="sc-line-price">~$1,800</span></div>
+        <div class="sc-line"><span class="sc-line-name">Originals Pensive Leather 2.5-Seater</span><span class="sc-line-price">$5,080</span></div>
+        <div class="sc-line"><span class="sc-line-name">Vintage stool + wool rug</span><span class="sc-line-price">~$380</span></div>
+        <div class="sc-line"><span class="sc-line-name">Originals Athena Teak 140cm + chairs</span><span class="sc-line-price">~$2,000</span></div>
+        <div class="sc-line"><span class="sc-line-name">TOTO CW522 + Washlet SX</span><span class="sc-line-price">$3,574</span></div>
+        <div class="sc-line"><span class="sc-line-name">Antique brass accessories</span><span class="sc-line-price">~$420</span></div>
+      </div>
+      <div class="sc-total"><div class="sc-total-label">Total</div><div class="sc-total-price">~$16,634</div></div>
+    </div>
+    <div class="sc">
+      <div class="sc-head"><div class="sc-letter">C</div><div class="sc-name">Maximum Wabi-Sabi</div></div>
+      <div class="sc-body">
+        <div class="sc-line"><span class="sc-line-name">Picket&amp;Rail Custom Teak Platform Q</span><span class="sc-line-price">~$2,400</span></div>
+        <div class="sc-line"><span class="sc-line-name">Premium mattress (Sealy Posturepedic)</span><span class="sc-line-price">~$2,000</span></div>
+        <div class="sc-line"><span class="sc-line-name">Originals Sloopy 3-Seater Flax</span><span class="sc-line-price">$6,480</span></div>
+        <div class="sc-line"><span class="sc-line-name">Vintage Indonesian stool + wool rug</span><span class="sc-line-price">~$680</span></div>
+        <div class="sc-line"><span class="sc-line-name">Picket&amp;Rail Custom Live-Edge Dining + vintage chairs</span><span class="sc-line-price">~$1,800</span></div>
+        <div class="sc-line"><span class="sc-line-name">TOTO CW522 + Washlet SX</span><span class="sc-line-price">$3,574</span></div>
+        <div class="sc-line"><span class="sc-line-name">Aged bronze + ceramic accents</span><span class="sc-line-price">~$580</span></div>
+      </div>
+      <div class="sc-total"><div class="sc-total-label">Total</div><div class="sc-total-price">~$17,514</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ SOURCES ═══════════════ -->
+<section id="sources">
+  <div class="sec-head">
+    <div class="sec-num" style="color:var(--ash)">—</div>
+    <div>
+      <div class="sec-eyebrow">Research Sources</div>
+      <div class="sec-title">All Links &amp; References</div>
+    </div>
+  </div>
+  <div class="sources-grid">
+
+    <div class="src-card">
+      <div class="src-card-title">小红书 XHS Searches — Wabi-Sabi</div>
+      <ul>
+        <li><span class="src-tag tag-xhs">XHS</span><a href="https://www.xiaohongshu.com/search_result?keyword=%E4%BE%98%E5%AF%82%E9%A3%8E+%E5%AE%B6%E5%85%B7" target="_blank">侘寂风 家具 (Wabi-Sabi furniture) ↗</a></li>
+        <li><span class="src-tag tag-xhs">XHS</span><a href="https://www.xiaohongshu.com/search_result?keyword=%E4%BE%98%E5%AF%82%E9%A3%8E+%E5%AE%A2%E5%8E%85" target="_blank">侘寂风 客厅 (Wabi-Sabi living room) ↗</a></li>
+        <li><span class="src-tag tag-xhs">XHS</span><a href="https://www.xiaohongshu.com/search_result?keyword=%E5%8E%9F%E6%9C%A8+%E5%BA%8A+%E6%96%B0%E5%8A%A0%E5%9D%A1" target="_blank">原木 床 新加坡 (Solid wood bed SG) ↗</a></li>
+        <li><span class="src-tag tag-xhs">XHS</span><a href="https://www.xiaohongshu.com/search_result?keyword=%E6%9F%9A%E6%9C%A8+%E5%AE%B6%E5%85%B7+%E6%96%B0%E5%8A%A0%E5%9D%A1" target="_blank">柚木 家具 新加坡 (Teak furniture SG) ↗</a></li>
+        <li><span class="src-tag tag-xhs">XHS</span><a href="https://www.xiaohongshu.com/search_result?keyword=%E4%BA%9A%E9%BA%BB+%E6%B2%99%E5%8F%91+%E6%96%B0%E5%8A%A0%E5%9D%A1" target="_blank">亚麻 沙发 新加坡 (Linen sofa SG) ↗</a></li>
+        <li><span class="src-tag tag-xhs">XHS</span><a href="https://www.xiaohongshu.com/search_result?keyword=%E6%89%8B%E7%BC%96%E7%BB%B3%E5%BA%8A%E5%A4%B4" target="_blank">手编绳床头 (Handwoven rope headboard) ↗</a></li>
+        <li><span class="src-tag tag-xhs">XHS</span><a href="https://www.xiaohongshu.com/search_result?keyword=%E5%BE%AE%E6%B0%B4%E6%B3%A5+%E6%B5%B4%E5%AE%A4" target="_blank">微水泥 浴室 (Microcement bathroom) ↗</a></li>
+        <li><span class="src-tag tag-xhs">XHS</span><a href="https://www.xiaohongshu.com/search_result?keyword=%E9%9D%92%E9%93%9C+%E5%8D%AB%E6%B5%B4" target="_blank">青铜 卫浴 (Bronze bathroom hardware) ↗</a></li>
+        <li><span class="src-tag tag-xhs">XHS</span><a href="https://www.xiaohongshu.com/search_result?keyword=%E4%B8%9C%E6%99%AF%E8%8B%91" target="_blank">东景苑 (Parc Esta) ↗</a></li>
+      </ul>
+    </div>
+
+    <div class="src-card">
+      <div class="src-card-title">Lemon8 SG Posts</div>
+      <ul>
+        <li><span class="src-tag tag-lemon">L8</span><a href="https://www.lemon8-app.com/momorie/7229642350350352898?region=sg" target="_blank">Hamilton sofa 1-year honest review ↗</a></li>
+        <li><span class="src-tag tag-lemon">L8</span><a href="https://www.lemon8-app.com/@chelleseashelle/7388387845653856769?region=sg" target="_blank">Castlery honest review (Weeawee) ↗</a></li>
+        <li><span class="src-tag tag-lemon">L8</span><a href="https://www.lemon8-app.com/madeinchaichee/7254520219966931457?region=sg" target="_blank">$6,000 Castlery furniture haul ↗</a></li>
+        <li><span class="src-tag tag-lemon">L8</span><a href="https://www.lemon8-app.com/at93sqm/7256339470629241346?region=sg" target="_blank">What we bought from Castlery ↗</a></li>
+        <li><span class="src-tag tag-lemon">L8</span><a href="https://www.lemon8-app.com/bideeho/7243807844812784130?region=sg" target="_blank">Best SG furniture stores honest experience ↗</a></li>
+        <li><span class="src-tag tag-lemon">L8</span><a href="https://www.lemon8-app.com/@deskuah/7280130132994556417?region=sg" target="_blank">Top IKEA finds for Japandi home ↗</a></li>
+        <li><span class="src-tag tag-lemon">L8</span><a href="https://www.lemon8-app.com/@renologist.sg/7437076542754243088?region=sg" target="_blank">Japandi design trend Singapore ↗</a></li>
+        <li><span class="src-tag tag-lemon">L8</span><a href="https://www.lemon8-app.com/experience/furniture-buying-guide-for-new-homeowners?region=sg" target="_blank">Furniture buying guide new homeowners ↗</a></li>
+        <li><span class="src-tag tag-lemon">L8</span><a href="https://www.lemon8-app.com/@home.swee.home/7355844812190581265?region=sg" target="_blank">Ultimate toilet bowl guide Singapore ↗</a></li>
+        <li><span class="src-tag tag-lemon">L8</span><a href="https://www.lemon8-app.com/@home.swee.home/7359514859660198417?region=sg" target="_blank">Best toilet bowl brands Singapore ↗</a></li>
+      </ul>
+    </div>
+
+    <div class="src-card">
+      <div class="src-card-title">Retailer Product Pages</div>
+      <ul>
+        <li><span class="src-tag tag-shop">Shop</span><a href="https://www.originals.com.sg/collections/wabi-sabi" target="_blank">Originals — Wabi-Sabi Collection ↗</a></li>
+        <li><span class="src-tag tag-shop">Shop</span><a href="https://www.originals.com.sg/products/isla-bed-frame-teak-with-rope" target="_blank">Originals Isla Teak with Rope ↗</a></li>
+        <li><span class="src-tag tag-shop">Shop</span><a href="https://www.originals.com.sg/products/luna-bed-frame-teak-natural" target="_blank">Originals Luna Teak Natural ↗</a></li>
+        <li><span class="src-tag tag-shop">Shop</span><a href="https://www.originals.com.sg/products/sloopy-fabric-sofa-3-seater-flax-230cm" target="_blank">Originals Sloopy Linen Sofa ↗</a></li>
+        <li><span class="src-tag tag-shop">Shop</span><a href="https://www.originals.com.sg/products/pensive-leather-sofa-arena" target="_blank">Originals Pensive Leather Sofa ↗</a></li>
+        <li><span class="src-tag tag-shop">Shop</span><a href="https://www.originals.com.sg/products/komo-modular-sofa-3-seater-bespoke" target="_blank">Originals Komo Modular Sofa ↗</a></li>
+        <li><span class="src-tag tag-shop">Shop</span><a href="https://www.originals.com.sg/products/athena-dining-table-teak" target="_blank">Originals Athena Teak Dining ↗</a></li>
+        <li><span class="src-tag tag-shop">Shop</span><a href="https://www.ikea.com/sg/en/p/skogsta-dining-table-acacia-black-50593805/" target="_blank">IKEA SKOGSTA Acacia Dining ↗</a></li>
+        <li><span class="src-tag tag-shop">Shop</span><a href="https://picketandrail.com/pages/tatami-storage-beds" target="_blank">Picket&amp;Rail Tatami / Custom ↗</a></li>
+        <li><span class="src-tag tag-shop">Shop</span><a href="https://journeyeast.com/" target="_blank">Journey East (reclaimed teak / dBodhi) ↗</a></li>
+        <li><span class="src-tag tag-shop">Shop</span><a href="https://lofthome.com/collections/wabi-sabi-premium-tables" target="_blank">LOFT HOME Wabi-Sabi Tables ↗</a></li>
+        <li><span class="src-tag tag-shop">Shop</span><a href="https://shop.bathroom.com.sg/product/toto-cw162-wall-hung-toilet-bowl/" target="_blank">TOTO CW162 Wall-Hung ↗</a></li>
+        <li><span class="src-tag tag-shop">Shop</span><a href="https://www.watelier.com/product/bathroom-sanitary-wares-toilets-wall-hung/toto-wall-hung-toilet-contemporary-ii-cw522hme5u-washlet-sx-tcf796cz" target="_blank">TOTO CW522 + Washlet SX ↗</a></li>
+        <li><span class="src-tag tag-shop">Shop</span><a href="https://www.bacera.com.sg/bathroom/bathroom-accessories/" target="_blank">Bacera Bronze Bathroom Accessories ↗</a></li>
+      </ul>
+    </div>
+
+    <div class="src-card">
+      <div class="src-card-title">Articles &amp; Wabi-Sabi Guides</div>
+      <ul>
+        <li><span class="src-tag tag-article">Read</span><a href="https://megafurniture.sg/blogs/articles/wabi-sabi-hdb-interior-design" target="_blank">Ultimate Wabi-Sabi HDB Interior Design (Megafurniture) ↗</a></li>
+        <li><span class="src-tag tag-article">Read</span><a href="https://www.originals.com.sg/collections/wabi-sabi" target="_blank">Originals — Wabi-Sabi Collection guide ↗</a></li>
+        <li><span class="src-tag tag-article">Read</span><a href="https://tree.com.hk/blog/celebrating-reclaimed-teak-wood" target="_blank">Reclaimed Teak — Wabi-Sabi trend (TREE) ↗</a></li>
+        <li><span class="src-tag tag-article">Read</span><a href="https://asia.toto.com/sg/products/toilets/wall-hung/" target="_blank">TOTO Asia — wall-hung toilet range ↗</a></li>
+        <li><span class="src-tag tag-article">Read</span><a href="https://www.fullsun.com.sg/toto-washlet-in-singapore-explained-features-and-functions/" target="_blank">TOTO Washlet explained (Fullsun SG) ↗</a></li>
+        <li><span class="src-tag tag-article">Read</span><a href="https://www.bestreviews.sg/best-toilet-bowl-singapore/" target="_blank">Best toilet bowls Singapore 2025 ↗</a></li>
+        <li><span class="src-tag tag-article">Read</span><a href="https://www.homeanddecor.com.sg/shopping/storage-bed-frame-singapore" target="_blank">Storage bed frame SG round-up (H&amp;D) ↗</a></li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <p style="font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:var(--ink-lt)">Parc Esta · Type BP5 · Furniture &amp; Fittings Research</p>
+  <p>Prices current as of May 2026. Verify before purchasing. Primary research: 小红书 XHS, Lemon8 SG, Singapore renovation community.</p>
+  <p style="margin-top:.5rem"><a href="https://github.com/gaoyan198/parc-este-furniture" target="_blank">View on GitHub ↗</a></p>
+</footer>
+
+</body>
+</html>

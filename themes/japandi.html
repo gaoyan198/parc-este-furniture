@@ -1,0 +1,1029 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Parc Esta Furniture — Type BP5</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --cream:#F7F3EE;--paper:#FDFAF6;--walnut:#6B4C2A;--walnut-lt:#9A7250;
+  --walnut-bg:#EDE0CF;--clay:#B8896A;--ash:#D4C4B0;--border:#E2D5C3;
+  --ink:#1E1610;--ink-lt:#5C4A38;--ink-xs:#9A8878;--white:#fff;
+  --green:#5A7A5A;--green-bg:#EBF2EB;--blue:#3A5A8A;--blue-bg:#EBF0F8;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--cream);color:var(--ink);font-size:15px;line-height:1.7}
+a{color:var(--walnut);text-decoration:none}
+a:hover{text-decoration:underline}
+
+/* NAV */
+.theme-nav{position:sticky;top:0;z-index:200;background:#1E1610;color:#fff;padding:0 clamp(1rem,5vw,3rem);display:flex;align-items:center;justify-content:space-between;height:42px;font-size:.74rem}
+.theme-nav-home{color:rgba(255,255,255,.65);font-weight:600;letter-spacing:.04em;text-decoration:none;font-family:'Cormorant Garamond',serif;font-size:.95rem}
+.theme-nav-home:hover{color:#fff}
+.theme-nav-links{display:flex;gap:1.4rem;list-style:none;align-items:center}
+.theme-nav-links a{color:rgba(255,255,255,.55);font-weight:600;letter-spacing:.08em;text-transform:uppercase;font-size:.66rem;text-decoration:none;padding:.4rem 0;border-bottom:2px solid transparent;transition:color .15s,border-color .15s}
+.theme-nav-links a.active{color:#fff;border-bottom-color:#D4C4B0}
+.theme-nav-links a:hover{color:#fff}
+@media(max-width:700px){.theme-nav-links{gap:.85rem}.theme-nav-links a{font-size:.6rem}.theme-nav-home{display:none}}
+nav{position:sticky;top:42px;z-index:100;background:rgba(247,243,238,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 clamp(1rem,5vw,3rem);display:flex;align-items:center;justify-content:space-between;height:52px}
+.nav-brand{font-family:'Cormorant Garamond',serif;font-size:1rem;font-weight:500;color:var(--walnut);letter-spacing:.04em}
+.nav-links{display:flex;gap:1.25rem;list-style:none}
+.nav-links a{font-size:.72rem;font-weight:600;color:var(--ink-lt);letter-spacing:.08em;text-transform:uppercase}
+.nav-links a:hover{color:var(--walnut);text-decoration:none}
+
+/* HERO */
+.hero{padding:clamp(3rem,8vw,5rem) clamp(1rem,5vw,3rem) 2rem;max-width:920px;margin:0 auto}
+.eyebrow{font-size:.7rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--clay);margin-bottom:.75rem}
+h1{font-family:'Cormorant Garamond',serif;font-size:clamp(2.4rem,6vw,3.8rem);font-weight:300;line-height:1.15;margin-bottom:1rem}
+h1 em{font-style:italic;color:var(--walnut)}
+.hero-meta{display:flex;flex-wrap:wrap;gap:.4rem 1.25rem;font-size:.8rem;color:var(--ink-xs);margin-bottom:2rem}
+.hero-meta span::before{content:'·';margin-right:.5rem}
+.palette{display:flex;flex-wrap:wrap;gap:.75rem;margin-bottom:2rem}
+.swatch{display:flex;align-items:center;gap:.4rem;font-size:.72rem;color:var(--ink-lt)}
+.swatch-dot{width:26px;height:26px;border-radius:50%;border:1px solid rgba(0,0,0,.08);flex-shrink:0}
+
+/* BUDGET BAR */
+.wrap{max-width:920px;margin:0 auto;padding:0 clamp(1rem,5vw,3rem)}
+.budget-bar{background:var(--white);border:1px solid var(--border);border-radius:16px;padding:1.5rem 2rem;margin-bottom:3rem}
+.budget-bar-label{font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--ink-xs);margin-bottom:1rem}
+.budget-items{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:1rem;margin-bottom:1.25rem}
+.bi-label{font-size:.68rem;color:var(--ink-xs)}
+.bi-name{font-size:.78rem;font-weight:500;color:var(--ink-lt);line-height:1.3;margin:.1rem 0}
+.bi-price{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:500;color:var(--walnut)}
+.budget-total{border-top:1px solid var(--border);padding-top:1rem;display:flex;justify-content:space-between;align-items:center}
+.budget-total-label{font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--ink-lt)}
+.budget-total-price{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:500;color:var(--walnut)}
+
+/* SECTION */
+section{max-width:920px;margin:0 auto;padding:0 clamp(1rem,5vw,3rem) 3.5rem}
+.sec-head{display:flex;align-items:baseline;gap:1rem;margin-bottom:1.75rem;padding-bottom:1rem;border-bottom:1px solid var(--border)}
+.sec-num{font-family:'Cormorant Garamond',serif;font-size:3.2rem;font-weight:300;color:var(--ash);line-height:1}
+.sec-eyebrow{font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--clay)}
+.sec-title{font-family:'Cormorant Garamond',serif;font-size:clamp(1.5rem,3.5vw,2.1rem);font-weight:400;line-height:1.2}
+
+/* COMMUNITY BOX */
+.community{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:1.25rem 1.5rem;margin-bottom:1.5rem}
+.community-label{font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--walnut);margin-bottom:.75rem;display:flex;align-items:center;gap:.5rem}
+.community-label::after{content:'';flex:1;height:1px;background:var(--border)}
+.community ul{list-style:none}
+.community li{padding:.45rem 0;border-bottom:1px solid var(--border);font-size:.82rem;color:var(--ink-lt);display:flex;gap:.6rem}
+.community li:last-child{border-bottom:none;padding-bottom:0}
+.community li::before{content:'小';flex-shrink:0;width:20px;height:20px;background:var(--walnut-bg);color:var(--walnut);border-radius:5px;display:flex;align-items:center;justify-content:center;font-size:.6rem;font-weight:700;margin-top:.2rem}
+.src-links{font-size:.72rem;color:var(--ink-xs);margin-top:.75rem;display:flex;flex-wrap:wrap;gap:.4rem .75rem}
+.src-links a{color:var(--walnut-lt)}
+
+/* CARDS */
+.card{background:var(--white);border:1px solid var(--border);border-radius:14px;overflow:hidden;margin-bottom:1rem}
+.card.top{border-left:3px solid var(--walnut)}
+.card.runner{border-left:3px solid var(--ash)}
+.card.alt{border-left:3px solid var(--green)}
+.card-head{display:flex;align-items:flex-start;justify-content:space-between;gap:1rem;padding:1.25rem 1.5rem 1rem;border-bottom:1px solid var(--border)}
+.badge-row{display:flex;gap:.4rem;margin-bottom:.4rem;flex-wrap:wrap}
+.badge{display:inline-block;font-size:.6rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;padding:.2em .65em;border-radius:100px}
+.b-top{background:var(--walnut);color:#fff}
+.b-runner{background:var(--walnut-bg);color:var(--walnut)}
+.b-alt{background:var(--green-bg);color:var(--green)}
+.b-save{background:#EBF0F8;color:#3A5A8A}
+.card-name{font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-weight:500;color:var(--ink);line-height:1.2}
+.card-sub{font-size:.75rem;color:var(--ink-xs);margin-top:.1rem}
+.card-price-wrap{text-align:right;flex-shrink:0}
+.card-price-label{font-size:.6rem;text-transform:uppercase;letter-spacing:.1em;color:var(--ink-xs)}
+.card-price{font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:500;color:var(--walnut);line-height:1}
+.card-body{padding:1.25rem 1.5rem}
+
+/* PRODUCT IMAGE */
+.card-image{position:relative;width:100%;aspect-ratio:4/3;background:var(--cream);overflow:hidden;border-bottom:1px solid var(--border)}
+.card-image img{width:100%;height:100%;object-fit:cover;object-position:center;display:block;transition:transform .6s ease}
+.card-image:hover img{transform:scale(1.03)}
+.card-image .img-caption{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(180deg,rgba(0,0,0,0) 0%,rgba(0,0,0,.55) 100%);color:#fff;font-size:.65rem;letter-spacing:.06em;padding:1.6rem .9rem .55rem;text-transform:uppercase;font-weight:600;opacity:.92}
+
+/* SPEC TABLE */
+.specs{display:grid;grid-template-columns:auto 1fr;border:1px solid var(--border);border-radius:10px;overflow:hidden;margin-bottom:1.25rem;font-size:.8rem}
+.sk{background:var(--cream);padding:.5rem .9rem;font-weight:600;color:var(--ink-lt);border-bottom:1px solid var(--border)}
+.sv{background:var(--white);padding:.5rem .9rem;color:var(--ink);border-bottom:1px solid var(--border)}
+.sk:last-of-type,.sv:last-of-type{border-bottom:none}
+
+/* CALLOUT BLOCKS */
+.why{background:var(--cream);border-left:3px solid var(--walnut);border-radius:0 8px 8px 0;padding:.9rem 1.1rem;margin-bottom:1rem;font-size:.82rem;color:var(--ink-lt)}
+.why strong{color:var(--ink)}
+.why-label,.tip-label{font-size:.62rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;margin-bottom:.3rem}
+.why-label{color:var(--walnut)}
+.tip{background:var(--green-bg);border-left:3px solid var(--green);border-radius:0 8px 8px 0;padding:.9rem 1.1rem;margin-bottom:1rem;font-size:.82rem;color:#3A5A3A}
+.tip-label{color:var(--green)}
+.note{background:var(--blue-bg);border-left:3px solid var(--blue);border-radius:0 8px 8px 0;padding:.9rem 1.1rem;margin-bottom:1rem;font-size:.82rem;color:#2A3A5A}
+
+/* COMPANIONS */
+.companion-label{font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--ink-xs);margin:.9rem 0 .4rem}
+.companion{padding-left:1rem;font-size:.8rem;color:var(--ink-lt)}
+.companion li{margin-bottom:.25rem}
+
+/* ACTION PLAN */
+.action-list{list-style:none}
+.action-item{display:flex;gap:.9rem;padding:.9rem 0;border-bottom:1px solid var(--border);font-size:.82rem}
+.action-item:last-child{border-bottom:none}
+.action-num{flex-shrink:0;width:26px;height:26px;border-radius:50%;background:var(--walnut);color:#fff;display:flex;align-items:center;justify-content:center;font-size:.68rem;font-weight:700;margin-top:.15rem}
+.action-text{color:var(--ink-lt)}
+.action-text strong{color:var(--ink)}
+.action-where{font-size:.7rem;color:var(--ink-xs);margin-top:.1rem}
+
+/* SCENARIOS */
+.scenarios{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1rem;margin-bottom:2rem}
+.sc{background:var(--white);border:1px solid var(--border);border-radius:12px;overflow:hidden}
+.sc-head{padding:.9rem 1.1rem .7rem;border-bottom:1px solid var(--border)}
+.sc-letter{font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:300;color:var(--ash);line-height:1}
+.sc-name{font-size:.75rem;font-weight:600;color:var(--ink-lt)}
+.sc-body{padding:.9rem 1.1rem}
+.sc-line{display:flex;justify-content:space-between;font-size:.76rem;padding:.18rem 0;border-bottom:1px dotted var(--border);color:var(--ink-lt)}
+.sc-line:last-of-type{border-bottom:none}
+.sc-line-name{flex:1;padding-right:.4rem;line-height:1.3}
+.sc-line-price{font-weight:600;color:var(--ink);white-space:nowrap}
+.sc-total{display:flex;justify-content:space-between;align-items:center;padding:.75rem 1.1rem;background:var(--cream);border-top:1px solid var(--border)}
+.sc-total-label{font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--ink-xs)}
+.sc-total-price{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:500;color:var(--walnut)}
+
+/* COHESION */
+.cohesion-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:.9rem;margin-bottom:2rem}
+.coh{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:1.1rem}
+.coh-icon{font-size:1.2rem;margin-bottom:.4rem}
+.coh-title{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--walnut);margin-bottom:.35rem}
+.coh-desc{font-size:.78rem;color:var(--ink-lt);line-height:1.5}
+
+/* SOURCES */
+.sources-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem;margin-bottom:2rem}
+.src-card{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:1.1rem 1.25rem}
+.src-card-title{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--ink-lt);margin-bottom:.75rem;padding-bottom:.5rem;border-bottom:1px solid var(--border)}
+.src-card ul{list-style:none}
+.src-card li{padding:.3rem 0;border-bottom:1px solid var(--border);font-size:.78rem}
+.src-card li:last-child{border-bottom:none;padding-bottom:0}
+.src-card a{color:var(--walnut-lt)}
+.src-card a:hover{color:var(--walnut)}
+.src-tag{display:inline-block;font-size:.58rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;padding:.1em .5em;border-radius:4px;margin-right:.3rem;vertical-align:middle}
+.tag-xhs{background:var(--walnut-bg);color:var(--walnut)}
+.tag-lemon{background:#FFF0F0;color:#C0404A}
+.tag-article{background:var(--blue-bg);color:var(--blue)}
+.tag-shop{background:var(--green-bg);color:var(--green)}
+
+/* DIVIDER */
+hr{border:none;border-top:1px solid var(--border);margin:2rem 0}
+
+/* FOOTER */
+footer{text-align:center;padding:3rem 1rem;border-top:1px solid var(--border);font-size:.75rem;color:var(--ink-xs)}
+footer p+p{margin-top:.4rem}
+
+/* RESPONSIVE */
+@media(max-width:600px){
+  .nav-links{display:none}
+  .card-head{flex-direction:column}
+  .card-price-wrap{text-align:left}
+}
+</style>
+</head>
+<body>
+
+<div class="theme-nav">
+  <a href="../index.html" class="theme-nav-home">Parc Esta · Furniture Research</a>
+  <ul class="theme-nav-links">
+    <li><a href="japandi.html" class="active">Japandi</a></li>
+    <li><a href="wabi-sabi.html">Wabi-Sabi</a></li>
+    <li><a href="scandi.html">Scandi</a></li>
+    <li><a href="modern-tropical.html">Tropical</a></li>
+    <li><a href="mid-century.html">Mid-Century</a></li>
+  </ul>
+</div>
+
+<nav>
+  <span class="nav-brand">Parc Esta · Type BP5</span>
+  <ul class="nav-links">
+    <li><a href="#bed">Bed</a></li>
+    <li><a href="#sofa">Sofa</a></li>
+    <li><a href="#dining">Dining</a></li>
+    <li><a href="#toilet">Toilet</a></li>
+    <li><a href="#style">Style</a></li>
+    <li><a href="#plan">Action Plan</a></li>
+    <li><a href="#sources">Sources</a></li>
+  </ul>
+</nav>
+
+<header class="hero">
+  <p class="eyebrow">Furniture &amp; Fittings Research Report</p>
+  <h1>A <em>Japandi</em> Home<br>at Parc Esta</h1>
+  <div class="hero-meta">
+    <span>Type BP5 · 69 sqm / 743 sq ft</span>
+    <span>Sims Avenue, Eunos</span>
+    <span>MCL Land</span>
+    <span>Japandi / Wabi-sabi</span>
+  </div>
+  <div class="palette">
+    <div class="swatch"><div class="swatch-dot" style="background:#6B4C2A"></div><span>Walnut</span></div>
+    <div class="swatch"><div class="swatch-dot" style="background:#C4A882"></div><span>Ash</span></div>
+    <div class="swatch"><div class="swatch-dot" style="background:#EAD9C0"></div><span>Oat</span></div>
+    <div class="swatch"><div class="swatch-dot" style="background:#C9A88E"></div><span>Clay</span></div>
+    <div class="swatch"><div class="swatch-dot" style="background:#F7F3EE"></div><span>Cream</span></div>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="budget-bar">
+    <div class="budget-bar-label">Scenario A · Recommended Total (all top picks)</div>
+    <div class="budget-items">
+      <div><div class="bi-label">Bed + Frame</div><div class="bi-name">BedAndBasics Take Tatami Storage</div><div class="bi-price">$1,169</div></div>
+      <div><div class="bi-label">Sofa</div><div class="bi-name">Castlery Hamilton 2-Seater</div><div class="bi-price">$1,199</div></div>
+      <div><div class="bi-label">Sofa Accents</div><div class="bi-name">Rattan chair + jute rug</div><div class="bi-price">~$350</div></div>
+      <div><div class="bi-label">Dining</div><div class="bi-name">IKEA LISABO set</div><div class="bi-price">$439</div></div>
+      <div><div class="bi-label">Toilet Bowl</div><div class="bi-name">TOTO CW162 Wall-Hung</div><div class="bi-price">$1,101</div></div>
+      <div><div class="bi-label">Bathroom Acc.</div><div class="bi-name">Matte black set</div><div class="bi-price">~$150</div></div>
+    </div>
+    <div class="budget-total">
+      <div class="budget-total-label">Estimated Total</div>
+      <div class="budget-total-price">~$4,938</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════ BED ═══════════════ -->
+<section id="bed">
+  <div class="sec-head">
+    <div class="sec-num">01</div>
+    <div>
+      <div class="sec-eyebrow">Splurge · Up to $4,000 (frame + mattress) · Master Bedroom</div>
+      <div class="sec-title">Storage Bed + Bedframe</div>
+    </div>
+  </div>
+
+  <div class="community">
+    <div class="community-label">小红书 · Lemon8 SG · Community Insights</div>
+    <ul>
+      <li><strong>Storage beds are the #1 XHS recommendation for 2BR SG condos</strong> — a 69sqm unit with BR2 as a home office cannot afford to lose wardrobe or chest-of-drawers space. The bed must do double duty.</li>
+      <li><strong>Tatami platform storage beds</strong> are the most-saved Japandi bedroom form on XHS — low profile, solid wood, hidden capacity. Picket&Rail and BedAndBasics dominate the SG market.</li>
+      <li><strong>Hydraulic lift vs side drawers</strong> — XHS verdict is split. Hydraulic stores more volume (full under-bed cavity) but requires clearing the bed surface; side drawers offer easier daily access but lose ~30% capacity.</li>
+      <li><strong>Solid oak over veneer</strong> — Japandi SG community strongly prefers solid American White Oak (FAS-certified) for storage beds. The drawers/lift mechanisms see daily wear that veneer can't handle long-term.</li>
+      <li><strong>Headboard-free design</strong> is the most authentically Japanese form on XHS — fewer visual lines, more wall plane visible, easier to dress with art or textiles.</li>
+    </ul>
+    <div class="src-links">
+      XHS searches:
+      <a href="https://www.xiaohongshu.com/search_result?keyword=%E6%96%B0%E5%8A%A0%E5%9D%A1+%E5%BA%8A%E6%9E%B6+%E6%8E%A8%E8%8D%90" target="_blank">新加坡 床架 推荐 ↗</a>
+      <a href="https://www.xiaohongshu.com/search_result?keyword=%E6%A6%BB%E6%A6%BB%E7%B1%B3%E5%BA%8A+%E6%96%B0%E5%8A%A0%E5%9D%A1" target="_blank">榻榻米床 新加坡 ↗</a>
+      <a href="https://www.xiaohongshu.com/search_result?keyword=%E6%97%A5%E5%BC%8F+%E5%8D%A7%E5%AE%A4+%E6%96%B0%E5%8A%A0%E5%9D%A1" target="_blank">日式卧室 新加坡 ↗</a>
+      · Lemon8:
+      <a href="https://www.lemon8-app.com/at93sqm/7256339470629241346?region=sg" target="_blank">Castlery haul review ↗</a>
+      <a href="https://www.lemon8-app.com/madeinchaichee/7254520219966931457?region=sg" target="_blank">$6k Castlery furniture haul ↗</a>
+      · Article: <a href="https://www.castlery.com/sg/blog/drawer-storage-bed-vs-lift-up-storage-bed" target="_blank">Drawer vs lift-up storage bed guide ↗</a>
+    </div>
+  </div>
+
+  <!-- Option 1 -->
+  <div class="card top">
+    <div class="card-image"><img src="../images/bed-take.jpg" alt="BedAndBasics Take Oak Wood Tatami Storage Bed" loading="lazy"><div class="img-caption">BedAndBasics · Take Oak Tatami Storage</div></div>
+    <div class="card-head">
+      <div>
+        <div class="badge-row"><span class="badge b-top">Top Pick</span><span class="badge b-runner">Most Storage</span><span class="badge b-runner">Solid American Oak</span></div>
+        <div class="card-name">BedAndBasics Take Oak Wood Tatami Storage Bed</div>
+        <div class="card-sub">BedAndBasics Singapore · Solid American White Oak (FAS-certified) · Hydraulic lift</div>
+      </div>
+      <div class="card-price-wrap">
+        <div class="card-price-label">Queen</div>
+        <div class="card-price">$1,169</div>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="specs">
+        <div class="sk">Dimensions</div><div class="sv">W186.6 × D213.5 × H93cm</div>
+        <div class="sk">Material</div><div class="sv">100% solid American White Oak · FAS-certified (highest hardwood grade) · Wooden slat base</div>
+        <div class="sk">Storage type</div><div class="sv">Dual hydraulic lift compartments with slow-closing pistons — full under-bed cavity</div>
+        <div class="sk">Headboard features</div><div class="sv">Built-in LED lighting with touch control · Built-in power outlet · Dual side storage slots · Reclined for back support</div>
+        <div class="sk">Weight capacity</div><div class="sv">220kg</div>
+        <div class="sk">Warranty</div><div class="sv">3-year warranty</div>
+        <div class="sk">Regular price</div><div class="sv">$1,299 (currently on sale at $1,169.10)</div>
+        <div class="sk">Buy</div><div class="sv"><a href="https://www.bedandbasics.sg/take-oak-wood-tatami-storage-bed.html" target="_blank">bedandbasics.sg → Take Oak Tatami Storage ↗</a></div>
+      </div>
+      <div class="why">
+        <div class="why-label">Why this is the top storage pick</div>
+        Maximum storage volume of the three — dual hydraulic lift compartments give you the full under-bed cavity for seasonal bedding, suitcases, off-season clothing. The LED-lit headboard with built-in power outlet is genuinely useful for charging phones and reading — saves you from buying a bedside lamp and an extension cord. FAS-certified solid American oak is heirloom-grade material that will last decades. Headboard depth (213.5cm) fits comfortably in master bedroom.
+      </div>
+      <div class="companion-label">Style with (budget remaining ~$2,800 from $4,000 bed budget)</div>
+      <ul class="companion">
+        <li>Premium mattress upgrade — Emma Hybrid Premium or Sealy Posturepedic Queen: ~$1,500–2,500</li>
+        <li>Solid oak floating bedside tables (BedAndBasics matching range): ~$280 each</li>
+        <li>Linen bedding in oat or clay — MUJI or Zara Home</li>
+        <li>Waffle-weave cotton throw in warm cream</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Option 2 -->
+  <div class="card runner">
+    <div class="card-image"><img src="../images/bed-mikuru.jpg" alt="BedAndBasics Mikuru Oak Tatami Bed with Drawers" loading="lazy"><div class="img-caption">BedAndBasics · Mikuru Oak Tatami w/ Drawers</div></div>
+    <div class="card-head">
+      <div>
+        <div class="badge-row"><span class="badge b-runner">Option 2</span><span class="badge b-runner">Pure Japandi Minimal</span><span class="badge b-runner">Side Drawers</span></div>
+        <div class="card-name">BedAndBasics Mikuru Oak Tatami Bed with Drawers</div>
+        <div class="card-sub">BedAndBasics Singapore · Solid American White Oak · Headboard-free · Triple side drawers</div>
+      </div>
+      <div class="card-price-wrap">
+        <div class="card-price-label">Queen</div>
+        <div class="card-price">$1,052</div>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="specs">
+        <div class="sk">Dimensions</div><div class="sv">W180 × D200 × H35cm — lowest profile of the three</div>
+        <div class="sk">Material</div><div class="sv">100% solid American White Oak · FAS-certified · Reinforced slat base</div>
+        <div class="sk">Storage type</div><div class="sv">Side-opening triple drawers · Configurable left or right placement</div>
+        <div class="sk">Design</div><div class="sv">Headboard-free · Four-sided flush-edge construction · Rounded polished corners</div>
+        <div class="sk">Weight capacity</div><div class="sv">220kg</div>
+        <div class="sk">Warranty</div><div class="sv">3-year warranty</div>
+        <div class="sk">Lead time</div><div class="sv">5 working days (made-to-order)</div>
+        <div class="sk">Regular price</div><div class="sv">$1,169 (currently on sale at $1,052.10)</div>
+        <div class="sk">Buy</div><div class="sv"><a href="https://www.bedandbasics.sg/mikuru-oak-wood-tatami-bed-with-drawers.html" target="_blank">bedandbasics.sg → Mikuru Oak Tatami ↗</a></div>
+      </div>
+      <div class="why">
+        <div class="why-label">Why consider this over the Take</div>
+        The purest Japandi form — headboard-free, ultra-low profile (35cm), clean rectangular slab. At 200cm depth and 180cm width, it has the smallest footprint of the three, ideal if you want to maximize floor space and air. Triple side drawers are easier to access daily than hydraulic lifts — you don't need to clear the bed surface to get to them. Configurable drawer placement (left or right) adapts to your wardrobe wall layout.
+      </div>
+      <div class="tip">
+        <div class="tip-label">Trade-off vs Take</div>
+        Storage volume ~60% of the Take (drawers can't use the full cavity). No LED/power features. No headboard means pillows lean against bare wall — consider a wall-mounted slim cushioned panel or art piece.
+      </div>
+    </div>
+  </div>
+
+  <!-- Option 3 -->
+  <div class="card alt">
+    <div class="card-image"><img src="../images/bed-koda.jpg" alt="BedAndBasics Koda Oak Tatami Storage Bed" loading="lazy"><div class="img-caption">BedAndBasics · Koda Oak Tatami Storage</div></div>
+    <div class="card-head">
+      <div>
+        <div class="badge-row"><span class="badge b-alt">Option 3</span><span class="badge b-alt">Most Compact</span><span class="badge b-alt">Best Value</span></div>
+        <div class="card-name">BedAndBasics Koda Oak Tatami Storage Bed</div>
+        <div class="card-sub">BedAndBasics Singapore · Solid American White Oak · Hydraulic lift · Compact footprint</div>
+      </div>
+      <div class="card-price-wrap">
+        <div class="card-price-label">Queen</div>
+        <div class="card-price">$827</div>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="specs">
+        <div class="sk">Dimensions</div><div class="sv">W155.4 × D205 × H38cm — smallest footprint</div>
+        <div class="sk">Material</div><div class="sv">100% solid American White Oak · FAS-certified · Wooden slat base</div>
+        <div class="sk">Storage type</div><div class="sv">Two large hydraulic lift compartments with slow-closing mechanism</div>
+        <div class="sk">Design</div><div class="sv">Headboard-free · Clean minimalist silhouette · 2cm raised gap protects items from floor moisture</div>
+        <div class="sk">Weight capacity</div><div class="sv">220kg</div>
+        <div class="sk">Warranty</div><div class="sv">3-year warranty</div>
+        <div class="sk">Regular price</div><div class="sv">$919 (currently on sale at $827.10)</div>
+        <div class="sk">Buy</div><div class="sv"><a href="https://www.bedandbasics.sg/koda-oak-wood-tatami-storage-bed.html" target="_blank">bedandbasics.sg → Koda Oak Tatami ↗</a></div>
+      </div>
+      <div class="why">
+        <div class="why-label">Why choose this</div>
+        Best value of the three at $827 — same FAS-certified solid American oak, same 220kg capacity, same 3-year warranty as the premium Take. The 2cm raised gap is a thoughtful detail for tropical SG humidity (keeps stored items off the slat base). At 155.4cm width, it's actually narrower than the others — gives you more bedside clearance in a 3.2m wide master bedroom. Frees ~$340 vs the Take for a better mattress.
+      </div>
+      <div class="tip">
+        <div class="tip-label">Honourable mention — also worth viewing in store</div>
+        <strong>Picket&Rail Tatami Platform Storage Bed</strong> — fully customisable platform width, custom storage configurations (Boxstorage, Drawer-storage, Cabinet-storage). Higher price but bespoke for awkward room dimensions. <a href="https://picketandrail.com/pages/tatami-storage-beds" target="_blank">picketandrail.com → Tatami Storage ↗</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ SOFA ═══════════════ -->
+<section id="sofa">
+  <div class="sec-head">
+    <div class="sec-num">02</div>
+    <div>
+      <div class="sec-eyebrow">Splurge · Living Room</div>
+      <div class="sec-title">Sofa</div>
+    </div>
+  </div>
+
+  <div class="community">
+    <div class="community-label">小红书 · Lemon8 SG · Community Insights</div>
+    <ul>
+      <li>Castlery Hamilton is the most-recommended sofa on Singapore Lemon8 for Japandi/Scandi homes — pocket spring comfort, deep 60cm seats, removable washable covers.</li>
+      <li>Linen-weave or bouclé in oat, cream, or warm grey is the XHS consensus for tropical climates — breathable, ages beautifully, doesn't trap heat.</li>
+      <li>2-seater + rattan accent chair reads "curated" not cramped in compact SG living rooms — adds texture a 3-seater alone cannot.</li>
+      <li>L-shaped sectionals in sub-800sqft units are consistently regretted on XHS — they dominate the room and block balcony access flow.</li>
+    </ul>
+    <div class="src-links">
+      XHS:
+      <a href="https://www.xiaohongshu.com/search_result?keyword=%E6%96%B0%E5%8A%A0%E5%9D%A1+%E6%B2%99%E5%8F%91+%E6%8E%A8%E8%8D%90" target="_blank">新加坡 沙发 推荐 ↗</a>
+      <a href="https://www.xiaohongshu.com/search_result?keyword=%E6%97%A5%E5%BC%8F%E9%A3%8E+%E5%AE%A2%E5%8E%85+%E6%96%B0%E5%8A%A0%E5%9D%A1" target="_blank">日式风 客厅 新加坡 ↗</a>
+      · Lemon8:
+      <a href="https://www.lemon8-app.com/momorie/7229642350350352898?region=sg" target="_blank">Hamilton sofa 1-year review ↗</a>
+      <a href="https://www.lemon8-app.com/@chelleseashelle/7388387845653856769?region=sg" target="_blank">Castlery honest review ↗</a>
+      <a href="https://www.lemon8-app.com/bideeho/7243807844812784130?region=sg" target="_blank">Best SG furniture stores ↗</a>
+    </div>
+  </div>
+
+  <div class="note">
+    <strong>Room dimension note:</strong> The floor plan labels "2.6m" and "2.0m" in the living area — likely partial references, not full room dimensions. <strong>Measure your actual space before purchasing.</strong> All options below are sized conservatively.
+  </div>
+
+  <!-- Option 1 -->
+  <div class="card top">
+    <div class="card-image"><img src="../images/sofa-hamilton-2.jpg" alt="Castlery Hamilton 2-Seater Sofa" loading="lazy"><div class="img-caption">Castlery · Hamilton 2-Seater (shown in Brilliant White; Oat fabric recommended)</div></div>
+    <div class="card-head">
+      <div>
+        <div class="badge-row"><span class="badge b-top">Top Pick</span><span class="badge b-runner">Compact Fit</span></div>
+        <div class="card-name">Castlery Hamilton 2-Seater</div>
+        <div class="card-sub">Performance Linen Weave · Oat — recommended fabric</div>
+      </div>
+      <div class="card-price-wrap">
+        <div class="card-price-label">2-Seater</div>
+        <div class="card-price">$1,199</div>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="specs">
+        <div class="sk">Dimensions</div><div class="sv">W180 × D100 × H82cm</div>
+        <div class="sk">Seating depth</div><div class="sv">60cm — deep and loungy</div>
+        <div class="sk">Best fabric</div><div class="sv">Performance Linen Weave "Oat" — warm, breathable, Japandi-perfect</div>
+        <div class="sk">Other fabrics</div><div class="sv">Bouclé Cream · Washed Chenille Sand · Performance Twill Pearl Beige</div>
+        <div class="sk">Suspension</div><div class="sv">Pocket springs + sinuous spring base</div>
+        <div class="sk">Covers</div><div class="sv">Fully removable, machine washable</div>
+        <div class="sk">Legs</div><div class="sv">Stainless steel (offset with warm accessories)</div>
+        <div class="sk">Capacity</div><div class="sv">2 × 150kg per seat</div>
+        <div class="sk">Buy</div><div class="sv"><a href="https://www.castlery.com/sg/products/hamilton-2-seater-sofa" target="_blank">castlery.com/sg → Hamilton 2-Seater ↗</a></div>
+      </div>
+      <div class="why">
+        <div class="why-label">Why this for Parc Esta's living room</div>
+        At 180cm wide in a compact living room, it leaves comfortable clearance either side. "Oat" linen weave is warm, breathable and classic Japandi — won't look dated in 5 years. Pocket springs (not just foam) mean the sofa won't sag. Deep 60cm seats are luxurious for a couple. Removable machine-washable covers are essential in Singapore's humid climate.
+      </div>
+      <div class="tip">
+        <div class="tip-label">Key action before buying</div>
+        Order a fabric swatch from Castlery — <strong>free by mail.</strong> Hold "Oat Linen Weave" against your unit wall in natural light before committing.
+      </div>
+      <div class="companion-label">Complete the living room (~$1,550–1,700 total)</div>
+      <ul class="companion">
+        <li>Rattan accent chair — ~$200–350 (Haji Lane rattan shops or IKEA)</li>
+        <li>IKEA SINDAL jute rug 200×300cm — ~$99</li>
+        <li>Low rattan or solid oak coffee table</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Option 2 -->
+  <div class="card runner">
+    <div class="card-image"><img src="../images/sofa-hamilton-3.jpg" alt="Castlery Hamilton 3-Seater Sofa" loading="lazy"><div class="img-caption">Castlery · Hamilton 3-Seater</div></div>
+    <div class="card-head">
+      <div>
+        <div class="badge-row"><span class="badge b-runner">Option 2</span><span class="badge b-runner">More Seating</span></div>
+        <div class="card-name">Castlery Hamilton 3-Seater</div>
+        <div class="card-sub">Performance Linen Weave · Oat — same fabric range as 2-seater</div>
+      </div>
+      <div class="card-price-wrap">
+        <div class="card-price-label">3-Seater</div>
+        <div class="card-price">$1,599</div>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="specs">
+        <div class="sk">Dimensions</div><div class="sv">W203.5 × D100 × H82cm</div>
+        <div class="sk">Seating depth</div><div class="sv">60cm</div>
+        <div class="sk">Seating height</div><div class="sv">42cm</div>
+        <div class="sk">Capacity</div><div class="sv">3 × 150kg per seat</div>
+        <div class="sk">Fabric options</div><div class="sv">Same 22 options as 2-seater · Oat Linen Weave recommended</div>
+        <div class="sk">Covers</div><div class="sv">Fully removable, machine washable</div>
+        <div class="sk">Buy</div><div class="sv"><a href="https://www.castlery.com/sg/products/hamilton-3-seater-sofa" target="_blank">castlery.com/sg → Hamilton 3-Seater ↗</a></div>
+      </div>
+      <div class="why">
+        <div class="why-label">When to choose the 3-seater over the 2-seater</div>
+        If you measure and confirm the living room is ≥3.0m wide, upgrade to the 3-seater for $400 more. Meaningfully better for hosting guests, lying down to watch TV, or working from the sofa. Same quality, same fabric options, same construction.
+      </div>
+    </div>
+  </div>
+
+  <!-- Option 3 -->
+  <div class="card alt">
+    <div class="card-image"><img src="../images/sofa-hamilton-2.jpg" alt="Castlery Hamilton 2-Seater paired with rattan accent chair" loading="lazy"><div class="img-caption">Castlery Hamilton 2-Seater + rattan accent chair + jute rug</div></div>
+    <div class="card-head">
+      <div>
+        <div class="badge-row"><span class="badge b-alt">Option 3</span><span class="badge b-alt">Best Composition</span></div>
+        <div class="card-name">Hamilton 2-Seater + Rattan Accent Chair</div>
+        <div class="card-sub">The classic XHS Japandi living room trio</div>
+      </div>
+      <div class="card-price-wrap">
+        <div class="card-price-label">Total</div>
+        <div class="card-price">~$1,650</div>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="specs">
+        <div class="sk">Sofa</div><div class="sv">Hamilton 2-Seater Oat — $1,199</div>
+        <div class="sk">Rattan chair</div><div class="sv">Natural rattan bucket/round chair — ~$200–350</div>
+        <div class="sk">Jute rug</div><div class="sv">IKEA SINDAL 200×300cm — ~$99</div>
+        <div class="sk">Total</div><div class="sv">~$1,498–1,648</div>
+      </div>
+      <div class="why">
+        <div class="why-label">Why this is the XHS gold standard</div>
+        Sofa + rattan accent chair + jute rug is the definitive Japandi living room composition on XHS home reveal accounts. Rattan introduces a third texture (beyond linen and wood) that is distinctly Japanese-Southeast Asian in spirit. Takes less floor space than a 3-seater while creating more visual interest and design depth.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ DINING ═══════════════ -->
+<section id="dining">
+  <div class="sec-head">
+    <div class="sec-num">03</div>
+    <div>
+      <div class="sec-eyebrow">Save · Dining Area</div>
+      <div class="sec-title">Dining Table + Chairs</div>
+    </div>
+  </div>
+
+  <div class="community">
+    <div class="community-label">小红书 · Lemon8 SG · Community Insights</div>
+    <ul>
+      <li>IKEA LISABO is overwhelmingly the top pick on Singapore Lemon8 renovation accounts for 2BR condo dining on a budget — ash veneer, Red Dot Award design, legitimately beautiful.</li>
+      <li>For Japandi chairs: solid wood without arms (minimalist) or upholstered seats with rounded backs. IKEA RÖNNINGE appears in virtually every Japandi home reveal.</li>
+      <li>Extendable tables are practical for 2BR condos that occasionally host — Nook & Cranny Oqui oval is the community pick for mid-range Japandi extendable dining.</li>
+      <li>Avoid chairs with armrests at a compact 140cm table — too wide, uncomfortable to seat 4 people.</li>
+    </ul>
+    <div class="src-links">
+      XHS:
+      <a href="https://www.xiaohongshu.com/search_result?keyword=%E6%96%B0%E5%8A%A0%E5%9D%A1+%E9%A4%90%E6%A1%8C+%E6%8E%A8%E8%8D%90" target="_blank">新加坡 餐桌 推荐 ↗</a>
+      <a href="https://www.xiaohongshu.com/search_result?keyword=%E5%B0%8F%E6%88%B7%E5%9E%8B+%E9%A4%90%E6%A1%8C+%E6%8E%A8%E8%8D%90" target="_blank">小户型 餐桌 推荐 ↗</a>
+      · Lemon8:
+      <a href="https://www.lemon8-app.com/@deskuah/7280130132994556417?region=sg" target="_blank">Top IKEA Japandi finds ↗</a>
+      · Article:
+      <a href="https://www.checkcharm.com/reviews/home-goods/minimalist-dining-ikea-lisabo-table-review/" target="_blank">LISABO table review ↗</a>
+      <a href="https://www.homeanddecor.com.sg/shopping/best-extendable-dining-table-set/" target="_blank">Best extendable dining tables SG ↗</a>
+    </div>
+  </div>
+
+  <!-- Option 1 -->
+  <div class="card top">
+    <div class="card-image"><img src="../images/dining-lisabo.jpg" alt="IKEA LISABO Table + 4 Chairs Ash Veneer" loading="lazy"><div class="img-caption">IKEA · LISABO Table + 4 Chairs (Ash Veneer)</div></div>
+    <div class="card-head">
+      <div>
+        <div class="badge-row"><span class="badge b-top">Top Pick</span><span class="badge b-save">Save Tier</span><span class="badge b-runner">Red Dot Award</span></div>
+        <div class="card-name">IKEA LISABO Table + 4 Chairs</div>
+        <div class="card-sub">Ash veneer + solid birch · 4.9/5 stars (IKEA SG)</div>
+      </div>
+      <div class="card-price-wrap">
+        <div class="card-price-label">Set of 5</div>
+        <div class="card-price">$439</div>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="specs">
+        <div class="sk">Table dimensions</div><div class="sv">140 × 78 × 74cm — seats 4 comfortably</div>
+        <div class="sk">Table material</div><div class="sv">Ash veneer surface · Solid birch legs · Tinted acrylic lacquer</div>
+        <div class="sk">Chair material</div><div class="sv">Layer-glued ash veneer · Solid birch legs · No arms</div>
+        <div class="sk">Rating</div><div class="sv">4.9 / 5.0 stars on IKEA Singapore</div>
+        <div class="sk">Design award</div><div class="sv">International Red Dot Award winner</div>
+        <div class="sk">Regular price</div><div class="sv">$529 (currently on sale at $439)</div>
+        <div class="sk">Buy</div><div class="sv"><a href="https://www.ikea.com/sg/en/p/lisabo-lisabo-table-and-4-chairs-ash-veneer-ash-s29385530/" target="_blank">IKEA Singapore → LISABO set ↗</a></div>
+      </div>
+      <div class="why">
+        <div class="why-label">Why this is the obvious choice for the save tier</div>
+        Ash veneer is the most Japandi material at any price point — light, warm grain, natural feel. Solid birch construction. Red Dot Award design. 4.9 stars. At $439 for table + 4 chairs, the value is exceptional and the money saved goes toward the bed and sofa. The LISABO chair's clean minimal back doesn't look "IKEA obvious" in a finished home.
+      </div>
+      <div class="companion-label">Style the table (under $100)</div>
+      <ul class="companion">
+        <li>4 linen placemats in oat or clay — Zara Home or MUJI</li>
+        <li>Rattan centrepiece tray — ~$20–40</li>
+        <li>Small ceramic bud vase — ~$20–40</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Option 2 -->
+  <div class="card runner">
+    <div class="card-image"><img src="../images/dining-morbylanga.jpg" alt="IKEA MÖRBYLÅNGA Table Oak Veneer Brown Stained" loading="lazy"><div class="img-caption">IKEA · MÖRBYLÅNGA Table (Brown-Stained Oak Veneer)</div></div>
+    <div class="card-head">
+      <div>
+        <div class="badge-row"><span class="badge b-runner">Option 2</span><span class="badge b-runner">Darker Tone</span></div>
+        <div class="card-name">IKEA MÖRBYLÅNGA + RÖNNINGE Chairs × 4</div>
+        <div class="card-sub">Brown-stained oak veneer table · Solid birch round-back chairs</div>
+      </div>
+      <div class="card-price-wrap">
+        <div class="card-price-label">Est. total</div>
+        <div class="card-price">~$950</div>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="specs">
+        <div class="sk">Table dimensions</div><div class="sv">140 × 85cm — slightly wider than LISABO</div>
+        <div class="sk">Table material</div><div class="sv">Oak veneer, brown stained — richer, warmer tone</div>
+        <div class="sk">Table price</div><div class="sv">$699</div>
+        <div class="sk">Chair (RÖNNINGE)</div><div class="sv">Solid birch · Round back · No arms · ~$59–79 each</div>
+        <div class="sk">Chairs × 4 est.</div><div class="sv">~$236–316</div>
+        <div class="sk">Durability</div><div class="sv">Certified for restaurant / commercial use</div>
+        <div class="sk">Buy table</div><div class="sv"><a href="https://www.ikea.com/sg/en/p/moerbylanga-table-oak-veneer-brown-stained-80365802/" target="_blank">IKEA Singapore → MÖRBYLÅNGA ↗</a></div>
+      </div>
+      <div class="why">
+        <div class="why-label">When to choose this over the LISABO</div>
+        MÖRBYLÅNGA's brown-stained oak is a step warmer and richer than the LISABO's natural ash — pairs more closely with the deeper oak tones of the tatami storage bed. The RÖNNINGE chair's solid birch round back is a Japandi classic and appears constantly on XHS SG home reveals. More substantial look, but ~$510 more than the LISABO set.
+      </div>
+    </div>
+  </div>
+
+  <!-- Option 3 -->
+  <div class="card alt">
+    <div class="card-image"><img src="../images/dining-oqui.png" alt="Nook &amp; Cranny Oqui Oval Extendable Dining Table" loading="lazy"><div class="img-caption">Nook &amp; Cranny · Oqui Oval Extendable (Oak)</div></div>
+    <div class="card-head">
+      <div>
+        <div class="badge-row"><span class="badge b-alt">Option 3</span><span class="badge b-alt">Extendable</span></div>
+        <div class="card-name">Nook &amp; Cranny Oqui Oval Extendable</div>
+        <div class="card-sub">Natural oak veneer · Japandi oval form · Seats 4 → extends to 6</div>
+      </div>
+      <div class="card-price-wrap">
+        <div class="card-price-label">Table only</div>
+        <div class="card-price">$1,051</div>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="specs">
+        <div class="sk">Material</div><div class="sv">Natural oak veneer · Rubber wood</div>
+        <div class="sk">Form</div><div class="sv">Oval — softer, more sculptural than rectangular</div>
+        <div class="sk">Seats</div><div class="sv">4 standard → extends to 6 for hosting</div>
+        <div class="sk">Style fit</div><div class="sv">Japandi / Scandi — oval forms are an XHS favourite for dining</div>
+        <div class="sk">Note</div><div class="sv">Budget chairs separately (~$400–600 for 4)</div>
+        <div class="sk">Buy</div><div class="sv"><a href="https://www.nookandcranny.com/products/oqui-oval-extendable-dining-table-oak" target="_blank">nookandcranny.com → Oqui Oval Oak ↗</a></div>
+      </div>
+      <div class="why">
+        <div class="why-label">When to choose this</div>
+        If you want a more premium, sculptural dining area and occasionally host 5–6 guests. The oval form is softer and more interesting than rectangular — it reads as a design choice, not just a table. Significantly more expensive than the IKEA options (~$1,450–1,650 with chairs). Treat this as an upgrade for a future refresh rather than the initial move-in.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ TOILET ═══════════════ -->
+<section id="toilet">
+  <div class="sec-head">
+    <div class="sec-num">04</div>
+    <div>
+      <div class="sec-eyebrow">Bathroom Upgrade</div>
+      <div class="sec-title">Toilet Bowl + Bathroom Accessories</div>
+    </div>
+  </div>
+
+  <div class="community">
+    <div class="community-label">小红书 · Lemon8 SG · Community Insights</div>
+    <ul>
+      <li>Wall-hung toilets are the XHS standard for modern Singapore condos — suspended design makes bathrooms appear larger, easier to mop underneath.</li>
+      <li>TOTO is the dominant brand on XHS SG renovation posts — praised for Tornado flush, CeFiONtect glaze (self-cleaning ceramic), and washlet bidet integration.</li>
+      <li>Washlet (bidet seat) is strongly recommended on Singapore Lemon8 — "once you use it you can't go back." TOTO washlets are the XHS gold standard.</li>
+      <li>For accessories: choose ONE finish across the entire bathroom and stick to it — matte black or brushed gold, never mixed.</li>
+      <li>Matte black hardware against white tiles is the most popular Japandi bathroom look on XHS SG. Brushed gold is trending for warmer, more luxurious feel.</li>
+    </ul>
+    <div class="src-links">
+      XHS:
+      <a href="https://www.xiaohongshu.com/search_result?keyword=%E6%96%B0%E5%8A%A0%E5%9D%A1+%E9%A9%AC%E6%A1%B6+%E6%8E%A8%E8%8D%90" target="_blank">新加坡 马桶 推荐 ↗</a>
+      <a href="https://www.xiaohongshu.com/search_result?keyword=%E6%97%A5%E5%BC%8F%E6%B5%B4%E5%AE%A4+%E6%96%B0%E5%8A%A0%E5%9D%A1" target="_blank">日式浴室 新加坡 ↗</a>
+      <a href="https://www.xiaohongshu.com/search_result?keyword=TOTO+%E9%A9%AC%E6%A1%B6+%E6%96%B0%E5%8A%A0%E5%9D%A1" target="_blank">TOTO 马桶 新加坡 ↗</a>
+      · Lemon8:
+      <a href="https://www.lemon8-app.com/@home.swee.home/7355844812190581265?region=sg" target="_blank">Ultimate toilet bowl guide SG ↗</a>
+      <a href="https://www.lemon8-app.com/@home.swee.home/7359514859660198417?region=sg" target="_blank">Best toilet bowl brands SG ↗</a>
+      · Article:
+      <a href="https://www.homeanddecor.com.sg/renovation/bathroom/toto-toilet-bowl-price" target="_blank">TOTO price review Home&Decor ↗</a>
+      <a href="https://www.bestreviews.sg/best-toilet-bowl-singapore/" target="_blank">Best toilet bowls SG 2025 ↗</a>
+    </div>
+  </div>
+
+  <p style="font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--ink-xs);margin-bottom:1rem;">PART A — Toilet Bowl</p>
+
+  <!-- Toilet Option 1 -->
+  <div class="card top">
+    <div class="card-image"><img src="../images/toilet-cw162.jpg" alt="TOTO CW162 Wall-Hung Toilet" loading="lazy"><div class="img-caption">TOTO · CW162 Wall-Hung Toilet (Tornado Flush · Rimless · CeFiONtect)</div></div>
+    <div class="card-head">
+      <div>
+        <div class="badge-row"><span class="badge b-top">Top Pick</span><span class="badge b-runner">Wall-Hung</span></div>
+        <div class="card-name">TOTO CW162 Wall-Hung Toilet</div>
+        <div class="card-sub">Tornado flush · Rimless · CeFiONtect · Separate washlet add-on available</div>
+      </div>
+      <div class="card-price-wrap">
+        <div class="card-price-label">On sale</div>
+        <div class="card-price">$1,101</div>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="specs">
+        <div class="sk">Dimensions</div><div class="sv">394W × 530D × 339H mm</div>
+        <div class="sk">Flush system</div><div class="sv">Tornado Flush — powerful, uses less water</div>
+        <div class="sk">Flush volume</div><div class="sv">3.5L full / 2.5L reduced dual flush</div>
+        <div class="sk">Bowl</div><div class="sv">Rimless — eliminates hidden bacteria buildup under rim</div>
+        <div class="sk">Glaze</div><div class="sv">CeFiONtect — nano-glaze prevents debris sticking, easy to clean</div>
+        <div class="sk">Seat</div><div class="sv">Soft-close seat and cover included</div>
+        <div class="sk">Regular price</div><div class="sv">$1,295 (currently on sale)</div>
+        <div class="sk">Buy</div><div class="sv"><a href="https://shop.bathroom.com.sg/product/toto-cw162-wall-hung-toilet-bowl/" target="_blank">bathroom.com.sg → TOTO CW162 ↗</a> · <a href="https://asia.toto.com/sg/products/toilets/wall-hung/" target="_blank">TOTO Asia official wall-hung range ↗</a></div>
+      </div>
+      <div class="why">
+        <div class="why-label">Why this as the base toilet pick</div>
+        Wall-hung design is the XHS standard for modern condos — creates the illusion of more floor space, and cleaning underneath is effortless. Tornado Flush is TOTO's signature system — dramatically quieter and more powerful than conventional flushing. CeFiONtect glaze means the bowl stays cleaner longer with minimal scrubbing. At ~$1,101, it's the most affordable wall-hung TOTO with the full feature set.
+      </div>
+      <div class="tip">
+        <div class="tip-label">Add a washlet separately</div>
+        TOTO washlet seats (bidet function, heated seat) can be added to the CW162. The TOTO TCF6531 washlet is a popular pairing at ~$800–1,200. Total bowl + washlet: ~$1,900–2,300. Check compatibility before purchasing.
+      </div>
+    </div>
+  </div>
+
+  <!-- Toilet Option 2 -->
+  <div class="card runner">
+    <div class="card-image"><img src="../images/toilet-cw522.jpg" alt="TOTO CW522 Wall-Hung Toilet + Washlet SX" loading="lazy"><div class="img-caption">TOTO · CW522 + Washlet SX (Contemporary II · Smart Toilet)</div></div>
+    <div class="card-head">
+      <div>
+        <div class="badge-row"><span class="badge b-runner">Option 2</span><span class="badge b-runner">Smart Toilet</span></div>
+        <div class="card-name">TOTO CW522 + WASHLET SX (Contemporary II)</div>
+        <div class="card-sub">Integrated wall-hung toilet + washlet combo · Heated seat · Auto deodorizer</div>
+      </div>
+      <div class="card-price-wrap">
+        <div class="card-price-label">Bundle (30% off)</div>
+        <div class="card-price">$3,574</div>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="specs">
+        <div class="sk">Bowl dimensions</div><div class="sv">380W × 580D × 335H mm</div>
+        <div class="sk">Flush</div><div class="sv">Tornado Flush · 4.5L / 3L dual flush · Rimless</div>
+        <div class="sk">Washlet features</div><div class="sv">Front + rear cleansing · Oscillating spray · Heated seat (adjustable temp)</div>
+        <div class="sk">Washlet features</div><div class="sv">Auto deodorizer · EWATER+ self-cleaning nozzle · Motion sensor activation</div>
+        <div class="sk">Regular price</div><div class="sv">$5,105 (currently 30% off at W. Atelier)</div>
+        <div class="sk">Note</div><div class="sv">Cistern tank, chair bracket, rubber bush purchased separately</div>
+        <div class="sk">Buy</div><div class="sv"><a href="https://www.watelier.com/product/bathroom-sanitary-wares-toilets-wall-hung/toto-wall-hung-toilet-contemporary-ii-cw522hme5u-washlet-sx-tcf796cz" target="_blank">W. Atelier → TOTO CW522 + Washlet ↗</a></div>
+      </div>
+      <div class="why">
+        <div class="why-label">When to choose this over the CW162</div>
+        If you want the full smart toilet experience — heated seat, integrated bidet functions, auto deodorizer, self-cleaning nozzle — this is the definitive TOTO package. At $3,574 (30% off from $5,105) it's a significant purchase but one of the most-praised bathroom upgrades on XHS SG. The Contemporary II design is architecturally clean and Japandi-compatible.
+      </div>
+    </div>
+  </div>
+
+  <!-- Toilet Option 3 -->
+  <div class="card alt">
+    <div class="card-image"><img src="../images/toilet-kohler.jpg" alt="Kohler Modern Life Wall-Hung Toilet" loading="lazy"><div class="img-caption">Kohler · Modern Life Wall-Hung (Red Dot Design Award)</div></div>
+    <div class="card-head">
+      <div>
+        <div class="badge-row"><span class="badge b-alt">Option 3</span><span class="badge b-alt">Budget Pick</span></div>
+        <div class="card-name">Kohler Wall-Hung Toilet</div>
+        <div class="card-sub">Modern Life range · Rimless · More affordable entry point</div>
+      </div>
+      <div class="card-price-wrap">
+        <div class="card-price-label">From</div>
+        <div class="card-price">$642</div>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="specs">
+        <div class="sk">Design</div><div class="sv">Wall-hung · Rimless bowl</div>
+        <div class="sk">Style</div><div class="sv">Clean modern lines — Japandi-compatible</div>
+        <div class="sk">From</div><div class="sv">$642 SGD (Modern Life range)</div>
+        <div class="sk">Buy</div><div class="sv"><a href="https://www.kohler.com.sg/browse/bathroom/Categories/toilets/" target="_blank">kohler.com.sg → Toilet range ↗</a></div>
+      </div>
+      <div class="why">
+        <div class="why-label">When to consider Kohler</div>
+        If the bathroom reno budget is tight, Kohler's Modern Life wall-hung at ~$642 delivers the wall-hung aesthetic at significantly lower cost than TOTO. Less brand prestige on XHS SG but solid functional quality. Saves ~$450 vs the CW162. Add a separate non-TOTO bidet seat (~$200–400) for similar function.
+      </div>
+    </div>
+  </div>
+
+  <hr/>
+  <p style="font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--ink-xs);margin:1.5rem 0 1rem;">PART B — Bathroom Accessories</p>
+
+  <div class="note">
+    <strong>Key rule from XHS:</strong> Pick ONE finish for the entire bathroom — towel bar, toilet paper holder, robe hook, tap, shower head — and never mix. Matte black and brushed gold are the two Japandi-approved finishes. Chrome is fine but less distinctive.
+  </div>
+
+  <!-- Accessories Option 1 -->
+  <div class="card top" style="margin-top:1rem">
+    <div class="card-head">
+      <div>
+        <div class="badge-row"><span class="badge b-top">Top Pick</span><span class="badge b-runner">Matte Black</span></div>
+        <div class="card-name">SUS304 Matte Black Bathroom Set</div>
+        <div class="card-sub">5–10 piece set · Towel bar, TP holder, hooks, ring · Amazon SG / Lazada SG</div>
+      </div>
+      <div class="card-price-wrap">
+        <div class="card-price-label">5–10 pcs</div>
+        <div class="card-price">~$80–180</div>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="specs">
+        <div class="sk">Material</div><div class="sv">SUS304 stainless steel — rust-resistant, essential for Singapore humidity</div>
+        <div class="sk">Finish</div><div class="sv">Matte black powder coat</div>
+        <div class="sk">Typical set includes</div><div class="sv">24" towel bar · Toilet paper holder · Towel ring · 2–4 robe hooks</div>
+        <div class="sk">Where to buy</div><div class="sv">Amazon.sg · Lazada.sg · Shopee SG · Bacera (in-store)</div>
+        <div class="sk">Price range</div><div class="sv">$80–180 SGD depending on piece count and brand</div>
+      </div>
+      <div class="why">
+        <div class="why-label">Why matte black is the Japandi pick</div>
+        Matte black on white tile is the dominant Japandi bathroom aesthetic on XHS SG — it reads as intentional contrast rather than cold minimalism. SUS304 stainless steel is non-negotiable in Singapore's humidity; avoid zinc alloy (rusts within 2 years). A full coordinated set from one brand ensures all pieces match exactly.
+      </div>
+      <div class="companion-label">Where to shop in SG</div>
+      <ul class="companion">
+        <li><a href="https://www.lazada.sg/tag/toilet-accessories-set/" target="_blank">Lazada SG — toilet accessories set ↗</a> — good selection, read SG seller reviews</li>
+        <li><a href="https://www.bacera.com.sg/bathroom/bathroom-accessories/" target="_blank">Bacera Singapore ↗</a> — showroom experience, can see finish in person</li>
+        <li><a href="https://www.amazon.sg" target="_blank">Amazon.sg ↗</a> — search "SUS304 matte black bathroom set"</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Accessories Option 2 -->
+  <div class="card runner">
+    <div class="card-head">
+      <div>
+        <div class="badge-row"><span class="badge b-runner">Option 2</span><span class="badge b-runner">Brushed Gold</span></div>
+        <div class="card-name">Brushed Gold / Brushed Brass Bathroom Set</div>
+        <div class="card-sub">Warmer, more luxurious Japandi aesthetic · Bacera or specialty bathroom stores</div>
+      </div>
+      <div class="card-price-wrap">
+        <div class="card-price-label">Est. set</div>
+        <div class="card-price">~$200–400</div>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="specs">
+        <div class="sk">Material</div><div class="sv">Brass or SUS304 stainless with brushed gold PVD coating</div>
+        <div class="sk">Finish</div><div class="sv">Brushed gold — warm, muted, anti-fingerprint</div>
+        <div class="sk">Style note</div><div class="sv">Pairs beautifully with warm walnut / ash wood tones in the rest of the home</div>
+        <div class="sk">Where to buy</div><div class="sv"><a href="https://www.bacera.com.sg/bathroom/bathroom-accessories/" target="_blank">Bacera SG ↗</a> · <a href="https://www.watelier.com/category/bathroom" target="_blank">W. Atelier ↗</a> · HERA Bathroom</div>
+      </div>
+      <div class="why">
+        <div class="why-label">When to choose brushed gold</div>
+        If the rest of the home uses warm walnut and ash tones (which it does in this plan), brushed gold hardware coordinates beautifully — it echoes the warm metal undertones in the wood. More expensive than matte black sets but creates a more premium, cohesive look. Best purchased in-store at Bacera or W. Atelier where you can see the finish against tile samples.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ STYLE ═══════════════ -->
+<section id="style">
+  <div class="sec-head">
+    <div class="sec-num" style="color:var(--ash)">—</div>
+    <div>
+      <div class="sec-eyebrow">Japandi Cohesion Guide</div>
+      <div class="sec-title">Making it all work together</div>
+    </div>
+  </div>
+  <div class="cohesion-grid">
+    <div class="coh"><div class="coh-icon">🪵</div><div class="coh-title">Wood Tone Anchor</div><div class="coh-desc">Teak/walnut bed + ash dining table + rattan accent. Intentional variation within one warm-neutral family — not a mismatch.</div></div>
+    <div class="coh"><div class="coh-icon">🧵</div><div class="coh-title">Fabric Palette</div><div class="coh-desc">Sofa in oat linen → dining chairs in ash veneer → bed in walnut/teak → accessories in clay/cream. One warm neutral family.</div></div>
+    <div class="coh"><div class="coh-icon">✋</div><div class="coh-title">Texture Layering</div><div class="coh-desc">Wood slats (bed) → woven linen (sofa) → smooth veneer (dining) → jute (rug) → ceramic (accessories). Different texture, same palette.</div></div>
+    <div class="coh"><div class="coh-icon">🚿</div><div class="coh-title">Bathroom Finish Rule</div><div class="coh-desc">Pick ONE finish — matte black or brushed gold — across every bathroom accessory. Never mix. Never use chrome alongside matte black.</div></div>
+    <div class="coh"><div class="coh-icon">⚠️</div><div class="coh-title">What to Avoid</div><div class="coh-desc">Tufted headboards. L-shaped sofas. Armchair dining chairs. Chrome + matte black mixed. Dark espresso wood. Red/mahogany tones.</div></div>
+    <div class="coh"><div class="coh-icon">🌿</div><div class="coh-title">Small Touches</div><div class="coh-desc">One or two indoor plants (monstera or snake plant). Wabi-sabi ceramic vessels. Linen cushions. A single art print in warm earthy tones.</div></div>
+  </div>
+</section>
+
+<!-- ═══════════════ ACTION PLAN ═══════════════ -->
+<section id="plan">
+  <div class="sec-head">
+    <div class="sec-num" style="color:var(--ash)">—</div>
+    <div>
+      <div class="sec-eyebrow">Next Steps</div>
+      <div class="sec-title">Shopping Action Plan</div>
+    </div>
+  </div>
+
+  <div class="card" style="margin-bottom:2rem">
+    <div class="card-body" style="padding:.5rem 1.5rem">
+      <ol class="action-list">
+        <li class="action-item"><div class="action-num">1</div><div class="action-text"><strong>Order Castlery fabric swatches</strong> — Oat Performance Linen Weave for the Hamilton sofa. Free by mail. Test in your unit's natural light before committing.<div class="action-where">→ castlery.com/sg — request from any product page</div></div></li>
+        <li class="action-item"><div class="action-num">2</div><div class="action-text"><strong>Visit BedAndBasics showroom</strong> — see and try all three tatami storage beds in person. Test the hydraulic lift mechanism, the drawer slides, and feel the FAS-certified solid oak finish. Solid wood storage beds are a major purchase — never buy unseen.<div class="action-where">→ BedAndBasics showroom (check site for current SG address)</div></div></li>
+        <li class="action-item"><div class="action-num">3</div><div class="action-text"><strong>Visit Castlery showroom</strong> — sit on the Hamilton sofa. Measure the sofa depth against your room.<div class="action-where">→ Jewel Changi Airport or Funan Mall</div></div></li>
+        <li class="action-item"><div class="action-num">4</div><div class="action-text"><strong>Visit a TOTO bathroom showroom</strong> — see the wall-hung toilet and washlet in person. W. Atelier or Fullsun both have good showroom displays.<div class="action-where">→ W. Atelier (authorised TOTO dealer) · fullsun.com.sg</div></div></li>
+        <li class="action-item"><div class="action-num">5</div><div class="action-text"><strong>Visit Bacera or W. Atelier</strong> — see bathroom accessory finishes (matte black vs brushed gold) against tile samples before committing to a finish.<div class="action-where">→ bacera.com.sg · watelier.com</div></div></li>
+        <li class="action-item"><div class="action-num">6</div><div class="action-text"><strong>Order IKEA LISABO set</strong> — this one you can order online confidently. Free delivery over $100.<div class="action-where">→ IKEA Alexandra or IKEA Tampines · ikea.com/sg</div></div></li>
+        <li class="action-item"><div class="action-num">7</div><div class="action-text"><strong>Sign up for Castlery newsletter</strong> — 10–20% sale events run regularly. Waiting can save $200–400 on bed + sofa combined.<div class="action-where">→ castlery.com/sg</div></div></li>
+      </ol>
+    </div>
+  </div>
+
+  <p style="font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--ink-xs);margin-bottom:1rem">Budget Scenarios</p>
+  <div class="scenarios">
+    <div class="sc">
+      <div class="sc-head"><div class="sc-letter">A</div><div class="sc-name">All Top Picks</div></div>
+      <div class="sc-body">
+        <div class="sc-line"><span class="sc-line-name">BedAndBasics Take Tatami Storage Q</span><span class="sc-line-price">$1,169</span></div>
+        <div class="sc-line"><span class="sc-line-name">Castlery Hamilton 2-Seater (Oat)</span><span class="sc-line-price">$1,199</span></div>
+        <div class="sc-line"><span class="sc-line-name">Rattan chair + jute rug</span><span class="sc-line-price">~$350</span></div>
+        <div class="sc-line"><span class="sc-line-name">IKEA LISABO set</span><span class="sc-line-price">$439</span></div>
+        <div class="sc-line"><span class="sc-line-name">TOTO CW162 wall-hung</span><span class="sc-line-price">$1,101</span></div>
+        <div class="sc-line"><span class="sc-line-name">Matte black accessories set</span><span class="sc-line-price">~$150</span></div>
+      </div>
+      <div class="sc-total"><div class="sc-total-label">Total</div><div class="sc-total-price">~$4,408</div></div>
+    </div>
+    <div class="sc">
+      <div class="sc-head"><div class="sc-letter">B</div><div class="sc-name">Premium Bed + Smart Toilet</div></div>
+      <div class="sc-body">
+        <div class="sc-line"><span class="sc-line-name">BedAndBasics Take Tatami Storage Q</span><span class="sc-line-price">$1,169</span></div>
+        <div class="sc-line"><span class="sc-line-name">Premium mattress (Emma Hybrid Premium)</span><span class="sc-line-price">~$1,800</span></div>
+        <div class="sc-line"><span class="sc-line-name">Castlery Hamilton 3-Seater (Oat)</span><span class="sc-line-price">$1,599</span></div>
+        <div class="sc-line"><span class="sc-line-name">Rattan chair + jute rug</span><span class="sc-line-price">~$350</span></div>
+        <div class="sc-line"><span class="sc-line-name">IKEA MÖRBYLÅNGA + RÖNNINGE ×4</span><span class="sc-line-price">~$950</span></div>
+        <div class="sc-line"><span class="sc-line-name">TOTO CW522 + Washlet SX</span><span class="sc-line-price">$3,574</span></div>
+        <div class="sc-line"><span class="sc-line-name">Brushed gold accessories</span><span class="sc-line-price">~$300</span></div>
+      </div>
+      <div class="sc-total"><div class="sc-total-label">Total</div><div class="sc-total-price">~$9,742</div></div>
+    </div>
+    <div class="sc">
+      <div class="sc-head"><div class="sc-letter">C</div><div class="sc-name">Maximum Japandi</div></div>
+      <div class="sc-body">
+        <div class="sc-line"><span class="sc-line-name">Picket&amp;Rail Custom Tatami Platform Q</span><span class="sc-line-price">~$1,800</span></div>
+        <div class="sc-line"><span class="sc-line-name">Premium mattress (Sealy Posturepedic)</span><span class="sc-line-price">~$2,000</span></div>
+        <div class="sc-line"><span class="sc-line-name">Castlery Hamilton 3-Seater (Oat)</span><span class="sc-line-price">$1,599</span></div>
+        <div class="sc-line"><span class="sc-line-name">Rattan chair + jute rug</span><span class="sc-line-price">~$350</span></div>
+        <div class="sc-line"><span class="sc-line-name">Nook &amp; Cranny Oqui + chairs</span><span class="sc-line-price">~$1,500</span></div>
+        <div class="sc-line"><span class="sc-line-name">TOTO CW522 + Washlet SX</span><span class="sc-line-price">$3,574</span></div>
+        <div class="sc-line"><span class="sc-line-name">Brushed gold accessories</span><span class="sc-line-price">~$300</span></div>
+      </div>
+      <div class="sc-total"><div class="sc-total-label">Total</div><div class="sc-total-price">~$11,123</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ SOURCES ═══════════════ -->
+<section id="sources">
+  <div class="sec-head">
+    <div class="sec-num" style="color:var(--ash)">—</div>
+    <div>
+      <div class="sec-eyebrow">Research Sources</div>
+      <div class="sec-title">All Links &amp; References</div>
+    </div>
+  </div>
+  <div class="sources-grid">
+
+    <div class="src-card">
+      <div class="src-card-title">小红书 XHS Searches</div>
+      <ul>
+        <li><span class="src-tag tag-xhs">XHS</span><a href="https://www.xiaohongshu.com/search_result?keyword=%E6%96%B0%E5%8A%A0%E5%9D%A1+%E5%BA%8A%E6%9E%B6+%E6%8E%A8%E8%8D%90" target="_blank">新加坡 床架 推荐 (SG bed frames) ↗</a></li>
+        <li><span class="src-tag tag-xhs">XHS</span><a href="https://www.xiaohongshu.com/search_result?keyword=%E6%A6%BB%E6%A6%BB%E7%B1%B3%E5%BA%8A+%E6%96%B0%E5%8A%A0%E5%9D%A1" target="_blank">榻榻米床 新加坡 (tatami beds SG) ↗</a></li>
+        <li><span class="src-tag tag-xhs">XHS</span><a href="https://www.xiaohongshu.com/search_result?keyword=%E6%96%B0%E5%8A%A0%E5%9D%A1+%E6%B2%99%E5%8F%91+%E6%8E%A8%E8%8D%90" target="_blank">新加坡 沙发 推荐 (SG sofa recs) ↗</a></li>
+        <li><span class="src-tag tag-xhs">XHS</span><a href="https://www.xiaohongshu.com/search_result?keyword=%E6%97%A5%E5%BC%8F%E9%A3%8E+%E5%AE%A2%E5%8E%85+%E6%96%B0%E5%8A%A0%E5%9D%A1" target="_blank">日式风 客厅 新加坡 (Japandi living room) ↗</a></li>
+        <li><span class="src-tag tag-xhs">XHS</span><a href="https://www.xiaohongshu.com/search_result?keyword=%E6%96%B0%E5%8A%A0%E5%9D%A1+%E9%A4%90%E6%A1%8C+%E6%8E%A8%E8%8D%90" target="_blank">新加坡 餐桌 推荐 (SG dining table) ↗</a></li>
+        <li><span class="src-tag tag-xhs">XHS</span><a href="https://www.xiaohongshu.com/search_result?keyword=%E6%96%B0%E5%8A%A0%E5%9D%A1+%E9%A9%AC%E6%A1%B6+%E6%8E%A8%E8%8D%90" target="_blank">新加坡 马桶 推荐 (SG toilet recs) ↗</a></li>
+        <li><span class="src-tag tag-xhs">XHS</span><a href="https://www.xiaohongshu.com/search_result?keyword=%E6%97%A5%E5%BC%8F%E6%B5%B4%E5%AE%A4+%E6%96%B0%E5%8A%A0%E5%9D%A1" target="_blank">日式浴室 新加坡 (Japandi bathroom) ↗</a></li>
+        <li><span class="src-tag tag-xhs">XHS</span><a href="https://www.xiaohongshu.com/search_result?keyword=TOTO+%E9%A9%AC%E6%A1%B6+%E6%96%B0%E5%8A%A0%E5%9D%A1" target="_blank">TOTO 马桶 新加坡 ↗</a></li>
+        <li><span class="src-tag tag-xhs">XHS</span><a href="https://www.xiaohongshu.com/search_result?keyword=%E4%B8%9C%E6%99%AF%E8%8B%91" target="_blank">东景苑 (Parc Esta) ↗</a></li>
+      </ul>
+    </div>
+
+    <div class="src-card">
+      <div class="src-card-title">Lemon8 SG Posts</div>
+      <ul>
+        <li><span class="src-tag tag-lemon">L8</span><a href="https://www.lemon8-app.com/momorie/7229642350350352898?region=sg" target="_blank">Hamilton sofa 1-year honest review ↗</a></li>
+        <li><span class="src-tag tag-lemon">L8</span><a href="https://www.lemon8-app.com/@chelleseashelle/7388387845653856769?region=sg" target="_blank">Castlery honest review (Weeawee) ↗</a></li>
+        <li><span class="src-tag tag-lemon">L8</span><a href="https://www.lemon8-app.com/madeinchaichee/7254520219966931457?region=sg" target="_blank">$6,000 Castlery furniture haul ↗</a></li>
+        <li><span class="src-tag tag-lemon">L8</span><a href="https://www.lemon8-app.com/at93sqm/7256339470629241346?region=sg" target="_blank">What we bought from Castlery ↗</a></li>
+        <li><span class="src-tag tag-lemon">L8</span><a href="https://www.lemon8-app.com/bideeho/7243807844812784130?region=sg" target="_blank">Best SG furniture stores honest experience ↗</a></li>
+        <li><span class="src-tag tag-lemon">L8</span><a href="https://www.lemon8-app.com/@deskuah/7280130132994556417?region=sg" target="_blank">Top IKEA finds for Japandi home ↗</a></li>
+        <li><span class="src-tag tag-lemon">L8</span><a href="https://www.lemon8-app.com/@renologist.sg/7437076542754243088?region=sg" target="_blank">Japandi design trend Singapore ↗</a></li>
+        <li><span class="src-tag tag-lemon">L8</span><a href="https://www.lemon8-app.com/experience/furniture-buying-guide-for-new-homeowners?region=sg" target="_blank">Furniture buying guide new homeowners ↗</a></li>
+        <li><span class="src-tag tag-lemon">L8</span><a href="https://www.lemon8-app.com/@home.swee.home/7355844812190581265?region=sg" target="_blank">Ultimate toilet bowl guide Singapore ↗</a></li>
+        <li><span class="src-tag tag-lemon">L8</span><a href="https://www.lemon8-app.com/@home.swee.home/7359514859660198417?region=sg" target="_blank">Best toilet bowl brands Singapore ↗</a></li>
+      </ul>
+    </div>
+
+    <div class="src-card">
+      <div class="src-card-title">Retailer Product Pages</div>
+      <ul>
+        <li><span class="src-tag tag-shop">Shop</span><a href="https://www.bedandbasics.sg/take-oak-wood-tatami-storage-bed.html" target="_blank">BedAndBasics Take Oak Tatami Storage ↗</a></li>
+        <li><span class="src-tag tag-shop">Shop</span><a href="https://www.bedandbasics.sg/mikuru-oak-wood-tatami-bed-with-drawers.html" target="_blank">BedAndBasics Mikuru Oak Tatami w/ Drawers ↗</a></li>
+        <li><span class="src-tag tag-shop">Shop</span><a href="https://www.bedandbasics.sg/koda-oak-wood-tatami-storage-bed.html" target="_blank">BedAndBasics Koda Oak Tatami Storage ↗</a></li>
+        <li><span class="src-tag tag-shop">Shop</span><a href="https://www.bedandbasics.sg/bed-frames/storage-beds.html" target="_blank">BedAndBasics Storage Beds (all) ↗</a></li>
+        <li><span class="src-tag tag-shop">Shop</span><a href="https://picketandrail.com/pages/tatami-storage-beds" target="_blank">Picket&amp;Rail Tatami Storage Beds ↗</a></li>
+        <li><span class="src-tag tag-shop">Shop</span><a href="https://www.castlery.com/sg/products/hamilton-2-seater-sofa" target="_blank">Castlery Hamilton 2-Seater ↗</a></li>
+        <li><span class="src-tag tag-shop">Shop</span><a href="https://www.castlery.com/sg/products/hamilton-3-seater-sofa" target="_blank">Castlery Hamilton 3-Seater ↗</a></li>
+        <li><span class="src-tag tag-shop">Shop</span><a href="https://www.ikea.com/sg/en/p/lisabo-lisabo-table-and-4-chairs-ash-veneer-ash-s29385530/" target="_blank">IKEA LISABO Table + 4 Chairs ↗</a></li>
+        <li><span class="src-tag tag-shop">Shop</span><a href="https://www.ikea.com/sg/en/p/moerbylanga-table-oak-veneer-brown-stained-80365802/" target="_blank">IKEA MÖRBYLÅNGA Table ↗</a></li>
+        <li><span class="src-tag tag-shop">Shop</span><a href="https://www.nookandcranny.com/products/oqui-oval-extendable-dining-table-oak" target="_blank">Nook &amp; Cranny Oqui Oval Oak ↗</a></li>
+        <li><span class="src-tag tag-shop">Shop</span><a href="https://shop.bathroom.com.sg/product/toto-cw162-wall-hung-toilet-bowl/" target="_blank">TOTO CW162 Wall-Hung ↗</a></li>
+        <li><span class="src-tag tag-shop">Shop</span><a href="https://www.watelier.com/product/bathroom-sanitary-wares-toilets-wall-hung/toto-wall-hung-toilet-contemporary-ii-cw522hme5u-washlet-sx-tcf796cz" target="_blank">TOTO CW522 + Washlet SX ↗</a></li>
+        <li><span class="src-tag tag-shop">Shop</span><a href="https://www.kohler.com.sg/browse/bathroom/Categories/toilets/" target="_blank">Kohler Singapore Toilets ↗</a></li>
+        <li><span class="src-tag tag-shop">Shop</span><a href="https://www.bacera.com.sg/bathroom/bathroom-accessories/" target="_blank">Bacera Bathroom Accessories ↗</a></li>
+      </ul>
+    </div>
+
+    <div class="src-card">
+      <div class="src-card-title">Articles &amp; Reviews</div>
+      <ul>
+        <li><span class="src-tag tag-article">Read</span><a href="https://www.castlery.com/sg/blog/drawer-storage-bed-vs-lift-up-storage-bed" target="_blank">Drawer vs lift-up storage bed (Castlery guide) ↗</a></li>
+        <li><span class="src-tag tag-article">Read</span><a href="https://www.homeanddecor.com.sg/shopping/storage-bed-frame-singapore" target="_blank">10 best storage bed frames SG (H&amp;D) ↗</a></li>
+        <li><span class="src-tag tag-article">Read</span><a href="https://www.checkcharm.com/reviews/home-goods/minimalist-dining-ikea-lisabo-table-review/" target="_blank">IKEA LISABO table review ↗</a></li>
+        <li><span class="src-tag tag-article">Read</span><a href="https://www.homeanddecor.com.sg/shopping/best-extendable-dining-table-set/" target="_blank">Best extendable dining tables SG ↗</a></li>
+        <li><span class="src-tag tag-article">Read</span><a href="https://www.homeanddecor.com.sg/renovation/bathroom/toto-toilet-bowl-price" target="_blank">TOTO toilet price review (H&amp;D) ↗</a></li>
+        <li><span class="src-tag tag-article">Read</span><a href="https://www.bestreviews.sg/best-toilet-bowl-singapore/" target="_blank">Best toilet bowls Singapore 2025 ↗</a></li>
+        <li><span class="src-tag tag-article">Read</span><a href="https://stackedhomes.com/how-a-couple-transformed-their-3-bedroom-condo-into-a-japandi-style-haven-with-a-walk-in-wardrobe/" target="_blank">Japandi condo transformation (Stacked Homes) ↗</a></li>
+        <li><span class="src-tag tag-article">Read</span><a href="https://www.castlery.com/sg/blog/japandi-interior-design" target="_blank">Castlery: Expert guide to Japandi design ↗</a></li>
+        <li><span class="src-tag tag-article">Read</span><a href="https://asia.toto.com/sg/products/toilets/wall-hung/" target="_blank">TOTO Asia — wall-hung toilet range ↗</a></li>
+        <li><span class="src-tag tag-article">Read</span><a href="https://www.fullsun.com.sg/toto-washlet-in-singapore-explained-features-and-functions/" target="_blank">TOTO Washlet explained (Fullsun SG) ↗</a></li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <p style="font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:var(--ink-lt)">Parc Esta · Type BP5 · Furniture &amp; Fittings Research</p>
+  <p>Prices current as of May 2026. Verify before purchasing. Primary research: 小红书 XHS, Lemon8 SG, Singapore renovation community.</p>
+  <p style="margin-top:.5rem"><a href="https://github.com/gaoyan198/parc-este-furniture" target="_blank">View on GitHub ↗</a></p>
+</footer>
+
+</body>
+</html>
