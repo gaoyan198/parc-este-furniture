@@ -87,6 +87,12 @@ section{max-width:920px;margin:0 auto;padding:0 clamp(1rem,5vw,3rem) 3.5rem}
 .card-price{font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:500;color:var(--walnut);line-height:1}
 .card-body{padding:1.25rem 1.5rem}
 
+/* PRODUCT IMAGE */
+.card-image{position:relative;width:100%;aspect-ratio:4/3;background:var(--cream);overflow:hidden;border-bottom:1px solid var(--border)}
+.card-image img{width:100%;height:100%;object-fit:cover;object-position:center;display:block;transition:transform .6s ease}
+.card-image:hover img{transform:scale(1.03)}
+.card-image .img-caption{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(180deg,rgba(0,0,0,0) 0%,rgba(0,0,0,.55) 100%);color:#fff;font-size:.65rem;letter-spacing:.06em;padding:1.6rem .9rem .55rem;text-transform:uppercase;font-weight:600;opacity:.92}
+
 /* SPEC TABLE */
 .specs{display:grid;grid-template-columns:auto 1fr;border:1px solid var(--border);border-radius:10px;overflow:hidden;margin-bottom:1.25rem;font-size:.8rem}
 .sk{background:var(--cream);padding:.5rem .9rem;font-weight:600;color:var(--ink-lt);border-bottom:1px solid var(--border)}
@@ -252,6 +258,7 @@ footer p+p{margin-top:.4rem}
 
   <!-- Option 1 -->
   <div class="card top">
+    <div class="card-image"><img src="images/bed-take.jpg" alt="BedAndBasics Take Oak Wood Tatami Storage Bed" loading="lazy"><div class="img-caption">BedAndBasics · Take Oak Tatami Storage</div></div>
     <div class="card-head">
       <div>
         <div class="badge-row"><span class="badge b-top">Top Pick</span><span class="badge b-runner">Most Storage</span><span class="badge b-runner">Solid American Oak</span></div>
@@ -290,6 +297,7 @@ footer p+p{margin-top:.4rem}
 
   <!-- Option 2 -->
   <div class="card runner">
+    <div class="card-image"><img src="images/bed-mikuru.jpg" alt="BedAndBasics Mikuru Oak Tatami Bed with Drawers" loading="lazy"><div class="img-caption">BedAndBasics · Mikuru Oak Tatami w/ Drawers</div></div>
     <div class="card-head">
       <div>
         <div class="badge-row"><span class="badge b-runner">Option 2</span><span class="badge b-runner">Pure Japandi Minimal</span><span class="badge b-runner">Side Drawers</span></div>
@@ -326,6 +334,7 @@ footer p+p{margin-top:.4rem}
 
   <!-- Option 3 -->
   <div class="card alt">
+    <div class="card-image"><img src="images/bed-koda.jpg" alt="BedAndBasics Koda Oak Tatami Storage Bed" loading="lazy"><div class="img-caption">BedAndBasics · Koda Oak Tatami Storage</div></div>
     <div class="card-head">
       <div>
         <div class="badge-row"><span class="badge b-alt">Option 3</span><span class="badge b-alt">Most Compact</span><span class="badge b-alt">Best Value</span></div>
@@ -395,6 +404,7 @@ footer p+p{margin-top:.4rem}
 
   <!-- Option 1 -->
   <div class="card top">
+    <div class="card-image"><img src="images/sofa-hamilton-2.jpg" alt="Castlery Hamilton 2-Seater Sofa" loading="lazy"><div class="img-caption">Castlery · Hamilton 2-Seater (shown in Brilliant White; Oat fabric recommended)</div></div>
     <div class="card-head">
       <div>
         <div class="badge-row"><span class="badge b-top">Top Pick</span><span class="badge b-runner">Compact Fit</span></div>
@@ -437,6 +447,7 @@ footer p+p{margin-top:.4rem}
 
   <!-- Option 2 -->
   <div class="card runner">
+    <div class="card-image"><img src="images/sofa-hamilton-3.jpg" alt="Castlery Hamilton 3-Seater Sofa" loading="lazy"><div class="img-caption">Castlery · Hamilton 3-Seater</div></div>
     <div class="card-head">
       <div>
         <div class="badge-row"><span class="badge b-runner">Option 2</span><span class="badge b-runner">More Seating</span></div>
@@ -467,6 +478,7 @@ footer p+p{margin-top:.4rem}
 
   <!-- Option 3 -->
   <div class="card alt">
+    <div class="card-image"><img src="images/sofa-hamilton-2.jpg" alt="Castlery Hamilton 2-Seater paired with rattan accent chair" loading="lazy"><div class="img-caption">Castlery Hamilton 2-Seater + rattan accent chair + jute rug</div></div>
     <div class="card-head">
       <div>
         <div class="badge-row"><span class="badge b-alt">Option 3</span><span class="badge b-alt">Best Composition</span></div>
@@ -525,6 +537,7 @@ footer p+p{margin-top:.4rem}
 
   <!-- Option 1 -->
   <div class="card top">
+    <div class="card-image"><img src="images/dining-lisabo.jpg" alt="IKEA LISABO Table + 4 Chairs Ash Veneer" loading="lazy"><div class="img-caption">IKEA · LISABO Table + 4 Chairs (Ash Veneer)</div></div>
     <div class="card-head">
       <div>
         <div class="badge-row"><span class="badge b-top">Top Pick</span><span class="badge b-save">Save Tier</span><span class="badge b-runner">Red Dot Award</span></div>
@@ -561,6 +574,7 @@ footer p+p{margin-top:.4rem}
 
   <!-- Option 2 -->
   <div class="card runner">
+    <div class="card-image"><img src="images/dining-morbylanga.jpg" alt="IKEA MÖRBYLÅNGA Table Oak Veneer Brown Stained" loading="lazy"><div class="img-caption">IKEA · MÖRBYLÅNGA Table (Brown-Stained Oak Veneer)</div></div>
     <div class="card-head">
       <div>
         <div class="badge-row"><span class="badge b-runner">Option 2</span><span class="badge b-runner">Darker Tone</span></div>
@@ -591,6 +605,7 @@ footer p+p{margin-top:.4rem}
 
   <!-- Option 3 -->
   <div class="card alt">
+    <div class="card-image"><img src="images/dining-oqui.png" alt="Nook &amp; Cranny Oqui Oval Extendable Dining Table" loading="lazy"><div class="img-caption">Nook &amp; Cranny · Oqui Oval Extendable (Oak)</div></div>
     <div class="card-head">
       <div>
         <div class="badge-row"><span class="badge b-alt">Option 3</span><span class="badge b-alt">Extendable</span></div>
@@ -656,6 +671,7 @@ footer p+p{margin-top:.4rem}
 
   <!-- Toilet Option 1 -->
   <div class="card top">
+    <div class="card-image"><img src="images/toilet-cw162.jpg" alt="TOTO CW162 Wall-Hung Toilet" loading="lazy"><div class="img-caption">TOTO · CW162 Wall-Hung Toilet (Tornado Flush · Rimless · CeFiONtect)</div></div>
     <div class="card-head">
       <div>
         <div class="badge-row"><span class="badge b-top">Top Pick</span><span class="badge b-runner">Wall-Hung</span></div>
@@ -691,6 +707,7 @@ footer p+p{margin-top:.4rem}
 
   <!-- Toilet Option 2 -->
   <div class="card runner">
+    <div class="card-image"><img src="images/toilet-cw522.jpg" alt="TOTO CW522 Wall-Hung Toilet + Washlet SX" loading="lazy"><div class="img-caption">TOTO · CW522 + Washlet SX (Contemporary II · Smart Toilet)</div></div>
     <div class="card-head">
       <div>
         <div class="badge-row"><span class="badge b-runner">Option 2</span><span class="badge b-runner">Smart Toilet</span></div>
@@ -721,6 +738,7 @@ footer p+p{margin-top:.4rem}
 
   <!-- Toilet Option 3 -->
   <div class="card alt">
+    <div class="card-image"><img src="images/toilet-kohler.jpg" alt="Kohler Modern Life Wall-Hung Toilet" loading="lazy"><div class="img-caption">Kohler · Modern Life Wall-Hung (Red Dot Design Award)</div></div>
     <div class="card-head">
       <div>
         <div class="badge-row"><span class="badge b-alt">Option 3</span><span class="badge b-alt">Budget Pick</span></div>
