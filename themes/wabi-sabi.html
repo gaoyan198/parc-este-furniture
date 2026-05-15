@@ -136,6 +136,22 @@ section{max-width:920px;margin:0 auto;padding:0 clamp(1rem,5vw,3rem) 3.5rem}
 .sc{background:var(--white);border:1px solid var(--border);border-radius:12px;overflow:hidden}
 .sc-head{padding:.9rem 1.1rem .7rem;border-bottom:1px solid var(--border)}
 .sc-letter{font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:300;color:var(--ash);line-height:1}
+
+/* VISUAL RECAP COLLAGE */
+.collage-wrap{margin-bottom:2.5rem}
+.collage-label{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.14em;color:var(--ink-xs);margin-bottom:.5rem}
+.collage-sub{font-size:.82rem;color:var(--ink-lt);margin-bottom:1.2rem;font-style:italic}
+.collage-group{margin-bottom:1.5rem}
+.collage-group-title{font-size:.66rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--walnut);margin-bottom:.6rem;display:flex;align-items:center;gap:.6rem}
+.collage-group-title::before{content:"";display:inline-block;width:18px;height:1px;background:var(--walnut)}
+.collage{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:.6rem}
+.collage-tile{position:relative;aspect-ratio:1;border-radius:10px;overflow:hidden;border:1px solid var(--border);background:var(--cream);text-decoration:none;color:inherit;display:block}
+.collage-tile img{width:100%;height:100%;object-fit:cover;transition:transform .4s ease}
+.collage-tile:hover img{transform:scale(1.06)}
+.collage-tile .ct-label{position:absolute;bottom:0;left:0;right:0;padding:1.3rem .6rem .5rem;background:linear-gradient(180deg,rgba(0,0,0,0) 0%,rgba(0,0,0,.8) 100%);color:#fff;font-size:.62rem;font-weight:600;text-transform:uppercase;letter-spacing:.04em;line-height:1.3}
+.collage-tile .ct-label .ct-cat{display:block;font-size:.54rem;color:rgba(255,255,255,.7);letter-spacing:.08em;margin-bottom:.1rem}
+.collage-tile.top-pick::before{content:"★";position:absolute;top:.4rem;right:.5rem;z-index:2;color:#fff;font-size:.9rem;text-shadow:0 1px 3px rgba(0,0,0,.5)}
+@media(max-width:600px){.collage{grid-template-columns:repeat(3,1fr);gap:.4rem}.collage-tile .ct-label{font-size:.56rem;padding:1rem .4rem .35rem}}
 .sc-name{font-size:.75rem;font-weight:600;color:var(--ink-lt)}
 .sc-body{padding:.9rem 1.1rem}
 .sc-line{display:flex;justify-content:space-between;font-size:.76rem;padding:.18rem 0;border-bottom:1px dotted var(--border);color:var(--ink-lt)}
@@ -200,10 +216,12 @@ footer p+p{margin-top:.4rem}
   <span class="nav-brand">Parc Esta · Type BP5</span>
   <ul class="nav-links">
     <li><a href="#bed">Bed</a></li>
+    <li><a href="#mattress">Mattress</a></li>
     <li><a href="#sofa">Sofa</a></li>
     <li><a href="#dining">Dining</a></li>
     <li><a href="#toilet">Toilet</a></li>
     <li><a href="#style">Style</a></li>
+    <li><a href="#recap">Recap</a></li>
     <li><a href="#plan">Action Plan</a></li>
     <li><a href="#sources">Sources</a></li>
   </ul>
@@ -232,6 +250,7 @@ footer p+p{margin-top:.4rem}
     <div class="budget-bar-label">Scenario A · Recommended Total (all top picks)</div>
     <div class="budget-items">
       <div><div class="bi-label">Bed + Frame</div><div class="bi-name">Originals Isla Teak with Rope</div><div class="bi-price">$2,980</div></div>
+      <div><div class="bi-label">Mattress</div><div class="bi-name">Heveya II Natural Latex</div><div class="bi-price">$7,288</div></div>
       <div><div class="bi-label">Sofa</div><div class="bi-name">Originals Sloopy Flax 2.5-Seater</div><div class="bi-price">$5,680</div></div>
       <div><div class="bi-label">Sofa Accents</div><div class="bi-name">Vintage stool + linen throw</div><div class="bi-price">~$280</div></div>
       <div><div class="bi-label">Dining</div><div class="bi-name">IKEA SKOGSTA Acacia Set</div><div class="bi-price">~$799</div></div>
@@ -240,7 +259,7 @@ footer p+p{margin-top:.4rem}
     </div>
     <div class="budget-total">
       <div class="budget-total-label">Estimated Total</div>
-      <div class="budget-total-price">~$11,060</div>
+      <div class="budget-total-price">~$18,348</div>
     </div>
   </div>
 </div>
@@ -305,7 +324,7 @@ footer p+p{margin-top:.4rem}
       </div>
       <div class="companion-label">Style with (budget remaining ~$1,000 from $4,000 bed budget)</div>
       <ul class="companion">
-        <li>Premium mattress (Emma Original Queen): ~$800–1,200</li>
+        <li>Premium mattress (see Section 02 — Heveya II latex or Origin Hybrid Pro)</li>
         <li>Under-bed canvas storage boxes (22cm tall) — MUJI or Daiso clear types: ~$30 each</li>
         <li>Raw linen bedding in stone, clay, or unbleached — Society Limonta / In Bed / MUJI</li>
         <li>Single ceramic table lamp (hand-thrown if possible) on a teak stool nightstand</li>
@@ -383,10 +402,139 @@ footer p+p{margin-top:.4rem}
   </div>
 </section>
 
+<!-- ═══════════════ MATTRESS ═══════════════ -->
+<section id="mattress">
+  <div class="sec-head">
+    <div class="sec-num">02</div>
+    <div>
+      <div class="sec-eyebrow">Splurge · $600 – $7,300 · Master Bedroom</div>
+      <div class="sec-title">Mattress</div>
+    </div>
+  </div>
+
+  <div class="community">
+    <div class="community-label">小红书 · Lemon8 SG · Community Insights</div>
+    <ul>
+      <li><strong>Wabi-sabi philosophy aligns most strongly with natural latex</strong> — slow-grown rubber tree material, hand-tapped, ages over 15–20 years rather than 7–10 for foam hybrids. Material consistency with solid teak elsewhere in the home.</li>
+      <li><strong>Heveya is the SG natural latex authority</strong> — 100% certified organic latex, no off-gassing, hypoallergenic. The mattress equivalent of buying Grade A teak vs MDF.</li>
+      <li><strong>Hybrid (Origin) is the pragmatic compromise</strong> — better for SG humidity than pure foam, dramatically cheaper than latex, 120-night trial removes purchase risk. Acceptable wabi-sabi compromise if budget can't stretch to $7k.</li>
+      <li><strong>Avoid memory foam pure-play</strong> — XHS consensus is memory foam traps heat in tropical climate, off-gasses for weeks, and doesn't suit the wabi-sabi natural-materials philosophy. Hybrid or latex only.</li>
+      <li><strong>Mattress is the only category where DTC beats showroom</strong> — Heveya, Origin, Sonno all offer 100+ night trials. Sealy and Simmons at department stores rarely do. A 30-night home trial beats any 10-minute showroom test.</li>
+    </ul>
+    <div class="src-links">
+      XHS searches:
+      <a href="https://www.xiaohongshu.com/search_result?keyword=%E5%A4%A9%E7%84%B6%E4%B9%B3%E8%83%B6+%E5%BA%8A%E5%9E%AB" target="_blank">天然乳胶 床垫 ↗</a>
+      <a href="https://www.xiaohongshu.com/search_result?keyword=Heveya+%E5%BA%8A%E5%9E%AB" target="_blank">Heveya 床垫 ↗</a>
+      <a href="https://www.xiaohongshu.com/search_result?keyword=%E6%96%B0%E5%8A%A0%E5%9D%A1+%E5%BA%8A%E5%9E%AB+%E6%8E%A8%E8%8D%90" target="_blank">新加坡 床垫 推荐 ↗</a>
+      · Article:
+      <a href="https://www.heveya.sg/blogs/articles/99774406-which-mattress-to-buy-mattress-buying-guide" target="_blank">Heveya — Which Mattress to Buy guide ↗</a>
+      <a href="https://www.herworld.com/life/heveya-european-bedding-mattress-review" target="_blank">Heveya review (Her World) ↗</a>
+    </div>
+  </div>
+
+  <!-- Option 1 -->
+  <div class="card top">
+    <div class="card-image"><img src="../images/mattress-heveya.jpg" alt="Heveya II Natural Organic Latex Mattress" loading="lazy"><div class="img-caption">Heveya · II Natural Organic Latex (100% organic · dual-firmness available · 100-night trial)</div></div>
+    <div class="card-head">
+      <div>
+        <div class="badge-row"><span class="badge b-top">Top Pick</span><span class="badge b-runner">100% Natural Latex</span><span class="badge b-runner">15–20 Year Lifespan</span></div>
+        <div class="card-name">Heveya II Natural Organic Latex Mattress</div>
+        <div class="card-sub">Heveya Singapore · Two-layer certified organic latex · Bamboo + organic cotton cover · Showroom at Tan Boon Liat</div>
+      </div>
+      <div class="card-price-wrap">
+        <div class="card-price-label">Queen</div>
+        <div class="card-price">$7,288</div>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="specs">
+        <div class="sk">Dimensions</div><div class="sv">152 × 190cm (SG Queen)</div>
+        <div class="sk">Construction</div><div class="sv">Two layers 100% certified organic latex (different densities for progressive support) · Bamboo fibre + organic cotton cover</div>
+        <div class="sk">Firmness options</div><div class="sv">Soft · Medium · Firm · OR split-firmness (½ Soft + ½ Medium, ½ Soft + ½ Firm, ½ Medium + ½ Firm) for couples with different preferences</div>
+        <div class="sk">7-zone support</div><div class="sv">Natural latex conforms to the body's 7-zone shape for optimal spine alignment</div>
+        <div class="sk">Lifespan</div><div class="sv">15–20 years — heirloom-class. Equivalent to 2–3 cycles of foam hybrid mattresses.</div>
+        <div class="sk">Trial period</div><div class="sv">100 nights free trial · Full refund including return collection</div>
+        <div class="sk">Warranty</div><div class="sv">10-year comprehensive warranty</div>
+        <div class="sk">Buy</div><div class="sv"><a href="https://www.heveya.sg/products/natural-organic-latex-mattress-ii" target="_blank">heveya.sg → Heveya II ↗</a></div>
+      </div>
+      <div class="why">
+        <div class="why-label">Why Heveya is THE wabi-sabi mattress</div>
+        Wabi-sabi philosophy values slow craftsmanship and natural materials that age over time. Latex from rubber trees, harvested over months, processed without synthetic foaming agents — this is the mattress equivalent of choosing solid teak over veneer. Heveya II will outlast your bed frame, possibly your apartment. The dual-firmness option is critical for couples with different sleep preferences (rare in the market). The Tan Boon Liat showroom lets you lie on three firmness levels for as long as you like — non-negotiable visit before committing $7k+.
+      </div>
+      <div class="tip">
+        <div class="tip-label">Mattress cost frame</div>
+        $7,288 over 17 years = $1.17/night. Compare to a $999 hybrid over 10 years = $0.27/night. Yes, latex costs ~4× per night — but you sleep on it ~10 hours/day and the experience and longevity justify the premium for wabi-sabi-philosophy buyers.
+      </div>
+    </div>
+  </div>
+
+  <!-- Option 2 -->
+  <div class="card runner">
+    <div class="card-image"><img src="../images/mattress-origin.png" alt="Origin Hybrid Pro Mattress" loading="lazy"><div class="img-caption">Origin · Hybrid Pro (9-layer hybrid · 120-night trial · 15-year warranty)</div></div>
+    <div class="card-head">
+      <div>
+        <div class="badge-row"><span class="badge b-runner">Option 2</span><span class="badge b-runner">9-Layer Hybrid</span><span class="badge b-runner">Pragmatic Compromise</span></div>
+        <div class="card-name">Origin Hybrid Pro Mattress</div>
+        <div class="card-sub">Origin Singapore · Engineered in Germany for SG climate · ArcticSilk Tencel pillow top · GraphiteCool latex layer</div>
+      </div>
+      <div class="card-price-wrap">
+        <div class="card-price-label">Queen, 40% off</div>
+        <div class="card-price">$999</div>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="specs">
+        <div class="sk">Dimensions</div><div class="sv">152 × 190 × 31cm (Queen) · 45kg</div>
+        <div class="sk">Construction</div><div class="sv">9 premium layers — ArcticSilk Tencel pillow top · PureWool · CryoFlex cooling foam · GraphiteCool latex · HexaGrid Plus ortho · AirSpring micro coils · CloudForm comfort · ErgoCoil 7-zone lumbar</div>
+        <div class="sk">Firmness</div><div class="sv">Medium-firm</div>
+        <div class="sk">Trial period</div><div class="sv">120 nights · Full refund</div>
+        <div class="sk">Warranty</div><div class="sv">15-year industry-leading warranty</div>
+        <div class="sk">Wabi-sabi fit</div><div class="sv">Contains GraphiteCool latex layer (natural latex blended with graphite) — partial alignment with wabi-sabi natural materials philosophy</div>
+        <div class="sk">Regular price</div><div class="sv">$1,884 (40% off at $999)</div>
+        <div class="sk">Buy</div><div class="sv"><a href="https://originmattress.com.sg/shop/mattresses/origin-hybrid-pro-mattress/" target="_blank">originmattress.com.sg → Hybrid Pro ↗</a></div>
+      </div>
+      <div class="why">
+        <div class="why-label">When Origin makes sense for Wabi-Sabi</div>
+        If $7k+ for a mattress isn't feasible. The Hybrid Pro is the best-engineered hybrid in the SG market at this price — proper pocket coils, multiple cooling layers, real ortho support. The GraphiteCool latex layer is a partial wabi-sabi alignment (some natural latex content). The 120-night trial removes purchase risk. Plan to replace at ~10 years.
+      </div>
+    </div>
+  </div>
+
+  <!-- Option 3 -->
+  <div class="card alt">
+    <div class="card-image"><img src="../images/mattress-sonno.png" alt="Sonno Original Mattress Queen" loading="lazy"><div class="img-caption">Sonno · Original Mattress (3-layer pillow top · 100-night trial)</div></div>
+    <div class="card-head">
+      <div>
+        <div class="badge-row"><span class="badge b-alt">Option 3</span><span class="badge b-alt">Tightest Budget</span><span class="badge b-alt">100-Night Trial</span></div>
+        <div class="card-name">Sonno Original Mattress</div>
+        <div class="card-sub">Sonno Singapore · 3-layer pillow top · Manufactured in Malaysia · 10-year warranty</div>
+      </div>
+      <div class="card-price-wrap">
+        <div class="card-price-label">Queen, on sale</div>
+        <div class="card-price">$599</div>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="specs">
+        <div class="sk">Dimensions</div><div class="sv">152 × 190cm (SG Queen)</div>
+        <div class="sk">Construction</div><div class="sv">3 layers — firm base + medium-firm contour + pillow-top comfort</div>
+        <div class="sk">Trial period</div><div class="sv">100 nights · Free return</div>
+        <div class="sk">Warranty</div><div class="sv">10 years</div>
+        <div class="sk">Regular price</div><div class="sv">$1,099 (on sale at $599)</div>
+        <div class="sk">Buy</div><div class="sv"><a href="https://www.sleepsonno.sg/products/sonno-original-mattress" target="_blank">sleepsonno.sg → Original ↗</a></div>
+      </div>
+      <div class="why">
+        <div class="why-label">When Sonno makes sense</div>
+        If the rest of the wabi-sabi budget (premium teak bed + linen sofa) is eating your savings, Sonno keeps the mattress purchase to under $600 with a real 100-night trial. Pure foam hybrid construction — fewer wabi-sabi materials credentials than Origin or Heveya, but it lets you say "yes" to the Originals teak bed without compromise. Plan to upgrade to Heveya at the 7-year mark.
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ═══════════════ SOFA ═══════════════ -->
 <section id="sofa">
   <div class="sec-head">
-    <div class="sec-num">02</div>
+    <div class="sec-num">03</div>
     <div>
       <div class="sec-eyebrow">Splurge · Living Room</div>
       <div class="sec-title">Sofa</div>
@@ -533,7 +681,7 @@ footer p+p{margin-top:.4rem}
 <!-- ═══════════════ DINING ═══════════════ -->
 <section id="dining">
   <div class="sec-head">
-    <div class="sec-num">03</div>
+    <div class="sec-num">04</div>
     <div>
       <div class="sec-eyebrow">Save · Dining Area</div>
       <div class="sec-title">Dining Table + Chairs</div>
@@ -668,7 +816,7 @@ footer p+p{margin-top:.4rem}
 <!-- ═══════════════ TOILET ═══════════════ -->
 <section id="toilet">
   <div class="sec-head">
-    <div class="sec-num">04</div>
+    <div class="sec-num">05</div>
     <div>
       <div class="sec-eyebrow">Bathroom Upgrade</div>
       <div class="sec-title">Toilet Bowl + Bathroom Accessories</div>
@@ -910,6 +1058,58 @@ footer p+p{margin-top:.4rem}
 </section>
 
 <!-- ═══════════════ ACTION PLAN ═══════════════ -->
+<!-- ═══════════════ VISUAL RECAP ═══════════════ -->
+<section id="recap">
+  <div class="sec-head">
+    <div class="sec-num" style="color:var(--ash)">—</div>
+    <div>
+      <div class="sec-eyebrow">Visual Recap</div>
+      <div class="sec-title">All picks at a glance</div>
+    </div>
+  </div>
+  <p class="collage-sub">Star (★) marks the top pick in each category. Hover any tile to zoom; click to jump to the full card.</p>
+
+  <div class="collage-group">
+    <div class="collage-group-title">Bedroom</div>
+    <div class="collage">
+      <a href="#bed" class="collage-tile top-pick"><img src="../images/wabi-bed-isla.jpg" alt="Originals Isla Teak with Rope" loading="lazy"><span class="ct-label"><span class="ct-cat">Bed · Top</span>Isla Teak + Rope<br/>$2,980</span></a>
+      <a href="#bed" class="collage-tile"><img src="../images/wabi-bed-luna.jpg" alt="Originals Luna Teak Natural" loading="lazy"><span class="ct-label"><span class="ct-cat">Bed · Option 2</span>Luna Teak Natural<br/>$3,380</span></a>
+      <a href="#bed" class="collage-tile"><img src="../images/wabi-bed-tatami.jpg" alt="Picket&amp;Rail Custom Tatami Storage" loading="lazy"><span class="ct-label"><span class="ct-cat">Bed · Option 3</span>Picket&amp;Rail Custom<br/>~$1,800+</span></a>
+      <a href="#mattress" class="collage-tile top-pick"><img src="../images/mattress-heveya.jpg" alt="Heveya II Natural Organic Latex" loading="lazy"><span class="ct-label"><span class="ct-cat">Mattress · Top</span>Heveya II Latex<br/>$7,288</span></a>
+      <a href="#mattress" class="collage-tile"><img src="../images/mattress-origin.png" alt="Origin Hybrid Pro" loading="lazy"><span class="ct-label"><span class="ct-cat">Mattress · Option 2</span>Origin Hybrid Pro<br/>$999</span></a>
+      <a href="#mattress" class="collage-tile"><img src="../images/mattress-sonno.png" alt="Sonno Original Queen" loading="lazy"><span class="ct-label"><span class="ct-cat">Mattress · Option 3</span>Sonno Original<br/>$599</span></a>
+    </div>
+  </div>
+
+  <div class="collage-group">
+    <div class="collage-group-title">Living Room</div>
+    <div class="collage">
+      <a href="#sofa" class="collage-tile top-pick"><img src="../images/wabi-sofa-sloopy.jpg" alt="Originals Sloopy Flax Linen" loading="lazy"><span class="ct-label"><span class="ct-cat">Sofa · Top</span>Sloopy 2.5 Flax<br/>$5,680</span></a>
+      <a href="#sofa" class="collage-tile"><img src="../images/wabi-sofa-pensive.jpg" alt="Originals Pensive Aniline Leather" loading="lazy"><span class="ct-label"><span class="ct-cat">Sofa · Option 2</span>Pensive Leather<br/>$5,080</span></a>
+      <a href="#sofa" class="collage-tile"><img src="../images/wabi-sofa-komo.jpg" alt="Originals Komo Modular" loading="lazy"><span class="ct-label"><span class="ct-cat">Sofa · Option 3</span>Komo Modular<br/>$3,400</span></a>
+    </div>
+  </div>
+
+  <div class="collage-group">
+    <div class="collage-group-title">Dining</div>
+    <div class="collage">
+      <a href="#dining" class="collage-tile top-pick"><img src="../images/wabi-dining-skogsta.jpg" alt="IKEA SKOGSTA Acacia" loading="lazy"><span class="ct-label"><span class="ct-cat">Dining · Top</span>SKOGSTA Acacia<br/>$329</span></a>
+      <a href="#dining" class="collage-tile"><img src="../images/wabi-dining-athena.jpg" alt="Originals Athena Teak" loading="lazy"><span class="ct-label"><span class="ct-cat">Dining · Option 2</span>Athena Teak 140cm<br/>$1,680</span></a>
+      <a href="#dining" class="collage-tile"><img src="../images/wabi-bed-tatami.jpg" alt="Picket&amp;Rail Custom Solid Wood" loading="lazy"><span class="ct-label"><span class="ct-cat">Dining · Option 3</span>Picket&amp;Rail Custom<br/>~$1,400+</span></a>
+    </div>
+  </div>
+
+  <div class="collage-group">
+    <div class="collage-group-title">Bathroom</div>
+    <div class="collage">
+      <a href="#toilet" class="collage-tile top-pick"><img src="../images/toilet-cw162.jpg" alt="TOTO CW162 Wall-Hung Toilet" loading="lazy"><span class="ct-label"><span class="ct-cat">Toilet · Top</span>TOTO CW162<br/>$1,101</span></a>
+      <a href="#toilet" class="collage-tile"><img src="../images/toilet-cw522.jpg" alt="TOTO CW522 + Washlet SX" loading="lazy"><span class="ct-label"><span class="ct-cat">Toilet · Option 2</span>CW522 + Washlet<br/>$3,574</span></a>
+      <a href="#toilet" class="collage-tile"><img src="../images/toilet-kohler.jpg" alt="Kohler Modern Life Wall-Hung" loading="lazy"><span class="ct-label"><span class="ct-cat">Toilet · Option 3</span>Kohler Modern Life<br/>$642</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ ACTION PLAN ═══════════════ -->
 <section id="plan">
   <div class="sec-head">
     <div class="sec-num" style="color:var(--ash)">—</div>
@@ -939,39 +1139,40 @@ footer p+p{margin-top:.4rem}
       <div class="sc-head"><div class="sc-letter">A</div><div class="sc-name">Entry Wabi-Sabi</div></div>
       <div class="sc-body">
         <div class="sc-line"><span class="sc-line-name">Originals Isla Teak with Rope Q</span><span class="sc-line-price">$2,980</span></div>
+        <div class="sc-line"><span class="sc-line-name">Origin Hybrid Pro Queen</span><span class="sc-line-price">$999</span></div>
         <div class="sc-line"><span class="sc-line-name">Originals Sloopy 2.5-Seater Flax</span><span class="sc-line-price">$5,680</span></div>
         <div class="sc-line"><span class="sc-line-name">Vintage stool + jute rug</span><span class="sc-line-price">~$280</span></div>
         <div class="sc-line"><span class="sc-line-name">IKEA SKOGSTA + EKEDALEN ×4</span><span class="sc-line-price">~$729</span></div>
         <div class="sc-line"><span class="sc-line-name">TOTO CW162 wall-hung</span><span class="sc-line-price">$1,101</span></div>
         <div class="sc-line"><span class="sc-line-name">Aged bronze accessories set</span><span class="sc-line-price">~$280</span></div>
       </div>
-      <div class="sc-total"><div class="sc-total-label">Total</div><div class="sc-total-price">~$11,050</div></div>
+      <div class="sc-total"><div class="sc-total-label">Total</div><div class="sc-total-price">~$12,049</div></div>
     </div>
     <div class="sc">
       <div class="sc-head"><div class="sc-letter">B</div><div class="sc-name">Premium Teak + Leather</div></div>
       <div class="sc-body">
         <div class="sc-line"><span class="sc-line-name">Originals Luna Teak Natural Q</span><span class="sc-line-price">$3,380</span></div>
-        <div class="sc-line"><span class="sc-line-name">Premium mattress (Emma Hybrid)</span><span class="sc-line-price">~$1,800</span></div>
+        <div class="sc-line"><span class="sc-line-name">Heveya II Natural Organic Latex</span><span class="sc-line-price">$7,288</span></div>
         <div class="sc-line"><span class="sc-line-name">Originals Pensive Leather 2.5-Seater</span><span class="sc-line-price">$5,080</span></div>
         <div class="sc-line"><span class="sc-line-name">Vintage stool + wool rug</span><span class="sc-line-price">~$380</span></div>
         <div class="sc-line"><span class="sc-line-name">Originals Athena Teak 140cm + chairs</span><span class="sc-line-price">~$2,000</span></div>
         <div class="sc-line"><span class="sc-line-name">TOTO CW522 + Washlet SX</span><span class="sc-line-price">$3,574</span></div>
         <div class="sc-line"><span class="sc-line-name">Antique brass accessories</span><span class="sc-line-price">~$420</span></div>
       </div>
-      <div class="sc-total"><div class="sc-total-label">Total</div><div class="sc-total-price">~$16,634</div></div>
+      <div class="sc-total"><div class="sc-total-label">Total</div><div class="sc-total-price">~$22,122</div></div>
     </div>
     <div class="sc">
       <div class="sc-head"><div class="sc-letter">C</div><div class="sc-name">Maximum Wabi-Sabi</div></div>
       <div class="sc-body">
         <div class="sc-line"><span class="sc-line-name">Picket&amp;Rail Custom Teak Platform Q</span><span class="sc-line-price">~$2,400</span></div>
-        <div class="sc-line"><span class="sc-line-name">Premium mattress (Sealy Posturepedic)</span><span class="sc-line-price">~$2,000</span></div>
+        <div class="sc-line"><span class="sc-line-name">Heveya II Latex (split firmness)</span><span class="sc-line-price">$7,288</span></div>
         <div class="sc-line"><span class="sc-line-name">Originals Sloopy 3-Seater Flax</span><span class="sc-line-price">$6,480</span></div>
         <div class="sc-line"><span class="sc-line-name">Vintage Indonesian stool + wool rug</span><span class="sc-line-price">~$680</span></div>
         <div class="sc-line"><span class="sc-line-name">Picket&amp;Rail Custom Live-Edge Dining + vintage chairs</span><span class="sc-line-price">~$1,800</span></div>
         <div class="sc-line"><span class="sc-line-name">TOTO CW522 + Washlet SX</span><span class="sc-line-price">$3,574</span></div>
         <div class="sc-line"><span class="sc-line-name">Aged bronze + ceramic accents</span><span class="sc-line-price">~$580</span></div>
       </div>
-      <div class="sc-total"><div class="sc-total-label">Total</div><div class="sc-total-price">~$17,514</div></div>
+      <div class="sc-total"><div class="sc-total-label">Total</div><div class="sc-total-price">~$22,802</div></div>
     </div>
   </div>
 </section>

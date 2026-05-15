@@ -135,6 +135,22 @@ section{max-width:920px;margin:0 auto;padding:0 clamp(1rem,5vw,3rem) 3.5rem}
 .sc{background:var(--white);border:1px solid var(--border);border-radius:12px;overflow:hidden}
 .sc-head{padding:.9rem 1.1rem .7rem;border-bottom:1px solid var(--border)}
 .sc-letter{font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:300;color:var(--ash);line-height:1}
+
+/* VISUAL RECAP COLLAGE */
+.collage-wrap{margin-bottom:2.5rem}
+.collage-label{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.14em;color:var(--ink-xs);margin-bottom:.5rem}
+.collage-sub{font-size:.82rem;color:var(--ink-lt);margin-bottom:1.2rem;font-style:italic}
+.collage-group{margin-bottom:1.5rem}
+.collage-group-title{font-size:.66rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--walnut);margin-bottom:.6rem;display:flex;align-items:center;gap:.6rem}
+.collage-group-title::before{content:"";display:inline-block;width:18px;height:1px;background:var(--walnut)}
+.collage{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:.6rem}
+.collage-tile{position:relative;aspect-ratio:1;border-radius:10px;overflow:hidden;border:1px solid var(--border);background:var(--cream);text-decoration:none;color:inherit;display:block}
+.collage-tile img{width:100%;height:100%;object-fit:cover;transition:transform .4s ease}
+.collage-tile:hover img{transform:scale(1.06)}
+.collage-tile .ct-label{position:absolute;bottom:0;left:0;right:0;padding:1.3rem .6rem .5rem;background:linear-gradient(180deg,rgba(0,0,0,0) 0%,rgba(0,0,0,.8) 100%);color:#fff;font-size:.62rem;font-weight:600;text-transform:uppercase;letter-spacing:.04em;line-height:1.3}
+.collage-tile .ct-label .ct-cat{display:block;font-size:.54rem;color:rgba(255,255,255,.7);letter-spacing:.08em;margin-bottom:.1rem}
+.collage-tile.top-pick::before{content:"★";position:absolute;top:.4rem;right:.5rem;z-index:2;color:#fff;font-size:.9rem;text-shadow:0 1px 3px rgba(0,0,0,.5)}
+@media(max-width:600px){.collage{grid-template-columns:repeat(3,1fr);gap:.4rem}.collage-tile .ct-label{font-size:.56rem;padding:1rem .4rem .35rem}}
 .sc-name{font-size:.75rem;font-weight:600;color:var(--ink-lt)}
 .sc-body{padding:.9rem 1.1rem}
 .sc-line{display:flex;justify-content:space-between;font-size:.76rem;padding:.18rem 0;border-bottom:1px dotted var(--border);color:var(--ink-lt)}
@@ -199,10 +215,12 @@ footer p+p{margin-top:.4rem}
   <span class="nav-brand">Parc Esta · Type BP5</span>
   <ul class="nav-links">
     <li><a href="#bed">Bed</a></li>
+    <li><a href="#mattress">Mattress</a></li>
     <li><a href="#sofa">Sofa</a></li>
     <li><a href="#dining">Dining</a></li>
     <li><a href="#toilet">Toilet</a></li>
     <li><a href="#style">Style</a></li>
+    <li><a href="#recap">Recap</a></li>
     <li><a href="#plan">Action Plan</a></li>
     <li><a href="#sources">Sources</a></li>
   </ul>
@@ -231,6 +249,7 @@ footer p+p{margin-top:.4rem}
     <div class="budget-bar-label">Scenario A · Recommended Total (all top picks)</div>
     <div class="budget-items">
       <div><div class="bi-label">Bed + Frame</div><div class="bi-name">BedAndBasics Take Tatami Storage</div><div class="bi-price">$1,169</div></div>
+      <div><div class="bi-label">Mattress</div><div class="bi-name">Origin Hybrid Pro Queen</div><div class="bi-price">$999</div></div>
       <div><div class="bi-label">Sofa</div><div class="bi-name">Castlery Hamilton 2-Seater</div><div class="bi-price">$1,199</div></div>
       <div><div class="bi-label">Sofa Accents</div><div class="bi-name">Rattan chair + jute rug</div><div class="bi-price">~$350</div></div>
       <div><div class="bi-label">Dining</div><div class="bi-name">IKEA LISABO set</div><div class="bi-price">$439</div></div>
@@ -239,7 +258,7 @@ footer p+p{margin-top:.4rem}
     </div>
     <div class="budget-total">
       <div class="budget-total-label">Estimated Total</div>
-      <div class="budget-total-price">~$4,938</div>
+      <div class="budget-total-price">~$5,407</div>
     </div>
   </div>
 </div>
@@ -306,7 +325,7 @@ footer p+p{margin-top:.4rem}
       </div>
       <div class="companion-label">Style with (budget remaining ~$2,800 from $4,000 bed budget)</div>
       <ul class="companion">
-        <li>Premium mattress upgrade — Emma Hybrid Premium or Sealy Posturepedic Queen: ~$1,500–2,500</li>
+        <li>Premium mattress (see Section 02 — Origin Hybrid Pro $999 / Heveya II latex $7,288 / Sonno Original $599)</li>
         <li>Solid oak floating bedside tables (BedAndBasics matching range): ~$280 each</li>
         <li>Linen bedding in oat or clay — MUJI or Zara Home</li>
         <li>Waffle-weave cotton throw in warm cream</li>
@@ -388,10 +407,150 @@ footer p+p{margin-top:.4rem}
   </div>
 </section>
 
+<!-- ═══════════════ MATTRESS ═══════════════ -->
+<section id="mattress">
+  <div class="sec-head">
+    <div class="sec-num">02</div>
+    <div>
+      <div class="sec-eyebrow">Splurge · $600 – $7,300 · Master Bedroom</div>
+      <div class="sec-title">Mattress</div>
+    </div>
+  </div>
+
+  <div class="community">
+    <div class="community-label">小红书 · Lemon8 SG · Community Insights</div>
+    <ul>
+      <li><strong>Mattress is the single highest-impact bedroom purchase</strong> — XHS SG consensus is that a $500 mattress on a $4,000 bed is a worse outcome than a $2,000 mattress on a $1,500 bed. Spend here generously.</li>
+      <li><strong>Hybrid (pocket spring + foam) is the dominant XHS recommendation for SG climate</strong> — pure foam traps heat in tropical humidity; hybrids breathe through the coil layer. Origin specifically engineers cooling layers for SG climate (Emma Sleep Singapore has stopped operations as of 2026).</li>
+      <li><strong>Natural latex (Heveya) is the premium long-game choice</strong> — 15–20 year lifespan vs 7–10 for foam hybrids. Eco-credentials, no off-gassing, anti-microbial. Cost reflects this — $5k+ is normal.</li>
+      <li><strong>120+ night trial is the new standard</strong> — Origin (120), Sonno (100), Heveya (100). Never buy a queen mattress without sleeping on it for at least 30 nights. Showroom 10-minute tests are useless for mattresses.</li>
+      <li><strong>Avoid in-store mattress brands without trial periods</strong> (Sealy at department stores often has no trial). The premium price doesn't include the safety net direct-to-consumer brands provide.</li>
+    </ul>
+    <div class="src-links">
+      XHS searches:
+      <a href="https://www.xiaohongshu.com/search_result?keyword=%E6%96%B0%E5%8A%A0%E5%9D%A1+%E5%BA%8A%E5%9E%AB+%E6%8E%A8%E8%8D%90" target="_blank">新加坡 床垫 推荐 ↗</a>
+      <a href="https://www.xiaohongshu.com/search_result?keyword=Origin+%E5%BA%8A%E5%9E%AB" target="_blank">Origin 床垫 ↗</a>
+      <a href="https://www.xiaohongshu.com/search_result?keyword=Heveya+%E5%BA%8A%E5%9E%AB" target="_blank">Heveya 床垫 ↗</a>
+      · Article:
+      <a href="https://www.homeanddecor.com.sg/shopping/best-mattress-brands-singapore" target="_blank">17 Best Mattresses SG (H&amp;D) ↗</a>
+      <a href="https://www.sassymamasg.com/home-best-mattress-singapore/" target="_blank">13 Best Mattresses SG (Sassy Mama) ↗</a>
+    </div>
+  </div>
+
+  <!-- Option 1 -->
+  <div class="card top">
+    <div class="card-image"><img src="../images/mattress-origin.png" alt="Origin Hybrid Pro Mattress" loading="lazy"><div class="img-caption">Origin · Hybrid Pro (9-layer hybrid · 120-night trial · 15-year warranty)</div></div>
+    <div class="card-head">
+      <div>
+        <div class="badge-row"><span class="badge b-top">Top Pick</span><span class="badge b-runner">9-Layer Hybrid</span><span class="badge b-runner">15-Year Warranty</span></div>
+        <div class="card-name">Origin Hybrid Pro Mattress</div>
+        <div class="card-sub">Origin Singapore · Designed in Germany, engineered for SG climate · ArcticSilk Tencel pillow top</div>
+      </div>
+      <div class="card-price-wrap">
+        <div class="card-price-label">Queen, 40% off</div>
+        <div class="card-price">$999</div>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="specs">
+        <div class="sk">Dimensions</div><div class="sv">152 × 190 × 31cm (Queen) · 45kg</div>
+        <div class="sk">Construction</div><div class="sv">9 premium layers — ArcticSilk Tencel pillow top · PureWool climate layer · CryoFlex cooling foam · GraphiteCool latex · HexaGrid Plus ortho · AirSpring micro coils · CloudForm comfort · ErgoCoil 7-zone lumbar</div>
+        <div class="sk">Firmness</div><div class="sv">Medium-firm — suits the broadest range of sleepers</div>
+        <div class="sk">Climate engineering</div><div class="sv">Multiple cooling layers specifically calibrated for SG humidity</div>
+        <div class="sk">Trial period</div><div class="sv">120 nights from delivery — full refund if returned</div>
+        <div class="sk">Warranty</div><div class="sv">Industry-leading 15-year warranty</div>
+        <div class="sk">Delivery</div><div class="sv">Free same-day SG delivery · Optional 2-hour express (+$20)</div>
+        <div class="sk">Regular price</div><div class="sv">$1,884 (currently 40% off at $999)</div>
+        <div class="sk">Buy</div><div class="sv"><a href="https://originmattress.com.sg/shop/mattresses/origin-hybrid-pro-mattress/" target="_blank">originmattress.com.sg → Hybrid Pro ↗</a></div>
+      </div>
+      <div class="why">
+        <div class="why-label">Why this is the top pick</div>
+        At $999 queen on sale, the Hybrid Pro delivers what would cost $2,500+ from a traditional retailer — 9 engineered layers, real pocket coils (not micro-coils), 7-zone lumbar support. The 120-night trial means you can return it if it doesn't work. The 15-year warranty is the longest in the SG market. Origin runs frequent sales — don't pay full price. The pillow-top cooling tech is specifically tuned for SG climate, which makes a meaningful difference in tropical humidity.
+      </div>
+      <div class="tip">
+        <div class="tip-label">Pair with the bed budget</div>
+        With BedAndBasics Take frame ($1,169) + Origin Hybrid Pro ($999) = $2,168 total — well under the $4,000 bedroom budget. Frees ~$1,800 for premium bedding (linen sheets, eiderdown pillows, weighted throw) or save it.
+      </div>
+    </div>
+  </div>
+
+  <!-- Option 2 -->
+  <div class="card runner">
+    <div class="card-image"><img src="../images/mattress-heveya.jpg" alt="Heveya II Natural Organic Latex Mattress" loading="lazy"><div class="img-caption">Heveya · II Natural Organic Latex Mattress (100% organic latex · 100-night trial)</div></div>
+    <div class="card-head">
+      <div>
+        <div class="badge-row"><span class="badge b-runner">Option 2</span><span class="badge b-runner">100% Natural Latex</span><span class="badge b-runner">Premium Heirloom</span></div>
+        <div class="card-name">Heveya II Natural Organic Latex Mattress</div>
+        <div class="card-sub">Heveya Singapore · 100% certified organic latex · Bamboo + organic cotton cover · Dual firmness available</div>
+      </div>
+      <div class="card-price-wrap">
+        <div class="card-price-label">Queen</div>
+        <div class="card-price">$7,288</div>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="specs">
+        <div class="sk">Dimensions</div><div class="sv">152 × 190cm (SG Queen)</div>
+        <div class="sk">Construction</div><div class="sv">Two layers 100% certified organic latex (different densities for progressive support) · Bamboo fibre + organic cotton cover</div>
+        <div class="sk">Firmness options</div><div class="sv">Soft · Medium · Firm · OR split-firmness (½ Soft + ½ Medium, etc.) for couples with different preferences</div>
+        <div class="sk">7-zone support</div><div class="sv">Latex conforms to the body's 7-zone shape for optimal spine alignment</div>
+        <div class="sk">Lifespan</div><div class="sv">15–20 years (vs 7–10 for foam hybrids) — heirloom-class</div>
+        <div class="sk">Trial period</div><div class="sv">100 nights free trial · Full refund, including return collection</div>
+        <div class="sk">Warranty</div><div class="sv">10-year comprehensive warranty</div>
+        <div class="sk">Buy</div><div class="sv"><a href="https://www.heveya.sg/products/natural-organic-latex-mattress-ii" target="_blank">heveya.sg → Heveya II ↗</a></div>
+      </div>
+      <div class="why">
+        <div class="why-label">When the Heveya II makes sense</div>
+        If you've allocated $7k+ for a mattress and want a heirloom piece — Heveya II will outlast 2–3 cycles of foam hybrid mattresses. 100% organic latex doesn't off-gas, doesn't trap dust mites (natural latex is hypoallergenic), and is one of the few mattresses where you can buy a different firmness on each side (essential if you and your partner have different preferences). The Heveya showroom is in Tan Boon Liat Building — visit and lie on three firmness levels for 15+ minutes each.
+      </div>
+      <div class="tip">
+        <div class="tip-label">Sustainability angle</div>
+        Heveya is the most-cited mattress on Japandi/Wabi-sabi XHS reveals for the same reason solid teak is preferred over veneer — natural materials, slow craftsmanship, designed to last decades. If the rest of your home is solid wood + linen, Heveya is the philosophically consistent pick.
+      </div>
+    </div>
+  </div>
+
+  <!-- Option 3 -->
+  <div class="card alt">
+    <div class="card-image"><img src="../images/mattress-sonno.png" alt="Sonno Original Mattress Queen" loading="lazy"><div class="img-caption">Sonno · Original Mattress (3-layer pillow top · 100-night trial · 10-year warranty)</div></div>
+    <div class="card-head">
+      <div>
+        <div class="badge-row"><span class="badge b-alt">Option 3</span><span class="badge b-alt">Best Value</span><span class="badge b-alt">Singapore Brand</span></div>
+        <div class="card-name">Sonno Original Mattress</div>
+        <div class="card-sub">Sonno Singapore · 3-layer pillow top · Manufactured in Malaysia · Most affordable trial mattress in SG</div>
+      </div>
+      <div class="card-price-wrap">
+        <div class="card-price-label">Queen, on sale</div>
+        <div class="card-price">$599</div>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="specs">
+        <div class="sk">Dimensions</div><div class="sv">152 × 190cm (SG Queen)</div>
+        <div class="sk">Construction</div><div class="sv">3 layers — firm base support + medium-firm contour layer + pillow-top comfort</div>
+        <div class="sk">Firmness</div><div class="sv">Medium-firm with a softer pillow-top — broad appeal</div>
+        <div class="sk">Trial period</div><div class="sv">100 nights · Free return collection</div>
+        <div class="sk">Warranty</div><div class="sv">10-year warranty</div>
+        <div class="sk">Delivery</div><div class="sv">2–3 working days · Free SG delivery</div>
+        <div class="sk">Regular price</div><div class="sv">$1,099 (currently on sale at $599 — typically the cheapest queen with a trial in SG)</div>
+        <div class="sk">Buy</div><div class="sv"><a href="https://www.sleepsonno.sg/products/sonno-original-mattress" target="_blank">sleepsonno.sg → Original ↗</a></div>
+      </div>
+      <div class="why">
+        <div class="why-label">When to go Sonno</div>
+        If the rest of the home budget is tight and you need to allocate dollars to the bed frame, sofa, or kitchen reno. At $599 with a 100-night trial, it's the lowest-risk mattress purchase in the SG market — you can return it for a full refund if you don't love it. The 10-year warranty is solid. The trade-off vs Origin is fewer cooling layers (less SG-climate-optimised) and fewer total construction layers — comfort is good, not great. Plan to replace at 7-year mark.
+      </div>
+      <div class="tip">
+        <div class="tip-label">Mattress decision sanity check</div>
+        Sleep nights × $/night is the only meaningful frame. A $999 Origin Hybrid Pro over 10 years = $0.27/night. A $599 Sonno over 7 years = $0.23/night. The cost difference is negligible per night — pick on quality and comfort, not sticker price.
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ═══════════════ SOFA ═══════════════ -->
 <section id="sofa">
   <div class="sec-head">
-    <div class="sec-num">02</div>
+    <div class="sec-num">03</div>
     <div>
       <div class="sec-eyebrow">Splurge · Living Room</div>
       <div class="sec-title">Sofa</div>
@@ -527,7 +686,7 @@ footer p+p{margin-top:.4rem}
 <!-- ═══════════════ DINING ═══════════════ -->
 <section id="dining">
   <div class="sec-head">
-    <div class="sec-num">03</div>
+    <div class="sec-num">04</div>
     <div>
       <div class="sec-eyebrow">Save · Dining Area</div>
       <div class="sec-title">Dining Table + Chairs</div>
@@ -656,7 +815,7 @@ footer p+p{margin-top:.4rem}
 <!-- ═══════════════ TOILET ═══════════════ -->
 <section id="toilet">
   <div class="sec-head">
-    <div class="sec-num">04</div>
+    <div class="sec-num">05</div>
     <div>
       <div class="sec-eyebrow">Bathroom Upgrade</div>
       <div class="sec-title">Toilet Bowl + Bathroom Accessories</div>
@@ -872,6 +1031,58 @@ footer p+p{margin-top:.4rem}
 </section>
 
 <!-- ═══════════════ ACTION PLAN ═══════════════ -->
+<!-- ═══════════════ VISUAL RECAP ═══════════════ -->
+<section id="recap">
+  <div class="sec-head">
+    <div class="sec-num" style="color:var(--ash)">—</div>
+    <div>
+      <div class="sec-eyebrow">Visual Recap</div>
+      <div class="sec-title">All picks at a glance</div>
+    </div>
+  </div>
+  <p class="collage-sub">Star (★) marks the top pick in each category. Hover any tile to zoom; click to jump to the full card.</p>
+
+  <div class="collage-group">
+    <div class="collage-group-title">Bedroom</div>
+    <div class="collage">
+      <a href="#bed" class="collage-tile top-pick"><img src="../images/bed-take.jpg" alt="BedAndBasics Take Tatami Storage" loading="lazy"><span class="ct-label"><span class="ct-cat">Bed · Top</span>Take Tatami<br/>$1,169</span></a>
+      <a href="#bed" class="collage-tile"><img src="../images/bed-mikuru.jpg" alt="BedAndBasics Mikuru Tatami Drawers" loading="lazy"><span class="ct-label"><span class="ct-cat">Bed · Option 2</span>Mikuru Drawers<br/>$1,052</span></a>
+      <a href="#bed" class="collage-tile"><img src="../images/bed-koda.jpg" alt="BedAndBasics Koda Tatami Storage" loading="lazy"><span class="ct-label"><span class="ct-cat">Bed · Option 3</span>Koda Compact<br/>$827</span></a>
+      <a href="#mattress" class="collage-tile top-pick"><img src="../images/mattress-origin.png" alt="Origin Hybrid Pro" loading="lazy"><span class="ct-label"><span class="ct-cat">Mattress · Top</span>Origin Hybrid Pro<br/>$999</span></a>
+      <a href="#mattress" class="collage-tile"><img src="../images/mattress-heveya.jpg" alt="Heveya II Natural Latex" loading="lazy"><span class="ct-label"><span class="ct-cat">Mattress · Option 2</span>Heveya II Latex<br/>$7,288</span></a>
+      <a href="#mattress" class="collage-tile"><img src="../images/mattress-sonno.png" alt="Sonno Original Queen" loading="lazy"><span class="ct-label"><span class="ct-cat">Mattress · Option 3</span>Sonno Original<br/>$599</span></a>
+    </div>
+  </div>
+
+  <div class="collage-group">
+    <div class="collage-group-title">Living Room</div>
+    <div class="collage">
+      <a href="#sofa" class="collage-tile top-pick"><img src="../images/sofa-hamilton-2.jpg" alt="Castlery Hamilton 2-Seater Oat" loading="lazy"><span class="ct-label"><span class="ct-cat">Sofa · Top</span>Hamilton 2-Seater<br/>$1,199</span></a>
+      <a href="#sofa" class="collage-tile"><img src="../images/sofa-hamilton-3.jpg" alt="Castlery Hamilton 3-Seater Oat" loading="lazy"><span class="ct-label"><span class="ct-cat">Sofa · Option 2</span>Hamilton 3-Seater<br/>$1,599</span></a>
+      <a href="#sofa" class="collage-tile"><img src="../images/sofa-hamilton-2.jpg" alt="Hamilton + Rattan Composition" loading="lazy"><span class="ct-label"><span class="ct-cat">Sofa · Option 3</span>Hamilton + Rattan<br/>~$1,650</span></a>
+    </div>
+  </div>
+
+  <div class="collage-group">
+    <div class="collage-group-title">Dining</div>
+    <div class="collage">
+      <a href="#dining" class="collage-tile top-pick"><img src="../images/dining-lisabo.jpg" alt="IKEA LISABO Table + 4 Chairs" loading="lazy"><span class="ct-label"><span class="ct-cat">Dining · Top</span>IKEA LISABO Set<br/>$439</span></a>
+      <a href="#dining" class="collage-tile"><img src="../images/dining-morbylanga.jpg" alt="IKEA MÖRBYLÅNGA + RÖNNINGE" loading="lazy"><span class="ct-label"><span class="ct-cat">Dining · Option 2</span>MÖRBYLÅNGA + RÖNNINGE<br/>~$950</span></a>
+      <a href="#dining" class="collage-tile"><img src="../images/dining-oqui.png" alt="Nook &amp; Cranny Oqui Oval" loading="lazy"><span class="ct-label"><span class="ct-cat">Dining · Option 3</span>Oqui Extendable<br/>$1,051</span></a>
+    </div>
+  </div>
+
+  <div class="collage-group">
+    <div class="collage-group-title">Bathroom</div>
+    <div class="collage">
+      <a href="#toilet" class="collage-tile top-pick"><img src="../images/toilet-cw162.jpg" alt="TOTO CW162 Wall-Hung Toilet" loading="lazy"><span class="ct-label"><span class="ct-cat">Toilet · Top</span>TOTO CW162<br/>$1,101</span></a>
+      <a href="#toilet" class="collage-tile"><img src="../images/toilet-cw522.jpg" alt="TOTO CW522 + Washlet SX" loading="lazy"><span class="ct-label"><span class="ct-cat">Toilet · Option 2</span>CW522 + Washlet<br/>$3,574</span></a>
+      <a href="#toilet" class="collage-tile"><img src="../images/toilet-kohler.jpg" alt="Kohler Modern Life Wall-Hung" loading="lazy"><span class="ct-label"><span class="ct-cat">Toilet · Option 3</span>Kohler Modern Life<br/>$642</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ ACTION PLAN ═══════════════ -->
 <section id="plan">
   <div class="sec-head">
     <div class="sec-num" style="color:var(--ash)">—</div>
@@ -901,39 +1112,40 @@ footer p+p{margin-top:.4rem}
       <div class="sc-head"><div class="sc-letter">A</div><div class="sc-name">All Top Picks</div></div>
       <div class="sc-body">
         <div class="sc-line"><span class="sc-line-name">BedAndBasics Take Tatami Storage Q</span><span class="sc-line-price">$1,169</span></div>
+        <div class="sc-line"><span class="sc-line-name">Origin Hybrid Pro Queen</span><span class="sc-line-price">$999</span></div>
         <div class="sc-line"><span class="sc-line-name">Castlery Hamilton 2-Seater (Oat)</span><span class="sc-line-price">$1,199</span></div>
         <div class="sc-line"><span class="sc-line-name">Rattan chair + jute rug</span><span class="sc-line-price">~$350</span></div>
         <div class="sc-line"><span class="sc-line-name">IKEA LISABO set</span><span class="sc-line-price">$439</span></div>
         <div class="sc-line"><span class="sc-line-name">TOTO CW162 wall-hung</span><span class="sc-line-price">$1,101</span></div>
         <div class="sc-line"><span class="sc-line-name">Matte black accessories set</span><span class="sc-line-price">~$150</span></div>
       </div>
-      <div class="sc-total"><div class="sc-total-label">Total</div><div class="sc-total-price">~$4,408</div></div>
+      <div class="sc-total"><div class="sc-total-label">Total</div><div class="sc-total-price">~$5,407</div></div>
     </div>
     <div class="sc">
-      <div class="sc-head"><div class="sc-letter">B</div><div class="sc-name">Premium Bed + Smart Toilet</div></div>
+      <div class="sc-head"><div class="sc-letter">B</div><div class="sc-name">Premium Mattress + Smart Toilet</div></div>
       <div class="sc-body">
         <div class="sc-line"><span class="sc-line-name">BedAndBasics Take Tatami Storage Q</span><span class="sc-line-price">$1,169</span></div>
-        <div class="sc-line"><span class="sc-line-name">Premium mattress (Emma Hybrid Premium)</span><span class="sc-line-price">~$1,800</span></div>
+        <div class="sc-line"><span class="sc-line-name">Heveya II Natural Organic Latex</span><span class="sc-line-price">$7,288</span></div>
         <div class="sc-line"><span class="sc-line-name">Castlery Hamilton 3-Seater (Oat)</span><span class="sc-line-price">$1,599</span></div>
         <div class="sc-line"><span class="sc-line-name">Rattan chair + jute rug</span><span class="sc-line-price">~$350</span></div>
         <div class="sc-line"><span class="sc-line-name">IKEA MÖRBYLÅNGA + RÖNNINGE ×4</span><span class="sc-line-price">~$950</span></div>
         <div class="sc-line"><span class="sc-line-name">TOTO CW522 + Washlet SX</span><span class="sc-line-price">$3,574</span></div>
         <div class="sc-line"><span class="sc-line-name">Brushed gold accessories</span><span class="sc-line-price">~$300</span></div>
       </div>
-      <div class="sc-total"><div class="sc-total-label">Total</div><div class="sc-total-price">~$9,742</div></div>
+      <div class="sc-total"><div class="sc-total-label">Total</div><div class="sc-total-price">~$15,230</div></div>
     </div>
     <div class="sc">
-      <div class="sc-head"><div class="sc-letter">C</div><div class="sc-name">Maximum Japandi</div></div>
+      <div class="sc-head"><div class="sc-letter">C</div><div class="sc-name">Budget-Conscious</div></div>
       <div class="sc-body">
-        <div class="sc-line"><span class="sc-line-name">Picket&amp;Rail Custom Tatami Platform Q</span><span class="sc-line-price">~$1,800</span></div>
-        <div class="sc-line"><span class="sc-line-name">Premium mattress (Sealy Posturepedic)</span><span class="sc-line-price">~$2,000</span></div>
-        <div class="sc-line"><span class="sc-line-name">Castlery Hamilton 3-Seater (Oat)</span><span class="sc-line-price">$1,599</span></div>
+        <div class="sc-line"><span class="sc-line-name">BedAndBasics Koda Tatami Storage Q</span><span class="sc-line-price">$827</span></div>
+        <div class="sc-line"><span class="sc-line-name">Sonno Original Queen</span><span class="sc-line-price">$599</span></div>
+        <div class="sc-line"><span class="sc-line-name">Castlery Hamilton 2-Seater (Oat)</span><span class="sc-line-price">$1,199</span></div>
         <div class="sc-line"><span class="sc-line-name">Rattan chair + jute rug</span><span class="sc-line-price">~$350</span></div>
-        <div class="sc-line"><span class="sc-line-name">Nook &amp; Cranny Oqui + chairs</span><span class="sc-line-price">~$1,500</span></div>
-        <div class="sc-line"><span class="sc-line-name">TOTO CW522 + Washlet SX</span><span class="sc-line-price">$3,574</span></div>
-        <div class="sc-line"><span class="sc-line-name">Brushed gold accessories</span><span class="sc-line-price">~$300</span></div>
+        <div class="sc-line"><span class="sc-line-name">IKEA LISABO set</span><span class="sc-line-price">$439</span></div>
+        <div class="sc-line"><span class="sc-line-name">Kohler Modern Life wall-hung</span><span class="sc-line-price">$642</span></div>
+        <div class="sc-line"><span class="sc-line-name">Matte black accessories set</span><span class="sc-line-price">~$120</span></div>
       </div>
-      <div class="sc-total"><div class="sc-total-label">Total</div><div class="sc-total-price">~$11,123</div></div>
+      <div class="sc-total"><div class="sc-total-label">Total</div><div class="sc-total-price">~$4,176</div></div>
     </div>
   </div>
 </section>
